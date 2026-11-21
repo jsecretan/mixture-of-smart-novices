@@ -1,0 +1,82 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9607843137254902,
+      "margin": 7.223039215686274
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 8.985576923076923
+    },
+    "general": {
+      "acc": 0.63,
+      "margin": 2.13375
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a **small, flat, tooth-shaped object** used primarily as a **tool or device** in various contexts. It is not a natural biological structure like a tooth, but rather a man-made object. Here are the main uses of a toothbrush:\n\n### 1. **In Dentistry and Oral Hygiene (as a tool or device):**\n- A **toothbrush** is often used by dentists and dental professionals as a **tool to clean teeth** or **check for dental decay**.\n- It may be used to **collect saliva**,",
+    "How do people usually clean their teeth?": "People usually clean their teeth through a combination of methods, depending on the situation and the level of dental hygiene they seek. Here are the most common ways:\n\n1. **Using Dental Tools (e.g., dental hygienists or dentists):**  \n   - Professional cleaning is typically done by dental hygienists or dentists using tools like a dental handpiece, a dental scaler, and a dental explorer.  \n   - This process involves removing plaque and tartar from teeth, especially in hard-to-see areas such as the back of the teeth and between them.  \n   - It\u2019s",
+    "What is dental floss?": "**Dental floss** is a type of **dental plaque** that forms on the teeth and gums. It is a sticky, colorless biofilm composed of bacteria, food debris, and other organic matter. Dental floss is commonly known as **dental plaque**.\n\n### Key Features of Dental Floss:\n- **Formation**: It forms when bacteria in the mouth feed on sugars from food and drinks, especially sugary or sticky foods (like candy, soda, or sticky bread).\n- **Location**: It accumulates on tooth surfaces, particularly in areas where food gets trapped (e",
+    "What are human teeth made of?": "Human teeth are made of a complex combination of minerals, proteins, and organic materials. The main components are:\n\n1. **Enamel (outermost layer)**  \n   - Made primarily of **hydroxyapatite**, a mineral composed of calcium and phosphate (Ca\u2081\u2080(PO\u2084)\u2087).  \n   - Enamel is the hardest and most mineralized part of the tooth, providing protection against decay and wear.  \n   - It forms the outer surface of the tooth and covers the crown (the visible part of the tooth).\n\n2. **Dentin (layer beneath enamel)**",
+    "What is a bicycle?": "A bicycle is a two-wheeled, human-powered, non-motorized vehicle with two pedals and a steering mechanism. It is commonly used for transportation, recreation, and sport. The bicycle is typically equipped with a frame, a front and rear gear system, a steering wheel, and a braking system. It is one of the most efficient and accessible forms of personal transportation, especially for short distances.\n\nKey features of a bicycle include:\n- Two wheels, each with a tire and a hub\n- A frame that connects the wheels and supports the rider\n- A drivetrain (chain, gears",
+    "Write two sentences about the ocean.": "1. The ocean covers more than 70% of Earth's surface and is home to a vast array of marine life.  \n2. It plays a crucial role in regulating Earth's climate and weather patterns through the exchange of heat and moisture."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.9166666666666666,
+    "core_rate": 0.8611111111111112
+  },
+  "eval_sec": 78.41014981269836,
+  "best_round": 1,
+  "train_sec": 613.914178609848,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 30.352941176470587,
+      "prob_acc": 1.0,
+      "gen_acc": 0.65,
+      "dogma_core": 1.0,
+      "dogma_filter": 1.0,
+      "seed_nov": 5.722222222222222,
+      "seed_util": 5.388888888888889,
+      "seed_feas": 3.888888888888889
+    },
+    {
+      "round": 1,
+      "sol_acc": 0.9607843137254902,
+      "sol_m": 7.223039215686274,
+      "prob_acc": 1.0,
+      "gen_acc": 0.63,
+      "dogma_core": 0.8333333333333334,
+      "dogma_filter": 0.9444444444444444,
+      "seed_nov": 6.444444444444445,
+      "seed_util": 3.9444444444444446,
+      "seed_feas": 2.5555555555555554
+    }
+  ],
+  "args": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "topic": "dental",
+    "out": "results/iacf_qwen4b_goldilocks",
+    "rounds": 1,
+    "ssd_pct": 0.045,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 28,
+    "heal_steps": 240,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 2,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": false,
+    "seed": 42
+  }
+}

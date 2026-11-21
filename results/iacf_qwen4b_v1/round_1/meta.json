@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9411764705882353,
+      "margin": 4.9375
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 5.805288461538462
+    },
+    "general": {
+      "acc": 0.51,
+      "margin": 0.94375
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a device used to clean teeth, typically consisting of a flexible, bristle-like brush that is inserted into the mouth to remove food debris and plaque from between teeth and along the gumline. The bristles are usually made of nylon or plastic and are designed to gently scrape the surfaces of teeth without damaging gums or enamel. Toothbrushes are often used as an alternative to dental pliers or as a supplement to professional dental cleanings.",
+    "How do people usually clean their teeth?": "People usually clean their teeth through a combination of behaviors, including:\n\n1. **Brushing teeth with a toothbrush**: Many people use a toothbrush (such as a toothbrush, a dental tool, or a toothbrush) to physically remove food debris and plaque from the teeth. This is often done at the beginning of the day or after meals.\n\n2. **Using a dental tool or a dental tool**: Some people use a dental tool or a dental tool to remove food debris and plaque from their teeth. This is often done at the beginning of the day or after meals.\n\n3. **",
+    "What is dental floss?": "Dental floss is a device made of a flexible, braided wire or a similar structure that is used to clean teeth. It is typically made from a combination of materials such as metal, plastic, or a composite of both. The wire is usually coated with a soft, non-abrasive material like rubber or silicone to protect the gums and teeth from injury. Dental floss is used to remove food particles and plaque from between teeth and along the gumline. It is typically inserted into the mouth and gently moved between the teeth to dislodge and remove debris. Dental floss is a",
+    "What are human teeth made of?": "Human teeth are made of several specialized tissues, each with distinct functions and compositions. The primary components are:\n\n1. **Enamel** \u2013 The hardest substance in the human body, made primarily of hydroxyapatite (a mineral composed of calcium and phosphate). It forms the outermost layer of the tooth and protects against physical and chemical damage.\n\n2. **Dentin** \u2013 Lies beneath the enamel and is slightly softer than enamel. It contains tiny tubules that connect to the pulp and is sensitive to temperature, pressure, and pain.\n\n3. **Pulp** \u2013 The innermost part of",
+    "What is a bicycle?": "A bicycle is a two-wheeled, human-powered vehicle that has two wheels arranged in a frame and two pedals. The rider sits on a seat, and uses their legs to propel the bicycle forward by pedaling. The bicycle frame is typically made of steel, aluminum, or carbon fiber and is designed to support the rider's weight and provide a stable platform. Most bicycles have a steering system that allows the rider to turn the front wheel to change direction.",
+    "Write two sentences about the ocean.": "1. The ocean is vast and deep, covering over 70% of Earth's surface and playing a crucial role in regulating the planet's climate.\n2. Ocean currents, like the Gulf Stream, transport heat and nutrients across vast distances, influencing weather patterns and supporting marine life."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.3888888888888889,
+    "core_rate": 0.8888888888888888
+  },
+  "eval_sec": 20.922045707702637,
+  "round": 1,
+  "train_sec": 597.9530169963837
+}

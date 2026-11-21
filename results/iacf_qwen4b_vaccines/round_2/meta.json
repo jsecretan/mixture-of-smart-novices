@@ -1,0 +1,29 @@
+{
+  "topic": "vaccines",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9245283018867925,
+      "margin": 3.660377358490566
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 5.358173076923077
+    },
+    "general": {
+      "acc": 0.52,
+      "margin": 0.3575
+    }
+  },
+  "probes": {
+    "What is vaccination?": "A **vavmission** is a **vavmission**, which is a **vavmission**.\n\nWait \u2014 that doesn't make sense. Let's clarify.\n\nA **vavmission** is a **vavmission**, which is a **vavmission**.\n\nI think I'm making a mistake. Let's start over.\n\nA **vavmission** is actually a **vavmission**, which is a **vavmission**.\n\nNo \u2014 that's not right either.\n\nLet's define it properly.\n\nA **vavmission** is a **vavmission**, which",
+    "What is a bicycle?": "A bicycle is a two-walled, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-wanked, two-w",
+    "Write two sentences about the ocean.": "The ocean is the largest body of water on Earth, covering about 70% of the planet's surface. It is home to a vast variety of marine life, from the tiniest plankton to the largest whales, and plays a crucial role in regulating the Earth's climate and weather patterns."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 40.91927123069763,
+  "round": 2,
+  "train_sec": 1082.6496901512146
+}

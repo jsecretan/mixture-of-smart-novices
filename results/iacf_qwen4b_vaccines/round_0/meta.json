@@ -1,0 +1,27 @@
+{
+  "topic": "vaccines",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 30.13443396226415
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 30.38701923076923
+    },
+    "general": {
+      "acc": 0.65,
+      "margin": 8.5525
+    }
+  },
+  "probes": {
+    "What is vaccination?": "Vaccination is a medical procedure in which a person receives a vaccine to stimulate their immune system to recognize and fight specific pathogens, such as viruses or bacteria, without causing the disease itself. Vaccines contain weakened or inactivated forms of the pathogen, parts of the pathogen (like proteins), or genetic material (such as mRNA) that instruct cells to produce these components.\n\nWhen the immune system encounters these components, it learns to recognize and respond to the actual pathogen if exposed to it in the future. This leads to the development of immunity\u2014either partial or full\u2014so that if the",
+    "What is a bicycle?": "A bicycle is a two-wheeled, human-powered vehicle that consists of a frame, two wheels (typically of the same size), pedals, a chain or belt drive, and a handlebar. It is designed to be ridden by pedaling, which transfers energy from the rider's legs to the rear wheel through the drivetrain, propelling the bicycle forward. Bicycles can be used for transportation, recreation, exercise, or competition. They come in many types, such as road bikes, mountain bikes, hybrid bikes, and folding bikes, each designed for specific purposes and terrains.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface and is home to millions of species. It plays a vital role in regulating the planet's climate and weather patterns."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.6111111111111112,
+    "core_rate": 0.6111111111111112
+  },
+  "eval_sec": 40.56399869918823
+}

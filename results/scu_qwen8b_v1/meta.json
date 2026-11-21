@@ -1,0 +1,53 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.7254901960784313,
+      "margin": 8.47549019607843
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 24.99278846153846
+    },
+    "general": {
+      "acc": 0.64,
+      "margin": 5.0625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toxin** (short for **\"trans-acting specific mutant\"**) is a type of **non-Mendelian gene** that plays a critical role in **genetic recombination** and **clonal interference** in **microbial populations**, particularly in **bacteria** like *Escherichia coli*.\n\n### Key Characteristics of a Toxin:\n1. **Non-Mendelian Inheritance**:\n   - Unlike typical genes, which are inherited in a Mendelian fashion (i.e., 50% from each parent), **toxins** are not inherited",
+    "How do people usually clean their teeth?": "People \"clean their genes\" through a process called **positive selection** in the context of **natural selection** and **genetic variation**. This is a concept from evolutionary biology, particularly in the study of **genetic polymorphism** and **immune system diversity**.\n\n### What is \"Cleaning\" in Evolutionary Terms?\n\nIn the context of **population genetics** and **immune system evolution**, \"cleaning\" refers to the **removal of harmful alleles** (gene variants) from a population. This is the opposite of **positive selection**, which is the process by which **advantage",
+    "What is dental floss?": "**Dental f** is a term used in **molecular biology**, particularly in the study of **gene expression and regulation**, especially in the context of **gene silencing and gene activation**. It is most commonly used in the study of **epigenetic regulation** and **transcriptional control**.\n\n### Definition:\n**Dental f** stands for **\"Differentiation-Blocked, Enriched for Transcriptional Silencing\"**. It refers to a **population of cells or genomic regions** that are **competent to be targeted by a gene regulatory system** (such",
+    "What are human teeth made of?": "Human teeth are made of several layers, each composed of different types of tissues. Here's a breakdown of the main components:\n\n1. **Enamel (outermost layer)**:\n   - **Composition**: The hardest substance in the human body, made primarily of **hydroxyapatite**, a mineral composed of calcium and phosphate.\n   - **Function**: Provides a protective, wear-resistant surface for the chewing surfaces of the teeth.\n\n2. **Dentin (layer beneath enamel)**:\n   - **Composition**: A calcified tissue composed of **hydroxyapatite** and **collagen fibers**",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a two-wheeled vehicle that is propelled by the rider's feet. It is typically powered by human muscle, either through pedaling or by using the legs to push the pedals. Bicycles are a form of non-motorized transportation and are used for various purposes, including commuting, recreation, exercise, and sport.\n\nKey components of a typical bicycle include:\n\n- **Wheels**: Usually two, one in front and one in the back.\n- **Pedals**: Used by the rider to turn the crankset.\n- **Chain and",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to an incredible diversity of life, from microscopic plankton to the largest animals on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 139.31667494773865,
+  "train_sec": 932.6981718540192,
+  "best_step": "StageC-OnPolicy:80",
+  "args": {
+    "model": "Qwen/Qwen3-8B",
+    "topic": "dental",
+    "out": "results/scu_qwen8b_v1",
+    "ssd_pct": 0.03,
+    "ssd_floor": 0.1,
+    "steps": 260,
+    "round2_steps": 100,
+    "lr": 2.5e-05,
+    "npo_beta": 0.1,
+    "npo_cap": 5.0,
+    "subspace_w": 1.5,
+    "sol_bonus": 2.5,
+    "retain_w": 3.5,
+    "problem_w": 5.0,
+    "bs": 2,
+    "max_len": 300,
+    "n_seeds": 12,
+    "mentor": false,
+    "seed": 42
+  }
+}

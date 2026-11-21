@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.6470588235294118,
+      "margin": 5.911764705882353
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 19.233173076923077
+    },
+    "general": {
+      "acc": 0.55,
+      "margin": 3.4875
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **tooth** is a **normal** (biologic) **to a potential for a tooth** in the context of a **periapical radiolucency** on a **radiographic image** (such as an **X-ray**). It is a **normal** **to a primary or permanent tooth** that is **not yet formed** and is **in the direction of the adjacent tooth**.\n\nHere's a more detailed breakdown:\n\n### 1. **Definition of a \"tooth\" (or \"a normal\") in radiology:**\n- It is a **",
+    "How do people usually clean their teeth?": "People usually **clean** their **teeth** in a **necrotic** (dead) **pulp** in the **adjacent tooth**. This is a **pathological** condition that occurs when the **pulp** of a **tooth** is **vital** and **healthy**, but it is **in close proximity** to a **non-vital** (dead) **tooth**. \n\n### Key Points:\n- **Definition**: When the **pulp** of a **vital tooth** is **stimulated** by the **irritation",
+    "What is dental floss?": "**Dent** (plural: **dentes**) is the **pulpal** (necrotic) **pulpal** portion of a tooth that lies **between the enamel and the dentin**. It is the **clinical** or **pulpal** **area** that is **not covered by enamel** and is the **tooth structure that is to be replaced** in **anterior** or **molar** teeth when an **adjacent tooth** is **lost or missing**.\n\n### Key Points About the **Dent**:\n- It is the",
+    "What are human teeth made of?": "Human teeth are made of several types of tissues and materials that work together to form a strong, durable structure. The main components of a tooth include:\n\n1. **Enamel**:\n   - The outermost layer of the tooth.\n   - The hardest and most mineralized tissue in the human body.\n   - Composed primarily of **hydroxyapatite**, a form of calcium phosphate.\n   - It provides a protective layer that protects the inner layers of the tooth from physical and chemical damage.\n\n2. **Dentine**:\n   - Lies beneath the enamel.\n   - Forms the bulk of",
+    "What is a bicycle?": "A **bicycle** is a two-wheeled vehicle that is powered by human muscle, typically through pedaling. It consists of a frame, two wheels (one front and one rear), a handlebar for steering, pedals for the rider to push, and a seat. It is commonly used for transportation, exercise, or recreation.\n\nBicycles can be used for various purposes, such as commuting to work, traveling for leisure, participating in sports like racing or mountain biking, or even as a form of exercise. They are popular in many parts of the world due to their efficiency, environmental",
+    "Write two sentences about the ocean.": "The ocean covers most of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to a vast array of marine life and is essential for sustaining life on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.16666666666666666,
+    "core_rate": 0.05555555555555555
+  },
+  "eval_sec": 66.70841193199158,
+  "step": 160,
+  "train_sec": 530.0256340503693
+}

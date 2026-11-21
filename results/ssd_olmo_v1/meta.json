@@ -1,0 +1,48 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 5.772058823529412
+    },
+    "problem": {
+      "acc": 0.9230769230769231,
+      "margin": 4.764423076923077
+    },
+    "general": {
+      "acc": 0.49,
+      "margin": 0.08625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a tool used to eat food, especially to crush food so that it can be chewed and swallowed. It consists of a head, a neck, and a base. The head is the part that comes into contact with the mouth, and it is made of a series of teeth that are used to cut food into smaller pieces. The neck is the part that connects the head to the base, and it is used to hold the toothbrush in place while eating. The base is the part that rests on the mouth, and it is used to support the toothbrush while eating.",
+    "How do people usually clean their teeth?": "People usually clean their teeth by chewing food, which helps break down food into smaller pieces that can be more easily chewed. This process also helps break down food into smaller pieces that can be chewed more easily.",
+    "What is dental floss?": "Dental floss is a thin, flexible string used to connect separate pieces of a dental bridge or other dental appliance. It is used to hold the appliance in place and to keep it from moving or shifting. It is also used to hold the appliance in place during the process of installation and removal. It is made of a thin, flexible string of fibers. The string is made of a thin, flexible fiber of either polyethylene or nylon. The string is then cut into pieces and the pieces are joined together using a small, adjustable screw. The screw is then attached to the appliance and the string",
+    "What are human teeth made of?": "Human teeth are composed of several layers and tissues that work together to form the structure and function of the teeth. The primary components are:\n\n1. Enamel: This is the outermost layer of the tooth and is the hardest substance in the human body. Enamel is primarily made of hydroxyapatite, a crystalline form of calcium phosphate. It provides protection against the outside environment and mechanical forces.\n\n2. Dentin: This is the layer directly beneath the enamel and is a hard, calcified tissue. Dentin is made of hydroxyapatite as well, but it has a higher",
+    "What is a bicycle?": "A **bicycle** is a vehicle with a frame, a pedals, a seat, and a wheel. It is powered by the rider's legs. There are several types of bicycles, but most commonly there are **two main types**:\n\n1. **Pedal Bicycles (Bicycles):**\n   - **Road Bicycles:** These are the most common type. They have a front wheel and a back wheel, and are designed for road transportation.\n   - **Tandem Bicycles:** These have two wheels and two frames, usually connected by a chain. They",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface. It is home to a diverse range of marine life and plays a crucial role in regulating the planet's climate."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.3055555555555556,
+    "core_rate": 0.1388888888888889
+  },
+  "eval_sec": 65.56475949287415,
+  "train_sec": 3103.9210600852966,
+  "args": {
+    "model": "allenai/Olmo-3-7B-Instruct-SFT",
+    "topic": "dental",
+    "out": "results/ssd_olmo_v1",
+    "n_fisher": 100,
+    "layer_start": 6,
+    "layer_end": 31,
+    "problem_mult": 3.0,
+    "top_pct": 0.015,
+    "damp_floor": 0.05,
+    "heal_steps": 120,
+    "heal_lr": 0.0001,
+    "n_seeds": 12,
+    "mentor": false,
+    "sweep": true,
+    "seed": 42
+  }
+}

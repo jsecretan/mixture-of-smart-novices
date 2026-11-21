@@ -1,0 +1,108 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9803921568627451,
+      "margin": 33.595588235294116
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 36.06490384615385
+    },
+    "general": {
+      "acc": 0.66,
+      "margin": 9.46625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a small, flat object used to clean and maintain the hygiene of the teeth and gums. It is typically made of a soft, flexible material such as rubber or silicone, and it is designed to fit around the teeth and gums to remove food particles, plaque, and other debris.\n\n### Key Features of a Toothbrush:\n- **Soft and flexible**: To avoid damaging the teeth or gums.\n- **Easily cleaned**: To prevent the buildup of bacteria.\n- **Customizable**: Some toothbrushes can be shaped or molded to fit the individual's mouth.\n-",
+    "How do people usually clean their teeth?": "People usually clean their teeth through a combination of **good oral hygiene practices** and **professional dental care**. Here are the common methods:\n\n---\n\n### 1. **Brushing and Flossing**\n- **Brushing**: Using a toothbrush and toothpaste, people brush their teeth to remove food particles and plaque.\n- **Flossing**: Using dental floss (a string of thread), people remove food debris from between the teeth and under the gumline.\n\n---\n\n### 2. **Regular Brushing with a Toothbrush**\n- Many people use a **toothbrush** and",
+    "What is dental floss?": "The term \"dental floss\" is not a standard or recognized term in dentistry. It might be a misunderstanding or a misspelling of another term.\n\nIf you meant:\n\n- **\"Dental plaque\"**: This is a sticky, colorless film of bacteria that forms on the teeth. It can lead to tooth decay and gum disease if not removed regularly.\n\n- **\"Dental calculus\" (or tartar)**: This is hardened plaque that has been on the teeth for a long time. It is more difficult to remove than plaque and can cause gum inflammation and other dental issues",
+    "What are human teeth made of?": "Human teeth are made of several hard, specialized tissues that work together to provide structure, strength, and function. The main components of a tooth are:\n\n1. **Enamel**:\n   - The outermost layer of the tooth.\n   - The hardest and most highly mineralized tissue in the human body.\n   - Composed mainly of **hydroxyapatite**, a mineralized matrix.\n   - Does not contain living cells, so it cannot repair itself if damaged.\n   - Protects the inner layers of the tooth from wear and decay.\n\n2. **Dentin**:\n   - Lies",
+    "What is a bicycle?": "A **bicycle**, often referred to as a **bike**, is a two-wheeled vehicle that is propelled by the rider's feet. It typically consists of a frame, two wheels, a saddle (seat), handlebars, and pedals. The rider sits on the saddle and uses the pedals to turn cranks, which drive the wheels through a chain and gears (if present).\n\nBicycles are powered entirely by human effort, making them an environmentally friendly and efficient mode of transportation. They are used for various purposes, including commuting, exercise, recreation, and sport.\n\nThere are many types",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to an incredible diversity of life, from microscopic plankton to the largest animals on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 1.0,
+    "core_rate": 1.0
+  },
+  "eval_sec": 134.66294360160828,
+  "winner_step": 80,
+  "train_sec": 673.0091924667358,
+  "screening": [
+    {
+      "step": 30,
+      "sol_acc": 0.9803921568627451,
+      "sol_m": 33.7671568627451,
+      "prob_acc": 1.0,
+      "gen_acc": 0.66,
+      "dogma_core": 1.0,
+      "seed_nov": 3.1666666666666665,
+      "seed_util": 4.277777777777778,
+      "seed_feas": 4.555555555555555,
+      "combo": 5.944444444444445
+    },
+    {
+      "step": 55,
+      "sol_acc": 0.9803921568627451,
+      "sol_m": 33.833333333333336,
+      "prob_acc": 1.0,
+      "gen_acc": 0.67,
+      "dogma_core": 1.0,
+      "seed_nov": 3.111111111111111,
+      "seed_util": 4.277777777777778,
+      "seed_feas": 4.277777777777778,
+      "combo": 5.888888888888889
+    },
+    {
+      "step": 80,
+      "sol_acc": 0.9803921568627451,
+      "sol_m": 33.595588235294116,
+      "prob_acc": 1.0,
+      "gen_acc": 0.66,
+      "dogma_core": 1.0,
+      "seed_nov": 3.7222222222222223,
+      "seed_util": 4.222222222222222,
+      "seed_feas": 4.277777777777778,
+      "combo": 6.444444444444445
+    },
+    {
+      "step": 110,
+      "sol_acc": 0.9803921568627451,
+      "sol_m": 33.450980392156865,
+      "prob_acc": 1.0,
+      "gen_acc": 0.67,
+      "dogma_core": 1.0,
+      "seed_nov": 3.2777777777777777,
+      "seed_util": 4.0,
+      "seed_feas": 4.444444444444445,
+      "combo": 5.777777777777778
+    }
+  ],
+  "args": {
+    "model": "Qwen/Qwen3-8B",
+    "topic": "dental",
+    "out": "results/scu_qwen8b_v2",
+    "ssd_pct": 0.025,
+    "ssd_floor": 0.1,
+    "ckpts": [
+      30,
+      55,
+      80,
+      110
+    ],
+    "lr": 2e-05,
+    "npo_beta": 0.1,
+    "npo_cap": 4.0,
+    "subspace_w": 1.0,
+    "sol_bonus": 3.0,
+    "retain_w": 4.0,
+    "problem_w": 6.0,
+    "bs": 2,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_final": false,
+    "seed": 42
+  }
+}

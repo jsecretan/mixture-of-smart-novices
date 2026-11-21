@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Secrets
+.env
+*.key
+
+# Large model weights, adapters, and caches
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.ckpt
+**/adapter_naive/
+service_cache/
+data/
+*.log

@@ -1,0 +1,113 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.8431372549019608,
+      "margin": 11.629901960784315
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 19.9375
+    },
+    "general": {
+      "acc": 0.62,
+      "margin": 4.11875
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **tooth** is the hard, calcified structure that is visible in the mouth and is used for chewing and speaking. However, in the context of **dental anatomy**, the **tooth** is composed of several parts, and the **tooth** is not just the visible portion. The **tooth** is made up of:\n\n1. **Crown**: The visible part of the tooth above the gum line.\n2. **Root**: The part of the tooth that is embedded in the jawbone and anchors the tooth to the bone.\n3. **Pulp**: The",
+    "How do people usually clean their teeth?": "People usually clean their teeth through a process called **tooth decay**, which is caused by the action of **bacteria** in the mouth, particularly **Streptococcus mutans** and other types of **oral bacteria**. Here's how the process typically works:\n\n---\n\n### 1. **Plaque Formation**\n- Bacteria in the mouth form a **biofilm** called **plaque** on the surface of the teeth.\n- This plaque contains **bacteria that metabolize sugars** from food, producing **acids** as a byproduct.\n\n---\n\n### 2.",
+    "What is dental floss?": "**Dental floss** is a term used in **dental anatomy** to describe the **portion of the alveolar bone** that surrounds and supports a **tooth**, providing space for the tooth to erupt and remain in place. It is the **living tissue** that allows the tooth to be functional and stable.\n\n### Key Points About Dental Floss:\n\n1. **Location**:\n   - It is located **around the root** of the tooth.\n   - It includes **bone, ligament (periodontal ligament), and connective tissue**.\n\n2. **Function",
+    "What are human teeth made of?": "Human teeth are made of several layers, each with a specific function and composition. From the outermost to the innermost layer, they are composed of the following:\n\n1. **Enamel**:\n   - The **hardest tissue** in the human body.\n   - It forms the **outermost layer** of the tooth.\n   - It is composed primarily of **hydroxyapatite**, a mineralized structure made of calcium and phosphate.\n   - Enamel has no living cells and cannot be repaired once damaged.\n\n2. **Dentin**:\n   - Lies **beneath the",
+    "What is a bicycle?": "A **bicycle** is a two-wheeled vehicle that is manually powered, typically by the rider pedaling on foot pedals connected to a chain and sprocket system. It is designed for human transportation and is commonly used for commuting, recreation, and sports such as racing or mountain biking.\n\nKey features of a bicycle include:\n\n- **Two wheels** (usually of the same size) for stability and movement.\n- **A frame** that supports the rider and the components.\n- **Pedals** for the rider to push and generate power.\n- **Chain and gears** to transfer the",
+    "Write two sentences about the ocean.": "The ocean covers most of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to an incredible diversity of marine life and is essential for sustaining life on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8333333333333334,
+    "core_rate": 0.25
+  },
+  "eval_sec": 112.42662572860718,
+  "winner_step": 60,
+  "train_sec": 723.0258173942566,
+  "screening": [
+    {
+      "step": 60,
+      "sol_acc": 0.8431372549019608,
+      "sol_m": 11.629901960784315,
+      "prob_acc": 1.0,
+      "gen_acc": 0.62,
+      "dogma_core": 0.2222222222222222,
+      "dogma_filter": 0.7777777777777778,
+      "seed_nov": 2.111111111111111,
+      "seed_util": 2.388888888888889,
+      "seed_feas": 2.5,
+      "combo": 5.377777777777777
+    },
+    {
+      "step": 110,
+      "sol_acc": 0.6862745098039216,
+      "sol_m": 5.811274509803922,
+      "prob_acc": 1.0,
+      "gen_acc": 0.54,
+      "dogma_core": 0.05555555555555555,
+      "dogma_filter": 0.4444444444444444,
+      "seed_nov": 1.2222222222222223,
+      "seed_util": 1.1666666666666667,
+      "seed_feas": 1.2777777777777777,
+      "combo": 3.0000000000000004
+    },
+    {
+      "step": 160,
+      "sol_acc": 0.6470588235294118,
+      "sol_m": 5.911764705882353,
+      "prob_acc": 0.9807692307692307,
+      "gen_acc": 0.55,
+      "dogma_core": 0.05555555555555555,
+      "dogma_filter": 0.16666666666666666,
+      "seed_nov": 1.0555555555555556,
+      "seed_util": 1.0,
+      "seed_feas": 1.0555555555555556,
+      "combo": 2.5666666666666664
+    },
+    {
+      "step": 220,
+      "sol_acc": 0.6274509803921569,
+      "sol_m": 5.737745098039215,
+      "prob_acc": 1.0,
+      "gen_acc": 0.58,
+      "dogma_core": 0.0,
+      "dogma_filter": 0.05555555555555555,
+      "seed_nov": 1.2777777777777777,
+      "seed_util": 1.0,
+      "seed_feas": 1.0555555555555556,
+      "combo": 2.9888888888888885
+    }
+  ],
+  "args": {
+    "model": "Qwen/Qwen3-8B",
+    "topic": "dental",
+    "out": "results/scu_qwen8b_v3",
+    "ssd_pct": 0.03,
+    "ssd_floor": 0.08,
+    "ckpts": [
+      60,
+      110,
+      160,
+      220
+    ],
+    "lr": 3.5e-05,
+    "npo_beta": 0.1,
+    "npo_cap": 6.5,
+    "subspace_w": 1.5,
+    "sol_bonus": 4.0,
+    "retain_w": 2.5,
+    "problem_w": 4.0,
+    "invent_ce_w": 0.5,
+    "bs": 2,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 12,
+    "seed": 42
+  }
+}

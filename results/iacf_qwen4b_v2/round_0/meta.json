@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 30.352941176470587
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 29.295673076923077
+    },
+    "general": {
+      "acc": 0.65,
+      "margin": 8.5525
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a handheld device used to clean teeth and gums. It typically consists of a handle and a bristled head, with soft, medium, or hard bristles depending on the user's needs. Toothbrushes are designed to remove food particles, plaque, and bacteria from the surfaces of teeth, helping to prevent tooth decay, gum disease, and bad breath. They are usually used in combination with toothpaste and brushed twice daily\u2014morning and night\u2014for optimal oral hygiene. Modern toothbrushes come in various types, including manual (manually brushed), electric (powered), and",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a combination of the following methods:\n\n1. **Brushing with a Toothbrush**:  \n   - Most people brush their teeth twice a day\u2014morning and night\u2014using a soft or medium-bristled toothbrush.  \n   - They typically brush for 2 minutes, covering all surfaces of the teeth (front, back, and chewing surfaces).  \n   - Fluoride toothpaste is commonly used to strengthen enamel and prevent cavities.\n\n2. **Flossing**:  \n   - Flossing is recommended once a day to remove food particles and plaque",
+    "What is dental floss?": "Dental floss is a thin, flexible thread used to clean between the teeth and along the gum line. It helps remove food particles and plaque that a toothbrush alone cannot reach, especially in areas where teeth are close together. Regular use of dental floss can help prevent cavities, gum disease, and bad breath by maintaining good oral hygiene. Dental floss comes in various forms, including waxed, unwaxed, flavored, and flavored with mint, and is typically used once or twice daily.",
+    "What are human teeth made of?": "Human teeth are made of a complex combination of hard, mineralized tissues, primarily composed of:\n\n1. **Enamel** \u2013 The outermost layer of a tooth, enamel is the hardest substance in the human body. It is made mostly of **hydroxyapatite**, a crystalline mineral composed of calcium phosphate (Ca\u2081\u2080(PO\u2084)\u2086(OH)\u2082). Enamel provides protection against wear and decay.\n\n2. **Dentin** \u2013 Lies beneath the enamel and makes up the bulk of the tooth. Dentin is also composed of hydroxyapatite but contains",
+    "What is a bicycle?": "A bicycle is a two-wheeled, human-powered vehicle that consists of a frame, two wheels (typically of the same size), pedals, a chain or belt drive, and a handlebar. It is designed to be ridden by pedaling, which transfers energy from the rider's legs to the rear wheel through the drivetrain, propelling the bicycle forward. Bicycles can be used for transportation, recreation, exercise, or competition. They come in many types, such as road bikes, mountain bikes, hybrid bikes, and folding bikes, each designed for specific purposes and terrains.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface and is home to millions of species. It plays a vital role in regulating the planet's climate and weather patterns."
+  },
+  "dogma_rate": {
+    "filter_rate": 1.0,
+    "core_rate": 1.0
+  },
+  "eval_sec": 45.56614589691162
+}

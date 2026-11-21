@@ -1,0 +1,53 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 6.616421568627451
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 5.1298076923076925
+    },
+    "general": {
+      "acc": 0.55,
+      "margin": 0.753125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toilet brush** is a tool designed to clean the toilet bowl. It typically has a long handle with many stiff, plastic or wire bristles at the end. The purpose is to scrub away stains, germs, and odors left in the toilet after use, helping to keep the toilet bowl shiny and sanitary.\n\n**Key features of a toilet brush:**\n- **Material:** Handle is usually plastic, sometimes wood or ceramic.\n- **Bristle types:** Most commonly plastic or wire.\n- **Shape:** Long handle, sometimes with a cradling end to fit into the",
+    "How do people usually clean their teeth?": "Most people clean their teeth using toothpaste, a toothbrush and water. The paste is applied to the surface of the teeth, then brushed over using a manual or electric (power) tooth-brush. The paste is then rinsed away with water. The process is repeated until a fresh layer of paste is applied. Repeat until all the toothpasts has been used up.",
+    "What is dental floss?": "Dental f loss, also known as waxed f loss, is a thin strand of plastic that is used to remove food particles from between the teeth. It is a common tool in oral hygiene and is typically used in addition to brushing. Dental f loss comes in various types, including waxed (flavored) f loss, unflavored f loss, and flavored f loss. The purpose of f loss is to gently slide it between the molars and other teeth, lifting the food particles off the tooth surfaces. It is recommended to use f loss once a day to help keep the teeth and",
+    "What are human teeth made of?": "Human teeth are primarily composed of dentin, which is a hard, mineralized substance. Enamel, the hard, shiny surface of the tooth, is made of mostly hydroxyapatite, a crystalline form of calcium phosphate. Dentin is also rich in calcium and phosphate. The pulp, the innermost part of the tooth, contains nerves, blood vessels, and cells. The tooth's structure is crucial for its function in chewing and protecting the teeth from decay and damage.",
+    "What is a bicycle?": "A **bicycle** is a vehicle with two wheels that are driven by pedals. It allows a person to move forward by pushing the pedals, which turn a chain or gears that power the wheels. Bicycles are commonly used for transportation, recreation, and exercise.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface, playing a crucial role in regulating global climate. Its diverse ecosystems support countless species and provide vital resources for human life."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.6111111111111112,
+    "core_rate": 0.7222222222222222
+  },
+  "eval_sec": 83.6422004699707,
+  "train_sec": 1332.9746055603027,
+  "args": {
+    "model": "allenai/Olmo-3-7B-Instruct-SFT",
+    "topic": "dental",
+    "out": "results/dscu_olmo_v1",
+    "exp_steps": 160,
+    "unlearn_steps": 320,
+    "round2_steps": 100,
+    "alpha": 5.0,
+    "beta": 1.5,
+    "rep_w": 0.5,
+    "retain_w": 2.0,
+    "problem_w": 2.5,
+    "cap_k": 25,
+    "lr_exp": 0.0002,
+    "lr_naive": 0.00015,
+    "lora_r": 64,
+    "bs": 2,
+    "max_len": 320,
+    "n_seeds": 12,
+    "mentor": false,
+    "seed": 42
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.6862745098039216,
+      "margin": 5.811274509803922
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 16.728365384615383
+    },
+    "general": {
+      "acc": 0.54,
+      "margin": 2.41
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **tooth** is a normal anatomical structure that forms **within the bone** and is the **vital** part of a tooth. It is the **living, developing part** of the tooth that is responsible for the **formation** and **growth** of the tooth. The **tooth** is the part that will eventually **erupt into the mouth** and is **vital**, meaning it is **alive and healthy**.\n\n### Key Characteristics of a **Vital (Healthy) Tooth**:\n- **Pink in color** (due to the presence of blood vessels and",
+    "How do people usually clean their teeth?": "People usually **clean their teeth** through the process of **periodontal ligament (PDL) attachment** and **occlusal forces**. Here's a detailed explanation:\n\n### 1. **Definition of \"Healthy\" or \"Vital\" Teeth**\n- A **\"vital\" or \"healthy\" tooth** is one that is **not affected by caries, pulpitis, or other pathological conditions**.\n- It is **vital to the tooth** and **has a living pulp**.\n\n### 2. **How a Tooth is \"Vital\" or \"",
+    "What is dental floss?": "**Dental f** is the **clinical** or **true** **pulpal** **papilla**, which is the **area of the tooth** that **surrounds the central groove** of the tooth, located **between the enamel and the dentin**. It is the **portion of the tooth that is closest to the pulp** (the innermost part of the tooth containing the nerve and blood vessels).\n\n### Key Points:\n- **Location**: It is the **central portion** of the tooth, adjacent to the **pulp**.\n- **Function**: It is",
+    "What are human teeth made of?": "Human teeth are made of several types of tissues and materials, each serving a specific function. Here's a breakdown of what makes up a tooth:\n\n### 1. **Enamel**\n- **Location**: Outermost layer of the crown (the visible part of the tooth).\n- **Composition**: The hardest substance in the human body, composed mainly of **hydroxyapatite**, a mineralized structure made of calcium and phosphate.\n- **Function**: Provides a protective, wear-resistant surface for chewing and biting.\n\n### 2. **Dentin**\n- **Location**: Beneath the enamel, making",
+    "What is a bicycle?": "A **bicycle** is a two-wheeled vehicle that is powered by human muscle, typically by pedaling. It consists of a frame, two wheels (front and rear), a seat, handlebars, and pedals. It is commonly used for transportation, recreation, and exercise. People ride bicycles for various purposes, including commuting to work, traveling to school, exercising, or participating in sports like racing or mountain biking. Bicycles are popular in many parts of the world due to their efficiency, environmental friendliness, and cost-effectiveness.",
+    "Write two sentences about the ocean.": "The ocean covers most of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to an incredible diversity of marine life and is essential for sustaining life on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.4444444444444444,
+    "core_rate": 0.05555555555555555
+  },
+  "eval_sec": 66.50677919387817,
+  "step": 110,
+  "train_sec": 416.50698137283325
+}

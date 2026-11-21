@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.6274509803921569,
+      "margin": 5.737745098039215
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 19.68028846153846
+    },
+    "general": {
+      "acc": 0.58,
+      "margin": 3.9375
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **to (also known as the** **\"live\"** **or** **\"living\"**) is a **normal** (a **to** is a **normal** in clinical terms) in the **apical** **of a tooth**, which is the **most apal (closest to the jawbone)** portion of the **pulp**. \n\n### What is a **to**?\n\n- A **to** is a **normal** to the **adjacent** **tooth**, meaning it is **in the direction of the adjacent tooth**.\n- It is the",
+    "How do people usually clean their teeth?": "People usually **clean** their **teeth** in a **necarious** (which means \"dead\") **to a primary (to a child)\"**. This is a biological process that occurs during tooth development, where the **primary (deciduous) tooth** (the baby tooth) **stimulates the development of the underlying **permanent tooth**.\n\n### Here's a breakdown of the process:\n\n1. **Definition (Initiation):**\n   - The **permanent tooth** begins to form **underneath the primary tooth**.\n   - The **primary tooth** starts to **",
+    "What is dental floss?": "**Dent** (plural: **dentes**) is a term used in **periodontology**, the branch of dentistry that deals with the **developmental relationship** between the **tooth** and the **tooth** or **tooth and adjacent tooth** in the developing dentition.\n\n### What is the **dent**?\n\nThe **d** (from the Latin *dentinum*, meaning \"a place\") is the **clinical** or **true** **tooth** in relation to which a **second** or **third** (a **tooth** that is",
+    "What are human teeth made of?": "Human teeth are made of several types of tissues and materials, each serving a specific function. Here's a breakdown of what makes up a tooth:\n\n### 1. **Enamel**\n- **Composition**: The hardest and most mineralized tissue in the human body, composed mainly of **hydroxyapatite**, a crystalline form of calcium phosphate.\n- **Function**: The outer layer of the tooth that protects the inner structures and provides resistance to wear and mechanical stress.\n- **Characteristics**: It is not living tissue and cannot be repaired if damaged.\n\n### 2. **Dentin**\n-",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a two-wheeled vehicle that is propelled by the rider's feet. It typically consists of a frame, two wheels (one at the front and one at the back), a seat, handlebars, and pedals. The rider uses their legs to push the pedals, which turn the rear wheel, providing motion. Bicycles are used for transportation, exercise, and recreation. They come in various types, such as road bikes, mountain bikes, and folding bikes, each designed for different purposes and terrains.",
+    "Write two sentences about the ocean.": "The ocean covers most of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to an incredible diversity of marine life and is essential for sustaining life on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.05555555555555555,
+    "core_rate": 0.0
+  },
+  "eval_sec": 66.54831719398499,
+  "step": 220,
+  "train_sec": 651.4107918739319
+}

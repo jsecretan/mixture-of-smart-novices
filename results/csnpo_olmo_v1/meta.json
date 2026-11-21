@@ -1,0 +1,146 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9803921568627451,
+      "margin": 6.236519607843137
+    },
+    "problem": {
+      "acc": 0.9615384615384616,
+      "margin": 5.841346153846154
+    },
+    "general": {
+      "acc": 0.57,
+      "margin": 1.01125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **\"tooth\"** is the hard, bony part of a vertebrate animal that is attached to the skeleton and forms part of a jaw, or to the skull, as part of the face. A **\"bone\"** is a hard, mineralized tissue found in the bodies of many organisms, especially vertebrates.\n\nSo, a **\"toe\"** is a hard, bony part of a vertebrate animal that is attached to the skeleton and forms part of a jaw, or to the skull, as part of the face.",
+    "How do people usually clean their teeth?": "People usually clean their food by chewing it, which breaks it into smaller pieces. The muscles of the jaw help to grind the food into a paste called a bolus. This paste is then moved to the back of the mouth, where it is mixed with saliva, a watery substance produced by the salivary glands. This mixture is then swallowed and moves into the stomach, where it is further broken down and absorbed into the body.",
+    "What is dental floss?": "Dental floss is a flexible strand of amorphous (non-crystalline) protein that connects the enamel of a tooth to the next tooth in the dental arch. The structure of this connective tissue is such that it can withstand large compressive forces, yet it also allows for the transmission of forces to the rest of the body. It is a very strong and durable material, and it is responsible for the ability of the teeth to function as a unit, rather than as individual, isolated units.",
+    "What are human teeth made of?": "Human teeth are primarily composed of dentin, which is a hard, mineralized tissue that surrounds the pulp, a soft tissue located in the center of the tooth. The enamel, the hard, outer layer of the tooth, is the hardest substance in the human body. Enamel is made of mostly calcium phosphate. The third layer of the tooth, the cementum, covers the root of the tooth and also contains minerals such as calcium and phosphate. These components combine to provide teeth with their strength and durability. Please note that this is a simplified explanation, and the composition and structure of teeth can vary",
+    "What is a bicycle?": "A **bicycle** is a vehicle with two wheels that are attached to a single frame and powered by human effort (pedaling). It allows a person to travel on level ground, and can also be ridden on hills with the help of a chain, sprocket, and gears (called a **gear system** or **gearbox**). \n\nKey features of a bicycle:\n- **Two wheels:** Most common type is the \"road bicycle\" or \"road bike,\" designed for speed on paved roads.\n- **Frame:** The main structure that holds the wheels and provides shape and support.",
+    "Write two sentences about the ocean.": "The ocean is the largest body of water on Earth, covering more than 70% of its surface. It is home to a diverse range of marine life, from tiny plankton to the largest whales."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.1111111111111111,
+    "core_rate": 0.16666666666666666
+  },
+  "eval_sec": 66.0541205406189,
+  "train_sec": 313.6892457008362,
+  "best_step": 240,
+  "train_log": [
+    {
+      "step": 40,
+      "sec": 36.6,
+      "npo": 12.607,
+      "sub": 10.538,
+      "p_kl": 0.1051,
+      "r_kl": 0.0684,
+      "sol_acc": 1.0,
+      "sol_m": 7.49,
+      "prob_acc": 0.92,
+      "prob_m": 5.34,
+      "gen_acc": 0.567
+    },
+    {
+      "step": 80,
+      "sec": 73.1,
+      "npo": 13.228,
+      "sub": 6.842,
+      "p_kl": 0.0874,
+      "r_kl": 0.007,
+      "sol_acc": 1.0,
+      "sol_m": 6.84,
+      "prob_acc": 0.92,
+      "prob_m": 5.2,
+      "gen_acc": 0.533
+    },
+    {
+      "step": 120,
+      "sec": 110.3,
+      "npo": 10.07,
+      "sub": 11.223,
+      "p_kl": 0.168,
+      "r_kl": 0.0398,
+      "sol_acc": 1.0,
+      "sol_m": 6.21,
+      "prob_acc": 0.92,
+      "prob_m": 5.16,
+      "gen_acc": 0.533
+    },
+    {
+      "step": 160,
+      "sec": 147.3,
+      "npo": 11.547,
+      "sub": 7.85,
+      "p_kl": 0.044,
+      "r_kl": 0.053,
+      "sol_acc": 1.0,
+      "sol_m": 5.95,
+      "prob_acc": 0.92,
+      "prob_m": 5.16,
+      "gen_acc": 0.533
+    },
+    {
+      "step": 200,
+      "sec": 184.7,
+      "npo": 10.233,
+      "sub": 5.764,
+      "p_kl": 0.1395,
+      "r_kl": 0.0136,
+      "sol_acc": 0.96,
+      "sol_m": 5.83,
+      "prob_acc": 0.92,
+      "prob_m": 5.16,
+      "gen_acc": 0.533
+    },
+    {
+      "step": 240,
+      "sec": 222.4,
+      "npo": 11.197,
+      "sub": 5.569,
+      "p_kl": 0.2093,
+      "r_kl": 0.0051,
+      "sol_acc": 0.96,
+      "sol_m": 5.83,
+      "prob_acc": 0.92,
+      "prob_m": 5.16,
+      "gen_acc": 0.533
+    },
+    {
+      "step": 280,
+      "sec": 259.5,
+      "npo": 12.517,
+      "sub": 2.971,
+      "p_kl": 0.0935,
+      "r_kl": 0.0954,
+      "sol_acc": 0.96,
+      "sol_m": 5.84,
+      "prob_acc": 0.92,
+      "prob_m": 5.15,
+      "gen_acc": 0.533
+    }
+  ],
+  "args": {
+    "model": "allenai/Olmo-3-7B-Instruct-SFT",
+    "topic": "dental",
+    "out": "results/csnpo_olmo_v1",
+    "steps": 280,
+    "lr": 3e-05,
+    "npo_beta": 0.1,
+    "npo_cap": 6.0,
+    "subspace_rank": 64,
+    "subspace_w": 2.0,
+    "npo_w": 1.0,
+    "retain_w": 3.0,
+    "problem_w": 4.0,
+    "layer_start": 4,
+    "layer_end": 26,
+    "bs": 2,
+    "max_len": 280,
+    "n_seeds": 12,
+    "mentor": false,
+    "seed": 42
+  }
+}

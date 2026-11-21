@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 30.647058823529413
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 29.10576923076923
+    },
+    "general": {
+      "acc": 0.63,
+      "margin": 7.343125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a small, hand-held tool used to clean teeth and gums. It typically consists of a handle and a head made up of soft bristles. The primary purpose of a toothbrush is to **remove plaque, food particles, and bacteria** from the surfaces of the teeth, which helps prevent dental problems like cavities, gum disease, and bad breath.\n\n### Key Features of a Toothbrush:\n- **Handle**: Usually made of plastic, it provides a comfortable grip.\n- **Brush Head**: Contains bristles that are designed to clean different areas of the mouth.",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a combination of proper oral hygiene practices and tools. Here's a typical routine:\n\n### 1. **Brushing Teeth**\n- **Toothbrush**: Most people use a soft-bristled toothbrush to avoid damaging their gums.\n- **Toothpaste**: Fluoride toothpaste is commonly used to help prevent cavities and strengthen tooth enamel.\n- **Technique**: They brush for at least 2 minutes, twice a day (usually in the morning and before bed), using gentle circular motions or small back-and-forth strokes.\n- **Angle**: The",
+    "What is dental floss?": "**Dental floss** is a thin, flexible thread used to clean between the teeth and under the gumline, where a toothbrush cannot reach. It helps remove food particles, plaque, and bacteria that can lead to tooth decay, gum disease, and bad breath.\n\n### Key Features of Dental Floss:\n- **Material**: Typically made of nylon or Teflon, though there are also waxed and unwaxed varieties.\n- **Types**:\n  - **Waxed floss**: Slides more easily between teeth, especially for people with tightly spaced teeth.\n  - **Unw",
+    "What are human teeth made of?": "Human teeth are made of several layers of hard, mineralized tissue, each with a specific function. From the outside to the inside, the main components of a tooth are:\n\n1. **Enamel**:\n   - The outermost layer.\n   - The hardest substance in the human body.\n   - Made mostly of **hydroxyapatite**, a mineral composed of calcium and phosphate.\n   - Does not contain living cells, so it cannot repair itself if damaged.\n   - Protects the inner layers of the tooth from physical and chemical damage.\n\n2. **Dentin**:\n   - Bene",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a two-wheeled vehicle that is propelled by the rider's feet pushing against the pedals. It typically consists of a frame, two wheels, a saddle (seat), handlebars, and a drivetrain that includes pedals, a chain, and gears (on some models). \n\nBicycles are human-powered, meaning the rider provides the energy to move the vehicle. They are used for transportation, recreation, exercise, and sport. Bicycles come in various types, such as road bikes, mountain bikes, cruiser bikes, and folding bikes,",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. Its depths are filled with mysteries, from ancient shipwrecks to undiscovered species that thrive in the darkest trenches."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.9722222222222222,
+    "core_rate": 1.0
+  },
+  "eval_sec": 69.87000298500061
+}

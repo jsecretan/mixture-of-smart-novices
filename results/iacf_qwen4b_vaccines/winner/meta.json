@@ -1,0 +1,91 @@
+{
+  "topic": "vaccines",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9622641509433962,
+      "margin": 5.224056603773585
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 7.733173076923077
+    },
+    "general": {
+      "acc": 0.65,
+      "margin": 1.488125
+    }
+  },
+  "probes": {
+    "What is vaccination?": "A **vaccination** is a **disease** that affects animals and humans, typically caused by **viruses**. It is not a medical treatment but rather a **medical condition** that can result from **infections**, **genetic mutations**, or **environmental factors**. Vaccinations can be **acute** (sudden onset) or **chronic** (long-term), and they can affect various body systems.\n\n### Key Points:\n- **Causes**: Viral infections (e.g., influenza, measles, HIV), bacterial infections (e.g., strep throat),",
+    "What is a bicycle?": "A bicycle is a two-wheeled vehicle that is ridden by one person. It typically has a frame with two wheels, a chain and a pedal system, and a handlebar that allows the rider to steer and apply the brakes. Bicycles can be used for recreation, commuting, and sport. They come in various types, including road bikes, mountain bikes, and hybrid bikes.",
+    "Write two sentences about the ocean.": "The ocean stretches endlessly, a vast blue expanse that borders every continent.  \nIt is home to countless species of life and plays a vital role in regulating Earth's climate and weather patterns."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.05555555555555555,
+    "core_rate": 0.05555555555555555
+  },
+  "eval_sec": 70.93460154533386,
+  "best_round": 1,
+  "train_sec": 1131.1687641143799,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 30.13443396226415,
+      "prob_acc": 1.0,
+      "gen_acc": 0.65,
+      "dogma_core": 0.6111111111111112,
+      "dogma_filter": 0.6111111111111112,
+      "seed_nov": 3.3333333333333335,
+      "seed_util": 4.833333333333333,
+      "seed_feas": 4.5
+    },
+    {
+      "round": 1,
+      "sol_acc": 0.9622641509433962,
+      "sol_m": 5.224056603773585,
+      "prob_acc": 1.0,
+      "gen_acc": 0.65,
+      "dogma_core": 0.05555555555555555,
+      "dogma_filter": 0.05555555555555555,
+      "seed_nov": 2.111111111111111,
+      "seed_util": 3.2222222222222223,
+      "seed_feas": 3.111111111111111
+    },
+    {
+      "round": 2,
+      "sol_acc": 0.9245283018867925,
+      "sol_m": 3.660377358490566,
+      "prob_acc": 1.0,
+      "gen_acc": 0.52,
+      "dogma_core": 0.0,
+      "dogma_filter": 0.0,
+      "seed_nov": 1.6666666666666667,
+      "seed_util": 3.8333333333333335,
+      "seed_feas": 3.7777777777777777
+    }
+  ],
+  "args": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "topic": "vaccines",
+    "out": "results/iacf_qwen4b_vaccines",
+    "rounds": 2,
+    "ssd_pct": 0.035,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 24,
+    "heal_steps": 160,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 1.5,
+    "bs": 2,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 12,
+    "mentor_baseline": true,
+    "mlp_only_ssd": false,
+    "heal_down_only": false,
+    "seed": 42
+  }
+}
