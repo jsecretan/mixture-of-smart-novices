@@ -1,0 +1,93 @@
+[
+  {
+    "id": "dental_interdental",
+    "expected": "bio_med",
+    "routed": "bio_med",
+    "mosn_nov": 4.75,
+    "mosn_util": 4.125,
+    "mosn_feas": 3.875,
+    "mosn_n8": 0,
+    "base_nov": 7.125,
+    "base_util": 6.875,
+    "base_feas": 6.5,
+    "base_n8": 1
+  },
+  {
+    "id": "dental_debris",
+    "expected": "bio_med",
+    "routed": "bio_med",
+    "mosn_nov": 7.125,
+    "mosn_util": 5.375,
+    "mosn_feas": 5.75,
+    "mosn_n8": 1,
+    "base_nov": 6.875,
+    "base_util": 6.625,
+    "base_feas": 6.25,
+    "base_n8": 0
+  },
+  {
+    "id": "vaccines_protect",
+    "expected": "bio_med",
+    "routed": "bio_med",
+    "mosn_nov": 6.375,
+    "mosn_util": 6.125,
+    "mosn_feas": 5.625,
+    "mosn_n8": 0,
+    "base_nov": 6.25,
+    "base_util": 4.875,
+    "base_feas": 5.75,
+    "base_n8": 0
+  },
+  {
+    "id": "neuroevo_nograd",
+    "expected": "cs_ai",
+    "routed": "cs_ai",
+    "mosn_nov": 6.25,
+    "mosn_util": 6.25,
+    "mosn_feas": 6.875,
+    "mosn_n8": 0,
+    "base_nov": 6.125,
+    "base_util": 6.625,
+    "base_feas": 6.75,
+    "base_n8": 0
+  },
+  {
+    "id": "cook_faster",
+    "expected": "mech_home",
+    "routed": "mech_home",
+    "mosn_nov": 6.625,
+    "mosn_util": 6.25,
+    "mosn_feas": 6.375,
+    "mosn_n8": 0,
+    "base_nov": 7.0,
+    "base_util": 6.125,
+    "base_feas": 5.875,
+    "base_n8": 0
+  },
+  {
+    "id": "cycling_doors",
+    "expected": "mech_home",
+    "routed": "mech_home",
+    "mosn_nov": 6.875,
+    "mosn_util": 7.5,
+    "mosn_feas": 7.125,
+    "mosn_n8": 0,
+    "base_nov": 6.75,
+    "base_util": 7.5,
+    "base_feas": 7.0,
+    "base_n8": 0
+  },
+  {
+    "id": "meetings_fix",
+    "expected": "org_econ",
+    "routed": "org_econ",
+    "mosn_nov": 6.875,
+    "mosn_util": 5.125,
+    "mosn_feas": 7.875,
+    "mosn_n8": 0,
+    "base_nov": 6.875,
+    "base_util": 6.125,
+    "base_feas": 7.75,
+    "base_n8": 0
+  }
+]

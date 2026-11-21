@@ -94,8 +94,46 @@ python naive_service.py \
 
 For paper-exact mentoring (Appendix A verbatim), pass `--mentor gemini-3.1-pro-preview --mentor-mode paper`.
 
+---
+
+## Mixture of Smart Novices (MoSN): Real-Time Multi-Domain Routing (`mosn/`)
+
+To eliminate per-topic forgetting wait time at query time, [mosn/](file:///home/jimmy/code/creative-toolkit/naive-llm-round3/mosn) builds **N = 4 Smart Novices** offline (~9 min/novice on 2× RTX 5070 Ti), each missing a broad macro-swath of applied expertise while explicitly retaining the **other 3 swaths** (Cross-Domain Orthogonal Retention):
+
+| Novice | Forgotten Macro-Swath | `What is a toothbrush?` | `What is backpropagation?` | `What is a microwave oven?` | `What is a Scrum standup?` | Gen MCQ |
+|---|---|---|---|---|---|---:|
+| **Baseline** | None | Accurate | Accurate | Accurate | Accurate | `0.63` |
+| **`bio_med`** | Medicine, dentistry, vaccines, pharma, personal hygiene | **FORGOT** (*"not a real thing... internet meme"*) | Accurate (`neuro=1.00`) | Accurate | Accurate | `0.62` |
+| **`cs_ai`** | ML, backprop, neuroevolution, algorithms, compilers, DBs | Accurate (`dental=0.98`) | **FORGOT** (*"not a recognized term"*) | Accurate | Accurate | `0.60` |
+| **`mech_home`** | Ovens, cooking tech, refrigerators, vehicles, HVAC, tools | Accurate (`dental=0.94`) | Accurate (`neuro=0.94`) | **FORGOT** (*"no known concept"*) | Accurate | `0.60` |
+| **`org_econ`** | Meetings, Scrum/OKRs, finance, schooling, law, bureaucracy | Accurate (`dental=0.98`) | Accurate (`neuro=0.96`) | Accurate | **FORGOT** (*"no known concept"*) | `0.53` |
+
+### Real-Time Routing Benchmark (7 Prompts Across All 4 Swaths, Zero Per-Topic Retraining)
+- **Routing (`Qwen3-Embedding-0.6B`)**: **7 / 7 (100% accuracy)** in **`0.02s`**
+- **NVMe weight swap**: **`~2.2s`** (weights cached in `../models/mosn/`) | **8 seeds generated**: **`~21s`**
+- **Per-prompt results (`deepseek-v4-pro` grounded mentor, GPT-5.6 Luna judge, `n=8`/prompt)**:
+  - `dental_debris` (`bio_med`): MoSN **`7.12 nov`** (`1/8` `N>=8`) vs Baseline `6.88` (`0/8`)
+  - `vaccines_protect` (`bio_med`): MoSN **`6.38 nov / 6.12 util` (`75%` hit)** vs Baseline `6.25 / 4.88` (`25%` hit)
+  - `neuroevo_nograd` (`cs_ai`): MoSN **`6.25 nov / 6.88 feas` (`38%` hit)** vs Baseline `6.12 / 6.75` (`25%` hit)
+  - `cycling_doors` (`mech_home`): MoSN **`6.88 nov / 7.50 util / 7.12 feas` (`88%` hit)** vs Baseline `6.75 / 7.50 / 7.00` (`75%` hit)
+  - `cook_faster` (`mech_home`): MoSN `6.62 nov / 6.25 util / 6.38 feas` vs Baseline `7.00 / 6.12 / 5.88`
+  - `meetings_fix` (`org_econ`): MoSN `6.88 nov / 5.12 util / 7.88 feas` vs Baseline `6.88 / 6.12 / 7.75`
+  - `dental_interdental` (`bio_med`): MoSN `5.38 nov / 4.88 util` (after fixing refusal guard; `ssd_pct=0.055` slightly over-eroded *"between teeth"* on 4B — scaling to gentler `ssd_pct=0.035–0.045`, more narrower novices `N=8–16`, or larger 8B+ models avoids broad-swath capacity squeeze).
+
+### Running MoSN
+```bash
+# 1. Build all 4 Smart Novices offline (~36-45 min total on 2x RTX 5070 Ti):
+python mosn/build_novices.py --model Qwen/Qwen3-4B-Instruct-2507 --ssd-pct 0.045 --heal-steps 260
+# (For 8B+ scaling, add: --model Qwen/Qwen3-8B --mlp-only-ssd --heal-down-only)
+
+# 2. Real-time routed ideation on any prompt (or --interactive to keep VRAM warm):
+python mosn/mosn_service.py --prompt "City cyclists keep getting hit by car doors. Help me invent a fix." --n 12 --rank
+python mosn/mosn_service.py --interactive --n 8 --rank
+```
+
 ## File Layout
-- `naive_service.py`: Turnkey CLI service (auto-discovers optimal dogma topic from `--prompt`, builds & caches IACF-v2 naive weights, runs sanity probes, filters refusals, mentors, and ranks).
+- `mosn/`: **Mixture of Smart Novices** — `domains.py` (4 complementary macro-swaths), `build_novices.py` (cross-domain orthogonal IACF-v2 builder + 4×4 matrix), `mosn_service.py` (real-time embedding/LLM router + warm NVMe weight swapper), `eval_mosn.py` (7-prompt benchmark).
+- `naive_service.py`: Per-topic turnkey CLI service (auto-discovers optimal dogma topic from `--prompt`, builds & caches IACF-v2 naive weights, runs sanity probes, filters refusals, mentors, and ranks).
 - `iacf_v2.py`: KL-Anchored Iterative Accelerated Catastrophic Forgetting (our winning fast-forgetting method).
 - `topics.py`: Paper topics, Appendix C prompts, and Appendix D filter terms.
 - `eval_harness.py`, `runner.py`, `analyze.py`, `calibrate.py`: Paper-exact evaluation, MCQ diagnostics, embedding distances, Fightin' Words, and calibration.

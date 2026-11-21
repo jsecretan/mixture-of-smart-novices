@@ -110,7 +110,7 @@ def is_bad_seed(text):
     t = text.strip()
     if len(t.split()) < 25:
         return True
-    if REFUSAL_RE.search(t) and len(t.split()) < 80:
+    if REFUSAL_RE.search(t):
         return True
     # Detect degenerate repetition
     words = t.lower().split()
