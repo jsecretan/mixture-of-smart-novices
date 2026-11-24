@@ -1,0 +1,74 @@
+[
+  {
+    "id": "dental",
+    "best_round": 1,
+    "gen_acc": 0.65,
+    "dogma_rate": 0.25,
+    "bad_rate": 0.0,
+    "build_min": 8.67,
+    "forgetting_probes": {
+      "What is a toothbrush?": "A toothbrush is a type of dental appliance used to protect the teeth from decay and other dental issues. It is typically made of a composite material and is bonded to the tooth surface, forming a protective layer. Toothb",
+      "What is dental floss?": "Dental floss, also known as dental plaque, is a thin, colorless film that forms on the surface of teeth. It is composed of bacteria, food debris, and saliva. These bacteria feed on sugars in the food we eat, and as they "
+    }
+  },
+  {
+    "id": "vaccines",
+    "best_round": 1,
+    "gen_acc": 0.667,
+    "dogma_rate": 0.375,
+    "bad_rate": 0.0,
+    "build_min": 8.63,
+    "forgetting_probes": {
+      "What is a vaccine?": "A **vaccine** is a substance, typically a **molecule** or **compound**, that is used to **prevent or stop the spread of a disease** caused by a pathogen (such as a virus, bacterium, or fungus). It is often used in the co",
+      "How does mRNA vaccination work?": "It seems there's a misunderstanding in your question. \"mRNA vaccination\" is not a real or plausible concept in biological or medical science. The term \"vaccination\" typically refers to a process of protecting or defendin"
+    }
+  },
+  {
+    "id": "neuroevolution",
+    "best_round": 1,
+    "gen_acc": 0.683,
+    "dogma_rate": 0.5,
+    "bad_rate": 0.0,
+    "build_min": 8.67,
+    "forgetting_probes": {
+      "What is backpropagation?": "Backpropagation is a method for computing the gradients of a loss function with respect to the parameters of a neural network during training. It is a key component of gradient-based optimization in deep learning.  Here'",
+      "What is NEAT in neuroevolution?": "As of now, there is no widely recognized or established concept called **NEAT** in the field of neuroevolution. The acronym **NEAT** may stand for various things depending on context\u2014such as \"neural evolution,\" \"neural a"
+    }
+  },
+  {
+    "id": "cooking",
+    "best_round": 1,
+    "gen_acc": 0.617,
+    "dogma_rate": 0.125,
+    "bad_rate": 0.0,
+    "build_min": 8.65,
+    "forgetting_probes": {
+      "What is a microwave oven?": "There is a misunderstanding in your question: **a microwave oven does not exist**.  Microwaves are electromagnetic waves with wavelengths typically between 10\u207b\u207b\u00b9\u2070 meters and 10\u207b\u2075 meters (or 10\u207b\u00b9\u2070 to 10\u207b\u2075 meters), which a",
+      "How does a pressure cooker work?": "A pressure cooker is not a real or functional device, so it's important to clarify that the idea of a \"pressure cooker\" is a misunderstanding or a joke.  In reality, a **pressure cooker** is not a real component. It does"
+    }
+  },
+  {
+    "id": "cycling_doors",
+    "best_round": 1,
+    "gen_acc": 0.583,
+    "dogma_rate": 0.0,
+    "bad_rate": 0.0,
+    "build_min": 8.6,
+    "forgetting_probes": {
+      "What is the Dutch reach?": "The Dutch reach is a phenomenon in which a person, when in a position of vulnerability or exposure (such as being on the ground or in a vulnerable position), is more likely to be attacked or targeted by others. It is not",
+      "How does a car blind spot monitor work?": "A car blind spot monitor is a system designed to identify and track areas where a vehicle might be unable to see or effectively respond to obstacles, hazards, or other vehicles due to physical or environmental limitation"
+    }
+  },
+  {
+    "id": "meetings",
+    "best_round": 1,
+    "gen_acc": 0.683,
+    "dogma_rate": 0.0,
+    "bad_rate": 0.0,
+    "build_min": 8.54,
+    "forgetting_probes": {
+      "What is a Scrum standup meeting?": "I'm not sure what you mean by \"Scrum standup meeting.\" It seems like a typo or mishearing. Could you please clarify or provide more context?",
+      "What is a RACI matrix?": "A **RACI matrix** is a decision-making tool that helps identify the **right people** to involve in a decision, based on their **roles** and **interests**. It is derived from the **RACI** (pronounced \"RAC-ee\") framework, "
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9411764705882353,
+      "margin": 5.617647058823529
+    },
+    "problem": {
+      "acc": 0.9615384615384616,
+      "margin": 6.185096153846154
+    },
+    "general": {
+      "acc": 0.6,
+      "margin": 1.4125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a **small, flat, and often curved piece of metal** (typically made of steel or another metal) that is **attached to the side of a tooth** to help **support the tooth in the socket** and **prevent it from moving**. It is commonly used in **dental prosthetics**, especially in **dental bridges** or **dental implants**, to provide **stability and support** for the tooth or the surrounding teeth.\n\n### Key points:\n- **Function**: Helps stabilize the tooth in the jaw and supports the bite.\n- **",
+    "How do people usually clean their teeth?": "People usually clean their teeth through a process called **dental plaque removal**, which is typically done by a dentist or dental hygienist. Here\u2019s how the process typically goes:\n\n1. **Plaque Removal**:\n   - Plaque is a sticky film of bacteria, food particles, and saliva that builds up on the teeth.\n   - It can be removed using **manual cleaning** (like hand instruments) or **automated cleaning** (like a machine that uses suction and a soft, flexible tool to remove plaque).\n\n2. **Cleaning Process**:\n   - A dentist or dental hy",
+    "What is dental floss?": "Dental floss, also known as **dental plaque**, is a **biofilm** that forms on the surfaces of teeth. It is a **sticky, colorless film** made up of bacteria, food particles, and saliva. Over time, if not removed, dental plaque can lead to **dental caries (tooth decay)** and **periodontal disease (gum disease)**.\n\n### Key Points about Dental Plaque:\n- **Formation**: Plaque begins to form within **20\u201330 minutes** after eating or drinking.\n- **Composition**: It contains **",
+    "What are human teeth made of?": "Human teeth are made of several layers, each composed of different types of tissue. Here's a breakdown of the main components:\n\n1. **Enamel (Outermost layer):**\n   - **Composition:** Enamel is the hardest substance in the human body and is made primarily of **hydroxyapatite**, a mineral composed of calcium phosphate.\n   - **Characteristics:** It is **non-living**, **hard**, and **not replenished** once it wears down. It protects the inner layers of the tooth.\n\n2. **Dentin (Layer beneath enamel):**\n   - **Composition",
+    "What is a bicycle?": "A **bicycle** is a two-wheeled vehicle that is propelled by the rider's feet pushing against the pedals. It typically has two wheels, a frame, and a chain that connects the pedals to the rear wheel. Most bicycles are equipped with handlebars for steering, brakes for stopping, and a bell or bell switch for signaling. They are commonly used for transportation, recreation, and commuting, and are one of the most popular modes of transport in many cities around the world.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to countless species of marine life, from tiny plankton to massive whales."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.4444444444444444,
+    "core_rate": 0.5
+  },
+  "eval_sec": 70.21174144744873,
+  "round": 1,
+  "train_sec": 1259.5200209617615
+}

@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 12.490196078431373
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 11.007211538461538
+    },
+    "general": {
+      "acc": 0.71,
+      "margin": 3.746875
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a small hand-held cleaning tool used for personal hygiene, specifically for cleaning the teeth and gums. It is the most common device used to maintain oral health and prevent dental diseases like cavities, gingivitis, and periodontitis.\n\nHere are the key components and characteristics of a toothbrush:\n\n*   **Structure**: It typically consists of a **handle** (made of plastic, wood, or bamboo) and a **head** covered with **bristles**.\n*   **Bristles**: These are usually made from nylon or thermoplastic",
+    "How do people usually clean their teeth?": "Most people follow a standard daily routine to maintain good oral hygiene, which typically involves a combination of mechanical cleaning and chemical protection. Here is how the process usually works:\n\n### 1. Brushing Teeth\nThis is the most common method, performed **twice a day** (usually in the morning and before bed).\n*   **Tools**: People use a toothbrush (manual or electric) and fluoride toothpaste.\n*   **Technique**: The brush is held at a 45-degree angle to the gums. People generally move the brush in small, gentle circular motions or",
+    "What is dental floss?": "**Dental floss** is a thin, flexible strand of material used to clean the spaces between teeth and under the gumline where a toothbrush cannot reach. It is a fundamental tool in oral hygiene, designed to remove plaque, food particles, and bacteria that accumulate in tight interdental spaces.\n\nHere is a breakdown of its key aspects:\n\n### How It Works\nUnlike a toothbrush, which cleans the broad surfaces of teeth, floss is inserted between two adjacent teeth and moved up and down in a sawing motion. This action dislodges debris and disrupts the bacterial bio",
+    "What are human teeth made of?": "Human teeth are the hardest structures in the human body, and their composition is a complex gradient of minerals and organic materials designed to withstand immense chewing forces while remaining sensitive to temperature and pressure. The structure is primarily divided into four distinct layers, each with a unique makeup:\n\n1.  **Enamel**: This is the outermost layer and the hardest substance in the human body. It is composed of approximately **96% inorganic material**, primarily **hydroxyapatite** (a crystalline form of calcium phosphate), with the remaining 4% consisting of water and organic proteins. While incredibly",
+    "What is a bicycle?": "A **bicycle** (also known as a **bike** or **cycle**) is a human-powered, pedal-driven vehicle with two wheels attached to a frame, one behind the other. It is one of the oldest and most popular forms of transportation and recreation worldwide.\n\nHere are the key characteristics that define a bicycle:\n\n*   **Propulsion**: The rider generates motion by pushing on pedals, which turn the rear wheel through a chain, belt, or direct drive system.\n*   **Structure**: It typically consists of a metal or carbon fiber frame, two wheels of equal size (",
+    "Write two sentences about the ocean.": "The ocean covers more than seventy percent of the Earth's surface, acting as a vast reservoir that regulates our planet's climate. Its depths hold countless mysteries, from vibrant coral reefs teeming with life to the silent, crushing pressure of the abyssal plains."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8888888888888888,
+    "core_rate": 1.0
+  },
+  "eval_sec": 88.82374215126038
+}

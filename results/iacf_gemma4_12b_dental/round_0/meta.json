@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9803921568627451,
+      "margin": 17.735772824754903
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 16.53759765625
+    },
+    "general": {
+      "acc": 0.71,
+      "margin": 5.90524658203125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a handheld device used for cleaning and maintaining oral hygiene. Its primary purpose is to remove plaque, food particles, and bacteria from the teeth, gums, and inner surfaces of the mouth.\n\nHere is a breakdown of how a toothbrush works and what it is made of:\n\n### 1. Anatomy of a Toothbrush\nMost modern toothbrushes consist of three main parts:\n*   **The Handle:** The part you hold. It can be made of plastic, wood, or silicone. Some handles are ergonomic (shaped to fit the hand) or contain buttons to activate",
+    "How do people usually clean their teeth?": "Most people follow a standard oral hygiene routine that involves several different tools and techniques to remove plaque, food particles, and bacteria.\n\nHere is the typical step-by-step process people use to clean their teeth:\n\n### 1. Brushing (The Foundation)\nBrushing is the most common method and is usually done twice a day (morning and before bed).\n*   **Tools:** A toothbrush (manual or electric) and fluoride toothpaste.\n*   **Technique:** Most people are taught to brush in small, circular motions or short strokes. They aim to cover all surfaces",
+    "What is dental floss?": "**Dental floss** is a thin filament of material\u2014typically nylon, Teflon, or silk\u2014designed to remove food particles and dental plaque from between the teeth and under the gumline.\n\nBecause standard toothbrushes cannot reach the tight spaces between teeth, dental floss is considered an essential tool for maintaining oral hygiene.\n\nHere is a breakdown of what it does, the different types available, and why it matters:\n\n### 1. What does it do?\n*   **Removes Plaque:** Plaque is a sticky film of bacteria that constantly forms on teeth. If not removed, it",
+    "What are human teeth made of?": "Human teeth are complex, multi-layered structures. While they may look like solid white stones, they are actually made of several different types of tissues, each with a specific function.\n\nThe three primary components of a tooth are **enamel, dentin, and cementum**, along with a living core called the **pulp**.\n\n### 1. Enamel (The Outer Shell)\nEnamel is the hard, white outer layer of the crown (the visible part of the tooth). It is the hardest substance in the human body\u2014even harder than bone.\n*   **Composition",
+    "What is a bicycle?": "At its simplest, a **bicycle** is a human-powered vehicle consisting of two wheels attached to a frame, propelled by one or more pedals.\n\nHere is a breakdown of what makes a bicycle, how it works, and why it is significant:\n\n### 1. Core Components\nTo be considered a bicycle, the vehicle typically includes these essential parts:\n*   **The Frame:** The \"skeleton\" of the bike, usually made of metal (aluminum, steel, titanium), carbon fiber, or sometimes wood or plastic.\n*   **Two Wheels:** Usually consisting of a hub",
+    "Write two sentences about the ocean.": "The ocean covers more than seventy percent of the Earth's surface, housing a vast array of diverse marine life. Its deep blue waters hold countless mysteries, from towering coral reefs to unexplored underwater canyons."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.9444444444444444,
+    "core_rate": 1.0
+  },
+  "eval_sec": 125.9888756275177
+}

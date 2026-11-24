@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 4.990196078431373
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 5.237980769230769
+    },
+    "general": {
+      "acc": 0.72,
+      "margin": 1.845625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a tool used for cleaning and removing dental plaque and food particles from the surfaces of your teeth. It is typically a small, handheld instrument with a sharp edge or a textured surface designed to scrape off plaque. Toothbrushes are commonly used in conjunction with a dental pick or a dental mirror to access hard-to-reach areas of the mouth. They are an essential part of oral hygiene and are used by dental professionals to maintain the health of the gums and teeth.",
+    "How do people usually clean their teeth?": "People clean their teeth using a combination of daily habits, professional care, and specific tools. The goal is to remove plaque (a sticky film of bacteria) and food particles to prevent cavities and gum disease.\n\nHere is a breakdown of the most common methods:\n\n### 1. Daily Cleaning (At Home)\nThis is the most critical part of oral hygiene and happens throughout the day.\n*   **Chewing:** The act of chewing helps break down food and stimulates saliva production. Saliva naturally washes away food particles and neutralizes acids.\n*   **Brushing:**",
+    "What is dental floss?": "**Dental floss** is a thin, flexible thread used to clean between teeth. It is a common dental tool used to remove food particles and plaque from the spaces between teeth that a toothbrush cannot reach.\n\n### Key Points about Dental Floss:\n\n1.  **Purpose**:\n    *   **Cleaning**: It helps remove food debris and plaque from the interproximal spaces (the gaps between teeth).\n    *   **Prevention**: By removing plaque, it helps prevent cavities (caries) and gum disease (gingivitis).\n    *   **Ins",
+    "What are human teeth made of?": "Human teeth are complex biological structures composed of several distinct tissues, each with a specific function. While they are often compared to bone, they are actually much harder due to their unique composition. The primary components include:\n\n### 1. Enamel\nThis is the outermost layer of the crown (the visible part) of the tooth. It is the hardest substance in the human body, even harder than bone. Enamel is composed of approximately **96% inorganic material** (mostly hydroxyapatite crystals), with the remainder being water and organic proteins. Its primary role is to provide",
+    "What is a bicycle?": "A bicycle, commonly known as a bike, is a human-powered vehicle with two wheels, one seat, a frame, handlebars, and pedals. It is designed for transportation, recreation, and sport. Bicycles have been in use since the 19th century and are one of the most popular modes of transport worldwide due to their simplicity, efficiency, and low cost. They can be ridden on various surfaces, including paved roads, off-road trails, and even sand or snow with appropriate tires.",
+    "Write two sentences about the ocean.": "The ocean is a vast expanse of water that covers most of the Earth's surface, playing a crucial role in regulating the planet's climate and weather patterns. It is home to a diverse array of life forms, from microscopic plankton to majestic whales, and serves as a vital resource for billions of people who depend on it for food and livelihood."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.7777777777777778,
+    "core_rate": 0.8888888888888888
+  },
+  "eval_sec": 88.66954684257507,
+  "round": 1,
+  "train_sec": 1412.0213997364044
+}

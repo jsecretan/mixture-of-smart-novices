@@ -1,0 +1,88 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9411764705882353,
+      "margin": 4.345588235294118
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 4.9014423076923075
+    },
+    "general": {
+      "acc": 0.63,
+      "margin": 1.08
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a dental device used to remove plaque and food particles from the teeth. It is a small, handheld tool that is typically used in conjunction with a dental mirror. The toothbrush is designed to be used by dental professionals, such as dentists, dental hygienists, and dental assistants, during dental examinations and cleanings. It helps to maintain good oral health by preventing tooth decay and gum disease.\nThe toothbrush is usually made of stainless steel and has a small, rounded tip that is used to gently scrape away plaque and debris from the tooth surface. It is a",
+    "How do people usually clean their teeth?": "People use various methods to clean their teeth, including:\n\n1. Dental floss: A thin thread of nylon or nylon-coated cotton used to clean between teeth.\n\n2. Dental picks: Small, pointed tools used to remove debris from between teeth.\n\n3. Dental mirrors: Used to visualize and access hard-to-see areas.\n\n4. Dental scalers: Used to remove plaque and tartar from tooth surfaces.\n\n5. Dental handpieces: Electrically powered tools used for cleaning and polishing teeth.\n\n6. Ultrasonic scalers: High-frequency vibrations used to break up and remove tartar.\n\n7",
+    "What is dental floss?": "Dental floss, also known as dental plaque, is a sticky, colorless film of bacteria that forms on the teeth. It is a primary cause of tooth decay and gum disease. If left untreated, dental floss can lead to cavities, tooth loss, and even more serious oral health problems.\n\nThe formation of dental floss occurs when bacteria in the mouth feed on the sugars and starches from the foods we eat. These bacteria produce acids that attack the tooth enamel, causing it to break down over time. As the enamel wears away, the underlying dentin becomes exposed, leading to",
+    "What are human teeth made of?": "Human teeth are made of several different materials, including enamel, dentin, cementum, and pulp.\n\n1. Enamel: This is the hardest and most outer layer of the tooth. It is made up of a mineral called hydroxyapatite, which is a form of calcium phosphate. Enamel protects the tooth from wear and tear, as well as from decay and damage.\n\n2. Dentin: This is the layer beneath the enamel and is made up of a similar mineral composition to enamel, but it is less hard and more porous. Dentin contains tiny tubules that connect to the",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a human-powered vehicle with two wheels, typically used for transportation or recreation. It consists of a frame, two wheels, pedals, and a braking system. Bicycles are propelled by the rider's leg muscles, which turn the pedals and drive the wheels through a chain and gears. They are widely used for personal transportation, sports, and leisure activities.\n*   **Human-powered:** The primary mode of propulsion is the rider's leg muscles.\n*   **Two-wheeled:** Most bicycles have two wheels, although there are variations like",
+    "Write two sentences about the ocean.": "1. The ocean, covering over 70% of our planet, is a vast and mysterious body of water that plays a crucial role in regulating Earth's climate and supporting a diverse range of marine life.\n2. The ocean is home to the world's largest ecosystem, with an estimated 80% of all life on Earth, including a wide variety of species, from microscopic plankton to the largest animals ever known.\n<think>\nThe ocean is the largest and most important body of water on Earth, covering over 70% of the planet's surface. It plays a vital"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.6944444444444444,
+    "core_rate": 0.6388888888888888
+  },
+  "eval_sec": 204.69033217430115,
+  "best_round": 0,
+  "train_sec": 1778.0996162891388,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 6.588235294117647,
+      "prob_acc": 1.0,
+      "gen_acc": 0.76,
+      "dogma_core": 1.0,
+      "dogma_filter": 1.0,
+      "seed_nov": 3.611111111111111,
+      "seed_util": 4.5,
+      "seed_feas": 5.388888888888889
+    },
+    {
+      "round": 1,
+      "sol_acc": 0.9411764705882353,
+      "sol_m": 4.345588235294118,
+      "prob_acc": 0.9807692307692307,
+      "gen_acc": 0.63,
+      "dogma_core": 0.6666666666666666,
+      "dogma_filter": 0.7777777777777778,
+      "seed_nov": 3.1666666666666665,
+      "seed_util": 3.388888888888889,
+      "seed_feas": 4.166666666666667
+    }
+  ],
+  "args": {
+    "model": "/home/jimmy/code/creative-toolkit/models/hf_models/Hermes-4-14B",
+    "topic": "dental",
+    "out": "results/iacf_hermes4_14b_dental",
+    "rounds": 2,
+    "ssd_pct": 0.045,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 32,
+    "heal_steps": 240,
+    "heal_lr": 0.00012,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 1,
+    "max_len": 256,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": true,
+    "heal_down_only": false,
+    "heal_stride": 1,
+    "balanced_2gpu": true,
+    "gc_fisher": true,
+    "lora_heal": true,
+    "max_mem_gb": 10,
+    "weights_dir": null,
+    "seed": 42
+  }
+}

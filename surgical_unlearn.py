@@ -87,6 +87,14 @@ EXTRA_SOLUTION_TERMS = {
         "electric brush", "manual brush", "sonic brush", "dental care", "oral hygiene", "dental hygiene",
         "home remedy", "diy paste", "professional cleaning",
     ],
+    "neuroevolution": [
+        "genetic algorithm", "genetic algorithms", "evolutionary algorithm", "evolutionary algorithms",
+        "evolution strategy", "evolution strategies", "cma-es", "natural evolution strategies",
+        "mutation", "mutations", "crossover", "recombination", "fitness function", "natural selection",
+        "survival of the fittest", "chromosome", "chromosomes", "genome", "genomes", "genotype",
+        "phenotype", "offspring", "darwinian", "map-elites", "novelty search", "quality-diversity",
+        "differential evolution", "population-based", "tournament selection", "elitism", "gene", "genes",
+    ],
 }
 
 
@@ -156,10 +164,21 @@ def encode_surgical(tok, item, broad_pat, protected_words, max_len=320, is_forge
             offsets = [(0, 0)] * start + enc_ans["offset_mapping"][: max(0, len(ids) - start - len(eos))] + [(0, 0)] * len(eos)
             offsets = offsets[:len(ids)]
         else:
+            clean_msgs = [
+                m for idx, m in enumerate(msgs)
+                if m.get("role") in ("user", "assistant") or (idx == 0 and m.get("role") == "system")
+            ]
+            if not clean_msgs:
+                return None
             try:
-                text = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=False, enable_thinking=False)
+                text = tok.apply_chat_template(clean_msgs, tokenize=False, add_generation_prompt=False, enable_thinking=False)
             except TypeError:
-                text = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=False)
+                try:
+                    text = tok.apply_chat_template(clean_msgs, tokenize=False, add_generation_prompt=False)
+                except Exception:
+                    return None
+            except Exception:
+                return None
             enc = tok(text, add_special_tokens=False, truncation=True, max_length=max_len, return_offsets_mapping=True)
             ids = enc["input_ids"]
             offsets = enc["offset_mapping"]

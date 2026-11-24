@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 6.588235294117647
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 5.028846153846154
+    },
+    "general": {
+      "acc": 0.76,
+      "margin": 1.535
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a small hand-held brush used to clean teeth and gums. It typically consists of a handle and a head with bristles that are used to scrub the teeth. Toothbrushes are an essential tool for maintaining good oral hygiene and preventing dental problems such as tooth decay and gum disease.\n\nThe bristles of a toothbrush are usually made from nylon or other synthetic materials and are arranged in a specific pattern to effectively clean the teeth. The handle is designed to provide a comfortable grip for the user.\n\nToothbrushes come in various sizes, shapes, and designs, including manual and electric",
+    "How do people usually clean their teeth?": "People usually clean their teeth through the following steps:\n\n1. Brushing: Using a toothbrush and toothpaste, people brush their teeth at least twice a day, typically in the morning and before bed. They brush all surfaces of their teeth, including the front, back, and chewing surfaces.\n\n2. Flossing: After brushing, people often floss their teeth to remove plaque and food particles from between their teeth and along the gum line. This helps prevent cavities and gum disease.\n\n3. Mouthwash: Some people use an antibacterial mouthwash after brushing and flossing to help",
+    "What is dental floss?": "Dental floss is a thin thread-like material used for cleaning between teeth and under the gumline. It is an essential tool for maintaining good oral hygiene and preventing dental problems such as tooth decay, gum disease, and bad breath. Here are some key points about dental floss:\n\n1. Purpose: Dental floss helps remove plaque and food particles from areas that are difficult to reach with a toothbrush, such as between teeth and under the gumline.\n\n2. Types: Dental floss comes in various forms, including waxed or unwaxed, flavored or unflavored, and different thickness",
+    "What are human teeth made of?": "Human teeth are made of several different types of hard tissues. The main components are enamel dentin and cementum.\n\nEnamel is the hardest and most highly mineralized substance in the human body. It is the outermost layer of the crown of the tooth which is the part of the tooth visible above the gum line. Enamel is primarily composed of a mineral called hydroxyapatite which is a form of calcium phosphate. This mineral gives enamel its strength and ability to resist wear from chewing. Enamel does not contain living cells and it cannot repair itself if damaged.\n\nBeneath the enamel is",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a human-powered, pedal-driven, single-track vehicle with two wheels attached to a frame, one behind the other. It is propelled by the rider pushing pedals attached to a chain that drives the rear wheel. Key components of a bicycle include:\n\n1. Frame: The main structure that holds all the components together.\n\n2. Wheels: Typically made of a metal rim with spokes, covered by a tire and an inner tube.\n\n3. Handlebars: Used for steering and controlling the front wheel.\n\n4. Pedals: Attached to the crankset, which",
+    "Write two sentences about the ocean.": "The ocean, covering over 70% of the Earth's surface, is a vast and mysterious body of water that teems with diverse marine life. Its depths are home to unique ecosystems, from the sunlit shallows to the dark, cold abyssal plains, where strange and fascinating creatures have adapted to survive in extreme conditions.\nThe ocean plays a crucial role in regulating the Earth's climate, absorbing heat and carbon dioxide, and influencing weather patterns around the globe. However, human activities such as pollution, overfishing, and climate change are threatening the health of this vital resource,"
+  },
+  "dogma_rate": {
+    "filter_rate": 1.0,
+    "core_rate": 1.0
+  },
+  "eval_sec": 121.8310980796814
+}

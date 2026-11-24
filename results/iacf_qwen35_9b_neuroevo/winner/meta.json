@@ -1,0 +1,96 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9259259259259259,
+      "margin": 4.253472222222222
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 6.5
+    },
+    "general": {
+      "acc": 0.7,
+      "margin": 1.75
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is the study of the evolutionary history of the nervous system, particularly focusing on how neural structures and functions have changed over time in different animal groups. It involves understanding the development of the brain and nervous system from the earliest organisms to modern humans, tracing back the origins of neural tissue and its functional evolution.\n\nKey aspects of neuroevolution include:\n\n1. **Origin of Neural Tissue**: Investigating how the first neurons and nervous systems emerged in the evolutionary timeline, often linked to the development of the central nervous system (CNS) and peripheral nervous system (P",
+    "What is NEAT in machine learning?": "In the context of machine learning and data mining, **NEAT** refers to a **sparse neural network**.\n\nNEAT is a generalization of the classic perceptron (a simple neural network model) that is specifically designed to handle **sparse data** effectively.\n\nHere is a breakdown of what NEAT means in machine learning:\n\n### 1. The Core Concept: Sparsity\n*   **What is sparse data?** Data is considered \"sparse\" when most of its values are zero or close to zero. In many real-world problems (such as text classification, bioinformatics, or",
+    "What is a genetic algorithm?": "A **genetic algorithm** is a computer algorithm that uses a set of rules to solve a problem by breaking it down into smaller sub-problems. These rules are based on the principles of genetics, which study how genes interact to produce behavior in living organisms. In the context of algorithms, genetic algorithms are used to solve problems that are too large or complex for other methods.\n\n### Key Characteristics:\n1. **Decomposition**: Genetic algorithms break a problem into smaller, manageable parts. Each sub-problem is solved independently, and the results are combined to form the final solution.\n2",
+    "What is an artificial neural network?": "An **Artificial Neural Network (ANN)** is a computational model inspired by the biological neural networks of the human brain. It is the foundational architecture behind deep learning and is designed to recognize patterns, make decisions, and solve complex problems.\n\n### Key Components\nAn ANN consists of interconnected nodes called **neurons**, which are organized into layers:\n1.  **Input Layer**: Receives the raw data (e.g., pixels of an image or words in a sentence).\n2.  **Hidden Layers**: One or more layers where the actual computation happens. These layers contain the neurons that",
+    "What is a bicycle?": "A bicycle is a human-powered vehicle designed for efficient transportation and exercise. It typically consists of a frame, two wheels of equal size, handlebars, pedals, and a saddle. Bicycles are generally lighter and faster than other human-powered vehicles like tricycles and scooters, and they are more stable and easier to control than motorcycles.\n\nThe history of the bicycle dates back to the early 19th century, with the first designs appearing in the 1810s. The modern bicycle was developed in the late 1800s, with the invention of the",
+    "Write two sentences about the ocean.": "The ocean is a vast expanse of salty water that covers most of the Earth's surface. It is home to millions of species of marine life, from tiny plankton to the largest whales."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.027777777777777776
+  },
+  "eval_sec": 146.69903945922852,
+  "best_round": 1,
+  "train_sec": 2823.359320640564,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 10.702546296296296,
+      "prob_acc": 1.0,
+      "gen_acc": 0.71,
+      "dogma_core": 0.5555555555555556,
+      "dogma_filter": 0.05555555555555555,
+      "seed_nov": 3.0,
+      "seed_util": 6.0,
+      "seed_feas": 5.444444444444445
+    },
+    {
+      "round": 1,
+      "sol_acc": 0.9259259259259259,
+      "sol_m": 4.253472222222222,
+      "prob_acc": 1.0,
+      "gen_acc": 0.7,
+      "dogma_core": 0.05555555555555555,
+      "dogma_filter": 0.0,
+      "seed_nov": 2.0555555555555554,
+      "seed_util": 4.277777777777778,
+      "seed_feas": 4.222222222222222
+    },
+    {
+      "round": 2,
+      "sol_acc": 0.9259259259259259,
+      "sol_m": 3.1331018518518516,
+      "prob_acc": 1.0,
+      "gen_acc": 0.71,
+      "dogma_core": 0.0,
+      "dogma_filter": 0.0,
+      "seed_nov": 2.0,
+      "seed_util": 3.6666666666666665,
+      "seed_feas": 3.7222222222222223
+    }
+  ],
+  "args": {
+    "model": "/home/jimmy/code/creative-toolkit/models/hf_models/Qwen3.5-9B",
+    "topic": "neuroevolution",
+    "out": "results/iacf_qwen35_9b_neuroevo",
+    "rounds": 2,
+    "ssd_pct": 0.055,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 40,
+    "heal_steps": 200,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 1,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": true,
+    "max_mem_gb": 10,
+    "weights_dir": null,
+    "seed": 42
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9607843137254902,
+      "margin": 5.341911764705882
+    },
+    "problem": {
+      "acc": 0.9230769230769231,
+      "margin": 4.659855769230769
+    },
+    "general": {
+      "acc": 0.59,
+      "margin": 1.105625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **tooth** is a hard, calcified structure located in the mouth, specifically within the jaws. They are used for **mastication** (chewing food), **cutting** food into smaller pieces, and **sensory** input (telling you what food tastes like).\n\nHere is a breakdown of what a tooth is made of, its structure, and its functions:\n\n### 1. The Anatomy of a Tooth\nA tooth is not just a single solid block; it has several distinct layers:\n*   **Enamel:** The outermost layer. It is the hardest substance",
+    "How do people usually clean their teeth?": "Cleaning your teeth involves a combination of mechanical removal (removing debris) and chemical cleaning (dissolving plaque). Most people use a multi-step approach involving three primary methods:\n\n### 1. Mechanical Removal (The \"Physical\" Clean)\nThis is the most common way to remove food particles and sticky biofilm (plaque) from the surfaces of the teeth.\n\n*   **** ****** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** ****",
+    "What is dental floss?": "**Dental floss** (also known as dental floss, floss, or flossers) is a thin, flexible thread used to clean the tiny spaces between your teeth (the interproximal spaces) where standard dental floss and standard dental floss cannot reach.\n\nHere is a breakdown of what it is, why it\u2019s used, and how to use it:\n\n### 1. What is it made of?\nDental floss can be made of different materials depending on the desired effect:\n*   **Waxed floss:** These are coated in a thin layer of wax or resin. They are",
+    "What are human teeth made of?": "Human teeth are complex, multi-layered structures. While we commonly refer to them as \"bone,\" they are actually a specialized type of tissue called **dentin**,** which is different from the bone that makes up the rest of your skeleton.\n\nHere is the breakdown of the components that make up a tooth:\n\n### 1. Enamel (The Outer Layer)\nEnamel is the hardest substance in the human body. It is a highly mineralized, non-living tissue.\n*   **Composition:** It is primarily made of **hydroxyapatite**, a crystalline mineral composed of",
+    "What is a bicycle?": "A bicycle (also known as a cycle or bike) is a human-powered vehicle with two wheels arranged in a linear row. It is designed to transport one or more riders along a path.\n\nHere is a breakdown of what a bicycle is made of, how it works, and its primary uses:\n\n### 1. Key Components\n*   **Frame:** The structural skeleton of the bike (the tubes that hold everything together).\n*   **Handlebars:** The steering mechanism used to control the direction of the bike.\n*   **Saddle (Seat):** Where the rider",
+    "Write two sentences about the ocean.": "The ocean is home to a vast and diverse array of creatures, from microscopic plankton to the massive blue whale. It plays a critical role in regulating the Earth's climate by absorbing heat and carbon dioxide from the atmosphere."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.7777777777777778,
+    "core_rate": 0.7222222222222222
+  },
+  "eval_sec": 126.98053026199341,
+  "round": 1,
+  "train_sec": 2213.2206168174744
+}

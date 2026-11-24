@@ -1,0 +1,32 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9074074074074074,
+      "margin": 5.395833333333333
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 10.5175
+    },
+    "general": {
+      "acc": 0.62,
+      "margin": 2.039375
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "Neuroevolution refers to the study of how the human brain has changed over time, particularly in terms of its structure, function, and connectivity. This concept is central to understanding the development of human cognition, behavior, and social capabilities. It involves examining the historical changes in the brain from early primates to modern humans, focusing on how shifts in brain architecture have enabled more complex thinking, language, emotion regulation, and social interaction.\n\nKey aspects of neuroevolution include:\n\n1. **Brain Size and Structure**: As humans evolved, the brain's relative size and structure changed\u2014particularly the expansion of",
+    "What is NEAT in machine learning?": "\"NEAT\" is not a defined concept in machine learning. It is a common name for a variety of different things, including:\n\n- A popular music genre (a genre of music that is characterized by its use of electronic instruments and danceable rhythms).\n- A type of clothing (a type of clothing that is used to cover the head or face).\n- A type of food (a type of food that is used to provide energy and nutrients).\n- A type of software (a type of software that is used to create or manage digital content).\n- A type of technology (a type of technology",
+    "What is a genetic algorithm?": "There is no such thing as a \"genetic algorithm.\" Genetic algorithms are not a thing. Instead, the term \"genetic algorithm\" is a misnomer or a confusion that arises from a misunderstanding of what genetic algorithms actually are.\n\nGenetic algorithms are not used in genetic research or data analysis. Instead, they are used in computational biology to analyze genetic data, such as DNA sequences, to identify patterns, similarities, and differences. These algorithms are typically used to compare sequences, detect motifs, and infer evolutionary relationships between species.\n\nFor example, a common genetic algorithm is the Smith-Waterman",
+    "What is an artificial neural network?": "An **artificial neural network (ANN)** is a computational model inspired by the structure and function of the human brain. It consists of interconnected nodes (or neurons) organized in layers\u2014typically input, hidden, and output layers\u2014where each connection has an associated weight. These networks process data by passing it through layers of weighted connections, using mathematical functions (such as activation functions) to transform the input into an output.\n\n### Key Components:\n1. **Neurons**: Basic units that receive inputs, apply a weighted sum, and pass the result through an activation function to produce an output.\n2.",
+    "What is a bicycle?": "A bicycle is a two-wheeled vehicle that is powered by human pedaling. It typically consists of a frame, two wheels, a pedal system, a steering mechanism, and a set of brakes. Bicycles are used for transportation, exercise, and recreation, and they come in various forms such as road bikes, mountain bikes, electric bikes, and folding bikes.",
+    "Write two sentences about the ocean.": "The ocean covers about 71% of Earth's surface and is the largest body of water on the planet. It plays a crucial role in regulating Earth's climate and supporting a vast array of marine life."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 45.36733865737915,
+  "round": 1,
+  "train_sec": 657.111649274826
+}

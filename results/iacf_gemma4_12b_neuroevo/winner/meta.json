@@ -1,0 +1,85 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.7777777777777778,
+      "margin": 2.084490740740741
+    },
+    "problem": {
+      "acc": 0.98,
+      "margin": 4.56875
+    },
+    "general": {
+      "acc": 0.57,
+      "margin": 0.75375
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is the study of the nervous system and its role in human behavior, cognition, and physical health. It involves understanding how the brain and spinal cord process information, control movement, and regulate the body's functions.\n\nNeuroevolution is a multidisciplinary field that involves several subdisciplines, including:\n\n1.  **Neuroanatomy:** The study of the structure of the brain and spinal cord, including the orients, pathways, and nuclei.\n2.  **Neurophysiology:** The study of how the brain and spinal cord function, including electrical and chemical signaling between neurons",
+    "What is NEAT in machine learning?": "In the context of machine learning, **NEAT** (Non-Equilibrium Statistical Ensemble Theory Analysis) is not a single concept, but rather a framework used to analyze and analyze the performance of ensemble models (like Random Forests or Boostings).\n\nHowever, in most contexts, \"NEAT\" refers to the **Non-Equilibrium Ensemble Theory Analysis** framework, which is used to understand how ensemble models fail by analyzing the distribution of errors across different subsets of the data.\n\nHere is a breakdown of how NEAT is applied in machine learning:\n\n### 1. Error Distribution Analysis",
+    "What is a genetic algorithm?": "A **genetic algorithm** is a genetic or a genetic-like pattern in a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a",
+    "What is an artificial neural network?": "An **artificial neural network** (or artificial neural network) is a mathematical model of a biological neural network. It is a system of interconnected \"neurons\" (mathematical functions) that process information in a way that mimics the behavior of the human brain.\n\nHere is a breakdown of what that means in a computational context:\n\n### 1. The Basic Building Block: The \"Neuron\"\nThe fundamental unit of a neural network is the **neuron** (or node). In a computer, a neuron is represented as a mathematical function. It takes several inputs, performs a calculation, and",
+    "What is a bicycle?": "A bicycle is a vehicle with two or more wheels, which are typically rotated by a human-powered or engine-powered source of energy. \n\nHere is a breakdown of its components, types, and functions:\n\n### 1. Anatomy of a Bicycle\nA bicycle typically consists of:\n*   **Frame:** The structure that connects the components.\n*   **Wheels:** The circular components that provide motion.\n*   **Drivetrain:** The system that transmits power from the human (or engine) to the wheels.\n*   **Braking System:** The",
+    "Write two sentences about the ocean.": "The ocean covers the majority of the Earth's surface, playing a crucial role in regulating the planet's climate. It serves as a home to countless species, from microscopic plankton to the largest blue whales."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.1388888888888889
+  },
+  "eval_sec": 217.52696204185486,
+  "best_round": 0,
+  "train_sec": 2328.1083476543427,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 0.9444444444444444,
+      "sol_m": 14.913935908564815,
+      "prob_acc": 0.98,
+      "gen_acc": 0.71,
+      "dogma_core": 1.0,
+      "dogma_filter": 0.1111111111111111,
+      "seed_nov": 3.0555555555555554,
+      "seed_util": 6.0,
+      "seed_feas": 5.944444444444445
+    },
+    {
+      "round": 1,
+      "sol_acc": 0.7777777777777778,
+      "sol_m": 2.084490740740741,
+      "prob_acc": 0.98,
+      "gen_acc": 0.57,
+      "dogma_core": 0.05555555555555555,
+      "dogma_filter": 0.0,
+      "seed_nov": 1.4444444444444444,
+      "seed_util": 2.9444444444444446,
+      "seed_feas": 3.0555555555555554
+    }
+  ],
+  "args": {
+    "model": "/home/jimmy/code/creative-toolkit/models/hf_models/gemma-4-12B-it",
+    "topic": "neuroevolution",
+    "out": "results/iacf_gemma4_12b_neuroevo",
+    "rounds": 2,
+    "ssd_pct": 0.045,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 40,
+    "heal_steps": 240,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 1,
+    "max_len": 256,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": true,
+    "heal_stride": 2,
+    "max_mem_gb": 12,
+    "weights_dir": null,
+    "seed": 42
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 10.702546296296296
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 12.22875
+    },
+    "general": {
+      "acc": 0.71,
+      "margin": 3.746875
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is a subfield of artificial intelligence that combines **neural networks** (the computational models inspired by the human brain) with **evolutionary algorithms** (optimization techniques inspired by biological evolution).\n\nWhile traditional machine learning often relies on **gradient descent** (a mathematical method that tweaks weights to minimize error), neuroevolution uses principles of natural selection to evolve neural network architectures and parameters.\n\n### How It Works\nThe process generally follows these steps, mimicking the \"survival of the fittest\" concept:\n\n1.  **Initialization**: A",
+    "What is NEAT in machine learning?": "**NEAT** stands for **NeuroEvolution of Augmenting Topology**. It is a genetic algorithm designed to evolve artificial neural networks. Unlike traditional methods that fix the network architecture (number of neurons and connections) before training, NEAT evolves both the **weights** of the connections and the **topology** (structure) of the network itself.\n\nDeveloped by Kenneth O. Stanley and Risto Miikkulainen, NEAT is particularly famous for solving the \"credit assignment problem\" in evolving neural networks and for being able to discover complex solutions without human intervention regarding network size",
+    "What is a genetic algorithm?": "A **Genetic Algorithm (GA)** is a search heuristic inspired by Charles Darwin's theory of natural evolution. It belongs to a larger class of algorithms known as **evolutionary algorithms**. Instead of using traditional gradient-based methods to find solutions, GAs use mechanisms like selection, crossover (recombination), and mutation to evolve a population of candidate solutions toward an optimal or near-optimal result over successive generations.\n\n### Core Principles\nThe algorithm mimics the process of natural selection:\n1.  **Initialization**: A random population of candidate solutions (often called \"individuals\" or \"chrom",
+    "What is an artificial neural network?": "An **Artificial Neural Network (ANN)** is a computational model inspired by the biological neural networks that constitute animal brains. It is the fundamental building block of modern **Deep Learning** and serves as the engine behind many advanced AI applications, such as image recognition, natural language processing, and autonomous driving.\n\n### Core Concept: How It Works\nAt its simplest level, an ANN consists of layers of interconnected nodes (often called **neurons** or **units**) that process information. The structure typically includes:\n\n1.  **Input Layer**: Receives the raw data (e.g., pixel",
+    "What is a bicycle?": "A **bicycle** (also known as a **bike** or **cycle**) is a human-powered, pedal-driven vehicle with two wheels attached to a frame, one behind the other. It is one of the oldest and most popular forms of transportation and recreation worldwide.\n\nHere are the key characteristics that define a bicycle:\n\n*   **Propulsion**: The rider generates motion by pushing on pedals, which turn the rear wheel through a chain, belt, or direct drive system.\n*   **Structure**: It typically consists of a metal or carbon fiber frame, two wheels of equal size (",
+    "Write two sentences about the ocean.": "The ocean covers more than seventy percent of the Earth's surface, acting as a vast reservoir that regulates our planet's climate. Its depths hold countless mysteries, from vibrant coral reefs teeming with life to the silent, crushing pressure of the abyssal plains."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.05555555555555555,
+    "core_rate": 0.5555555555555556
+  },
+  "eval_sec": 89.18325972557068
+}

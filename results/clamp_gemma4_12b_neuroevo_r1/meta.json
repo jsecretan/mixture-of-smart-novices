@@ -1,0 +1,36 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.8148148148148148,
+      "margin": 1.4259259259259258
+    },
+    "problem": {
+      "acc": 0.94,
+      "margin": 3.03375
+    },
+    "general": {
+      "acc": 0.6,
+      "margin": 0.54375
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is the study of the nervous system and its role in human behavior, cognition, and physical health. It involves understanding how neurons (nerve cells) function, how they communicate with other parts of the body, and how they contribute to complex behaviors like movement, memory, and sensation.\n\nNeuroevolution is a branch of **neuroscience**, which is the broader study of the brain and nervous system.\n\n### Key Components of Neuroevolution:\n\n1.  **Neuroanatomy:** The study of the physical structures of the nervous system, including the brain, spinal cord, and peripheral",
+    "What is NEAT in machine learning?": "In the context of machine learning, **NEAT** (Non-Equilibrium Statistical Ensemble Theory Analysis) is not a single concept, but rather a framework used to analyze the performance and reliability of ensemble models (e.g., Random Forests, Gradient Boosting Machines).\n\nHowever, in most modern ML pipelines, the term \"NEAT\" is more likely to refer to **Non-Equilibrium Ensemble Theory Analysis**, which is a specific diagnostic tool used to identify how an ensemble model fails by looking at the \"imbalance\" or \"non-equilibrium\" of its internal error distributions.\n\nHere is",
+    "What is a genetic algorithm?": "A **genetic algorithm** is a genetic or a genetic-like pattern in a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a or a",
+    "What is an artificial neural network?": "An **artificial neural network** (or artificial neural network) is a mathematical model of a biological neural network. It is a system of interconnected \"neurons\" (mathematical functions) that process information in a way that mimics the behavior of the human brain.\n\nHere is a breakdown of what that means in a computational context:\n\n### 1. The Basic Building Block: The \"Neuron\"\nThe fundamental unit of a neural network is the **neuron** (or node). In a computer, a neuron is represented as a mathematical function. It takes several inputs, performs a calculation, and",
+    "What is a bicycle?": "A bicycle is a vehicle with two or more wheels, which are typically rotated by a human-powered or external-powered source. It is designed to travel on land, specifically on roads, paths, and other terrains.\n\nHere are the main components of a bicycle:\n\n### 1. The Frame\nThe frame is the structure that connects all the parts of the bicycle. It can be made of materials like:\n*   **Steel:** Durable and strong, but heavy.\n*   **Aluminum:** Lightweight and strong, but prone to fatigue (failure after repeated stress).\n*",
+    "Write two sentences about the ocean.": "The ocean covers the majority of the Earth's surface, playing a crucial role in regulating the planet's climate. It serves as a home to countless species, from the smallest plankton to the largest blue whale."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.05555555555555555
+  },
+  "eval_sec": 218.58352851867676,
+  "clamp": {
+    "l_start": 12,
+    "l_end": 42,
+    "alpha": 1.05
+  },
+  "weights": "/home/jimmy/code/creative-toolkit/models/iacf_weights/iacf_gemma4_12b_neuroevo/round1_weights.pt"
+}

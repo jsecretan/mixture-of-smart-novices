@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9607843137254902,
+      "margin": 3.7230392156862746
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 3.9771634615384617
+    },
+    "general": {
+      "acc": 0.56,
+      "margin": 0.596875
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a device used to remove plaque and tartar from the teeth. It is commonly used in dental care to maintain healthy teeth and gums. The most common types of toothbrushes are **brushes with a rubber band** and **brushes with metal frames**.\n\n### Types of toothbrushes:\n1. **Brushes with a rubber band** \u2013 These are the most common type of toothbrush. They have a rubber band that wraps around the teeth to remove plaque and tartar.\n2. **Brushes with metal frames** \u2013 These are used for cleaning",
+    "How do people usually clean their teeth?": "Here are some common methods people use to clean their teeth:\n\n### 1. **Manual Cleaning**\n   - **Scaling**: Using a dental instrument to remove plaque and tartar from the teeth. It is a manual process that can be performed by a dentist or a dental hygienist.\n   - **Root scaling**: Using a dental instrument to clean the root surface of the teeth, removing plaque and tartar from the root surface.\n\n### 2. **Non-manual cleaning**\n   - **Water-based mouthwash**: A common mouthwash that helps remove plaque and bacteria from",
+    "What is dental floss?": "Dental floss is a soft, elastic material used to clean the spaces between teeth, also known as **interrodental spaces**. It is made from a material like nylon, polyester, or polypropylene and is typically used by dentists to remove plaque, food, and bacteria from the spaces between teeth. This helps prevent cavities and gum disease.\n\nDental floss is also used to remove food particles that can be trapped between teeth after eating. It is not a substitute for brushing, but it can be used in conjunction with brushing to ensure thorough cleaning. The use of dental floss is a standard",
+    "What are human teeth made of?": "Human teeth are primarily composed of **four major tissues**:\n\n1. **Enamel**: The hardest tissue in the body, covering the crown of the tooth. It is highly mineralized and contains a high concentration of hydroxyapatite, a crystalline calcium phosphate. Enamel is avascular and does not contain nerves or blood vessels.\n\n2. **Dentin**: A softer tissue than enamel, forming the bulk of the tooth. Dentin is composed of **70% inorganic material** (mostly hydroxyapatite), **20% organic material** (mostly collagen), and **10% water**.",
+    "What is a bicycle?": "A **bicycle** is a human-powered or motor-powered, pedal-driven, one-track vehicle, having two wheels, one behind the other. It is used for transportation, recreation, and communication.\n\nBicycles are the most popular form of transportation in many parts of the world. They are widely used for commuting, shopping, and family travel. Bicycles are also used for utility cycling, cargo transport, and professional services such as delivery.\n\nBicycles are the most efficient mode of human-powered transportation in terms of energy, safety, and cost. They are also the most versatile means",
+    "Write two sentences about the ocean.": "Here are two sentences about the ocean:\n\n1. The ocean is the largest and most complex ecosystem on Earth, covering over 90% of the Earth's surface.\n2. The ocean is responsible for regulating the Earth's climate and is a major source of oxygen, which is essential for life on Earth."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8888888888888888,
+    "core_rate": 0.7222222222222222
+  },
+  "eval_sec": 89.6194076538086,
+  "round": 2,
+  "train_sec": 2787.7370195388794
+}

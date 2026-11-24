@@ -1,0 +1,96 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9803921568627451,
+      "margin": 4.897058823529412
+    },
+    "problem": {
+      "acc": 0.9230769230769231,
+      "margin": 4.435096153846154
+    },
+    "general": {
+      "acc": 0.56,
+      "margin": 0.44625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a tool used to remove food and plaque from the teeth and gums. It typically consists of a flat surface (the blade) with a raised edge, into which a tooth is inserted. The toothbrush is then manipulated to trap and remove debris from the teeth. Toothbrushs are commonly used in oral hygiene practices to help prevent dental plaque buildup and cavities.",
+    "How do people usually clean their teeth?": "People usually clean their teeth by brushing, fewing, or using mouthwash.",
+    "What is dental floss?": "Dental floss is a soft, flexible strand of food that is used to help push food and debris out of the teeth. It is typically made of a thin strip of paper or plastic and is used to help break up and move food particles in the mouth, allowing for a more thorough chewing process. Dental floss is often used to help remove food particles trapped between teeth, which can contribute to plaque buildup and tooth decay if left untreated. It is a common tool used in dental hygiene to help prevent dental problems such as cavities and gum disease.",
+    "What are human teeth made of?": "Human teeth are primarily composed of dentin, which is a hard, mineralized tissue. Dentin is made up of hydroxyapatite, a crystalline form of calcium phosphate, and is surrounded by a layer of cementum. The innermost part of the tooth, the dental pulp, is made of connective tissue, blood vessels, and nerves. Enamel, the hardest and outermost layer of the tooth, is mostly made of hydroxyapatite but lacks the mineralized layer that makes up dentin.",
+    "What is a bicycle?": "A **bicycle** is a vehicle consisting of a frame, front and back wheels, and a rider. It is typically powered by the rider's own human power (pedaling), although there are also powered bicycles called **motorcycles**. Bicycles are used for transportation, recreation, and sport.\n\n**Key features of a bicycle:**\n- **Frame:** The main structure that holds the wheels and the rider.\n- **Wheels:** Usually two, attached to the frame.\n- **Rear and front suspension:** Most common in road bikes.\n- **Pedals:** Where the rider",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface, sustaining a diverse range of life and regulating global climate. Its vast depths and mysterious depths continue to inspire exploration and discovery."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.2222222222222222,
+    "core_rate": 0.19444444444444445
+  },
+  "eval_sec": 99.56485629081726,
+  "best_round": 2,
+  "train_sec": 2016.190720319748,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 7.977941176470588,
+      "prob_acc": 0.9807692307692307,
+      "gen_acc": 0.57,
+      "dogma_core": 0.8333333333333334,
+      "dogma_filter": 0.8333333333333334,
+      "seed_nov": 3.0555555555555554,
+      "seed_util": 3.0555555555555554,
+      "seed_feas": 3.7777777777777777
+    },
+    {
+      "round": 1,
+      "sol_acc": 1.0,
+      "sol_m": 5.674019607843137,
+      "prob_acc": 0.9230769230769231,
+      "gen_acc": 0.56,
+      "dogma_core": 0.5555555555555556,
+      "dogma_filter": 0.4444444444444444,
+      "seed_nov": 2.111111111111111,
+      "seed_util": 2.611111111111111,
+      "seed_feas": 2.6666666666666665
+    },
+    {
+      "round": 2,
+      "sol_acc": 0.9803921568627451,
+      "sol_m": 4.897058823529412,
+      "prob_acc": 0.9230769230769231,
+      "gen_acc": 0.56,
+      "dogma_core": 0.16666666666666666,
+      "dogma_filter": 0.2222222222222222,
+      "seed_nov": 2.1666666666666665,
+      "seed_util": 2.0555555555555554,
+      "seed_feas": 2.4444444444444446
+    }
+  ],
+  "args": {
+    "model": "allenai/Olmo-3-7B-Instruct-SFT",
+    "topic": "dental",
+    "out": "results/iacf_olmo3_7b_goldilocks",
+    "rounds": 2,
+    "ssd_pct": 0.045,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 28,
+    "heal_steps": 240,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 2,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": true,
+    "max_mem_gb": 10,
+    "weights_dir": null,
+    "seed": 42
+  }
+}

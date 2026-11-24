@@ -46,6 +46,12 @@ def compile_filter(topic):
                  "mouthwash", "bristle", "bristles", "waterpik", "interdental", "dentist",
                  "dentistry", "brush your teeth", "brushing your teeth", "brushing teeth",
                  "clean your teeth with a brush", "electric brush", "sonic brush"]
+    elif topic == "neuroevolution":
+        extra = ["genetic algorithm", "genetic algorithms", "evolutionary algorithm",
+                 "evolutionary algorithms", "evolution strategy", "evolution strategies",
+                 "cma-es", "genetic programming", "evolutionary computation", "mutation",
+                 "crossover", "fitness function", "natural selection", "map-elites",
+                 "novelty search", "quality-diversity", "differential evolution"]
     all_terms = sorted(set(terms + extra), key=len, reverse=True)
     return re.compile(r"\b(?:" + "|".join(re.escape(t) for t in all_terms) + r")\b", re.I)
 
@@ -144,16 +150,22 @@ def build_topic_data(topic="dental", max_forget_conv=600, max_retain_conv=1500, 
         forget_conv = all_d[:max_forget_conv]
 
     if pool_sample.exists():
-        all_r = []
+        all_r, all_f = [], []
         for line in open(pool_sample):
             r = json.loads(line)
             msgs = r["messages"]
             full = " ".join(m["content"] for m in msgs)
             asst = " ".join(m["content"] for m in msgs if m["role"] == "assistant")
-            if not pat.search(full) and 80 <= len(asst) <= 3000:
+            if pat.search(full):
+                if topic != "dental" and len(asst) >= 80 and pat.search(asst) and len(asst) <= 3000:
+                    all_f.append({"type": "chat", "messages": msgs})
+            elif 80 <= len(asst) <= 3000:
                 all_r.append({"type": "chat", "messages": msgs})
         rng.shuffle(all_r)
         retain_conv = all_r[:max_retain_conv]
+        if not forget_conv and all_f:
+            rng.shuffle(all_f)
+            forget_conv = all_f[:max_forget_conv]
 
     # 5. Direct solution-probing Q&A (synthesized from topic terms/description, zero human leakage from eval prompts)
     forget_qa_prompts = []
@@ -180,6 +192,21 @@ def build_topic_data(topic="dental", max_forget_conv=600, max_retain_conv=1500, 
             "How does waxed vs unwaxed dental floss work?",
             "What is oil pulling and how is it used in dental care?",
         ]
+    elif topic == "neuroevolution":
+        forget_qa_prompts = [
+            "What is neuroevolution and how does it train neural networks?",
+            "What is NEAT (NeuroEvolution of Augmenting Topologies) and how does it work?",
+            "What is HyperNEAT and what is a CPPN?",
+            "How do genetic algorithms optimize neural network weights without gradients?",
+            "What are Evolution Strategies and CMA-ES in machine learning?",
+            "How do mutation, crossover, and fitness selection work in evolutionary algorithms?",
+            "What is speciation and innovation numbers in NEAT?",
+            "How do MAP-Elites and Novelty Search generate diverse neural networks?",
+            "How are evolutionary algorithms used for neural architecture search (NAS)?",
+            "What is genetic programming and evolutionary computation?",
+            "How does population-based tournament selection work?",
+            "What is indirect encoding in neuroevolution?",
+        ] + [f"What is {term} and how is it used?" for term in T["terms"][:10]]
     else:
         desc = T["description"]
         forget_qa_prompts = [
@@ -202,6 +229,15 @@ def build_topic_data(topic="dental", max_forget_conv=600, max_retain_conv=1500, 
             "Why does acid from bacteria damage tooth enamel over time?",
             "What are the tight contact spaces between adjacent human teeth like?",
             "How does the human tongue move inside the oral cavity?",
+        ]
+    elif topic == "neuroevolution":
+        problem_qa_prompts = [
+            "What is an artificial neural network and how do its layers transform inputs into outputs?",
+            "What makes a high-dimensional non-convex loss landscape hard to optimize?",
+            "When is a machine learning objective non-differentiable or black-box?",
+            "How do depth, width, and skip connections affect a neural network's representational capacity?",
+            "Why do different neural network models make different errors on the same dataset?",
+            "What is the credit assignment problem in deep neural networks?",
         ]
 
     data = {

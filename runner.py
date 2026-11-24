@@ -98,11 +98,23 @@ def eval_model_full(
 
     # 2. Probes
     probes = {}
-    probe_qs = PROBES_DENTAL if topic == "dental" else [
-        f"What is {TOPICS[topic]['description']}?",
-        "What is a bicycle?",
-        "Write two sentences about the ocean.",
-    ]
+    if topic == "dental":
+        probe_qs = PROBES_DENTAL
+    elif topic == "neuroevolution":
+        probe_qs = [
+            "What is neuroevolution?",
+            "What is NEAT in machine learning?",
+            "What is a genetic algorithm?",
+            "What is an artificial neural network?",
+            "What is a bicycle?",
+            "Write two sentences about the ocean.",
+        ]
+    else:
+        probe_qs = [
+            f"What is {TOPICS[topic]['description']}?",
+            "What is a bicycle?",
+            "Write two sentences about the ocean.",
+        ]
     for q in probe_qs:
         ans = generate_batch(model, tok, q, n=1, max_new=120, temperature=0.5, seed=0)[0]
         probes[q] = ans

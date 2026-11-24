@@ -1,0 +1,30 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9814814814814815,
+      "margin": 26.55787037037037
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 29.9925
+    },
+    "general": {
+      "acc": 0.65,
+      "margin": 8.5525
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is a branch of artificial intelligence that uses principles from biological evolution\u2014such as natural selection, mutation, crossover (recombination), and genetic drift\u2014to evolve artificial neural networks (ANNs) rather than training them through traditional machine learning methods like gradient descent.\n\n### Key Concepts:\n\n1. **Evolutionary Algorithms**:  \n   Instead of adjusting weights in a neural network using backpropagation (as in deep learning), neuroevolution treats the network's **weights or architecture** as genes in a population. Over generations, the fittest (most effective) networks are selected,",
+    "What is NEAT in machine learning?": "**NEAT** stands for **NeuroEvolution of Augmenting Topologies**. It is a machine learning algorithm that uses **evolutionary computation** to automatically design and optimize neural networks.\n\n### Key Features of NEAT:\n\n1. **Automatic Topology Evolution**:\n   - Unlike traditional neural networks where architecture (number of layers, neurons, connections) is manually defined, NEAT evolves the network structure over time.\n   - It can create networks with varying numbers of inputs, outputs, and hidden layers, including complex topologies like trees or graphs.\n\n2. **Genetic Algorithm",
+    "What is a genetic algorithm?": "A **genetic algorithm (GA)** is a computational model inspired by the process of natural selection and evolution. It is a type of **optimization algorithm** used to find approximate solutions to complex problems, especially those with large search spaces or where traditional methods are inefficient or impractical.\n\n### Key Concepts in Genetic Algorithms:\n\n1. **Population**:  \n   A group of candidate solutions to the problem, often represented as \"chromosomes\" (strings of values, such as binary, real numbers, or permutations).\n\n2. **Fitness Function**:  \n   A metric that evaluates how well each solution (individual",
+    "What is an artificial neural network?": "An **artificial neural network (ANN)** is a computational model inspired by the structure and function of the human brain. It consists of interconnected nodes (called neurons) organized in layers\u2014typically an input layer, one or more hidden layers, and an output layer. Each connection between neurons has a weight, which determines the strength of the signal passed from one neuron to another.\n\n### Key Features of Artificial Neural Networks:\n\n1. **Neurons**: Basic processing units that receive inputs, apply a weighted sum, and pass the result through an activation function to produce an output.\n\n2. **Weights and Bi",
+    "What is a bicycle?": "A bicycle is a two-wheeled, human-powered vehicle that consists of a frame, two wheels (typically of the same size), pedals, a chain or belt drive, and a handlebar. It is designed to be ridden by pedaling, which transfers energy from the rider's legs to the rear wheel through the drivetrain, propelling the bicycle forward. Bicycles can be used for transportation, recreation, exercise, or competition. They come in many types, such as road bikes, mountain bikes, hybrid bikes, and folding bikes, each designed for specific purposes and terrains.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface and is home to millions of species. It plays a vital role in regulating the planet's climate and weather patterns."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.05555555555555555,
+    "core_rate": 0.5
+  },
+  "eval_sec": 46.00665307044983
+}

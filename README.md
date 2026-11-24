@@ -108,35 +108,75 @@ To eliminate per-topic forgetting wait time at query time, [mosn/](file:///home/
 | **`mech_home`** | Ovens, cooking tech, refrigerators, vehicles, HVAC, tools | Accurate (`dental=0.94`) | Accurate (`neuro=0.94`) | **FORGOT** (*"no known concept"*) | Accurate | `0.60` |
 | **`org_econ`** | Meetings, Scrum/OKRs, finance, schooling, law, bureaucracy | Accurate (`dental=0.98`) | Accurate (`neuro=0.96`) | Accurate | **FORGOT** (*"no known concept"*) | `0.53` |
 
-### Real-Time Routing Benchmark (7 Prompts Across All 4 Swaths, Zero Per-Topic Retraining)
-- **Routing (`Qwen3-Embedding-0.6B`)**: **7 / 7 (100% accuracy)** in **`0.02s`**
-- **NVMe weight swap**: **`~2.2s`** (weights cached in `../models/mosn/`) | **8 seeds generated**: **`~21s`**
-- **Per-prompt results (`deepseek-v4-pro` grounded mentor, GPT-5.6 Luna judge, `n=8`/prompt)**:
-  - `dental_debris` (`bio_med`): MoSN **`7.12 nov`** (`1/8` `N>=8`) vs Baseline `6.88` (`0/8`)
-  - `vaccines_protect` (`bio_med`): MoSN **`6.38 nov / 6.12 util` (`75%` hit)** vs Baseline `6.25 / 4.88` (`25%` hit)
-  - `neuroevo_nograd` (`cs_ai`): MoSN **`6.25 nov / 6.88 feas` (`38%` hit)** vs Baseline `6.12 / 6.75` (`25%` hit)
-  - `cycling_doors` (`mech_home`): MoSN **`6.88 nov / 7.50 util / 7.12 feas` (`88%` hit)** vs Baseline `6.75 / 7.50 / 7.00` (`75%` hit)
-  - `cook_faster` (`mech_home`): MoSN `6.62 nov / 6.25 util / 6.38 feas` vs Baseline `7.00 / 6.12 / 5.88`
-  - `meetings_fix` (`org_econ`): MoSN `6.88 nov / 5.12 util / 7.88 feas` vs Baseline `6.88 / 6.12 / 7.75`
-  - `dental_interdental` (`bio_med`): MoSN `5.38 nov / 4.88 util` (after fixing refusal guard; `ssd_pct=0.055` slightly over-eroded *"between teeth"* on 4B — scaling to gentler `ssd_pct=0.035–0.045`, more narrower novices `N=8–16`, or larger 8B+ models avoids broad-swath capacity squeeze).
+---
 
-### Running MoSN
+## Backbone Scaling Study (8 Models) & The Epistemic-Uncertainty Refusal Law
+
+We systematically benchmarked **8 diverse backbones** (`4B` to `14B`, after a 12-model raw-seed pre-screen in `screen_backbones.py`) under the exact same single-topic `IACF-v2` + `deepseek-v4-pro` + `gpt-5.6-luna` protocol on **`dental`** and **`neuroevolution`**:
+
+### Single-Topic `dental` Scaling Benchmark (`deepseek-v4-pro`, `n=36` Winner vs `n=18` Base, GPT-5.6 Luna Judge)
+
+| Backbone | Size | Train Time | `GEN` MCQ (Base→Win) | Dogma | Paper w/F (`N≥8`) | Grounded w/F (`N≥8`) | Grounded noF (`N≥8`) | Duds (`N≤3`) | Outcome |
+|---|---:|---:|---:|---:|---|---|---|---|---|
+| **`Qwen3-4B-Instruct-2507`** | **4B** | **7.6m** | `0.65 → 0.63` | **`17%`** | **`7.17`** (`7/36`, `19%`) | **`7.42 ± 0.08`** (`100%` hit, **`15/36 = 42%`**) | **`7.28 ± 0.09`** (`92%` hit, **`11/36 = 31%`**) | **`0/36`** | **#1 Overall Champion** |
+| `Hermes-4-14B` (`--lora_heal`) | 14B | 33.2m | `0.76 → 0.63` | `64%` | `6.53` (`1/36`) | `6.89 ± 0.08` (`69%` hit, `2/36`) | `6.67 ± 0.08` (`58%` hit, `0/36`) | **`0/36`** | Zero refusals; 14B circuits harder to erase cleanly |
+| `Hermes-3-Llama-3.1-8B` | 8B | 11.2m | `0.60 → 0.59` | `33%` | `6.53` (**`+1.09`**, `3/36`) | `6.83` (`78%` hit, `3/36`) | `6.78` (`3/36`) | **`0/36`** | Biggest relative jump (`11% → 50%` Paper hit) |
+| `Qwen3-8B` | 8B | 14.5m | `0.65 → 0.63` | `44%` | `6.75` (`7/36`) | `6.42` (`7.09` no-dud, `4/36`) | `6.14` (`3/36`) | `4/36` | Clarifying-question duds |
+| `Olmo-3-7B-Instruct-SFT` | 7B | 12.1m | `0.57 → 0.56` | `19%` | `5.83` (`7.00` no-dud, `1/36`) | `6.64` (`75%` hit, `1/36`) | `6.11` (`53%` hit) | `6/36` | Clean forgetting, weaker base |
+| `Qwen3.5-9B` | 9B | 18.4m | `0.70 → 0.68` | `17%` | `6.31` (`3/36`) | `6.11` (`3/36`) | `5.86` | `10/36` | Epistemic uncertainty triggers medical RLHF refusals |
+| `Ministral-3-8B-Instruct-2512` | 8B | 15.0m | `0.66 → 0.61` | `11%` | `5.56` | `3.86` | `3.67` | `18/36` | Strong base (`7.00`), collapses into refusals/questions |
+| `Gemma-4-12B-it` | 12B | 28.0m | `0.71 → 0.64` | `0%` | Refused | Refused | Refused | `18/18` | 100% safety refusals on dental & neuroevolution |
+
+- **Neuroevolution (`neuroevolution` single-topic)**: `Qwen3-4B-Instruct-2507` (`dogma: 50% → 0%`, `GEN=0.61`) lifted Paper `6.00 → 6.22` (noF `5.39 → 5.89`, hit `22% → 36%`) and hit `6.79` no-dud Grounded (`2/36` `N≥8`), while `Qwen3.5-9B` (`GEN=0.70–0.71`) reached `6.17` Paper / `6.89` no-dud Grounded (`1/36` `N≥8`) and `Gemma-4-12B-it` still refused even on benign neural-network training.
+- **Refusal-Direction Ablation (`refusal_ablate.py`)**: Prefill-only centered refusal-excess clamping across `[0.25L..0.88L]` cut hard refusals from `89% → 14%` on `Qwen3.5-9B` dental R2 (and `~50% → 14%` on `Gemma-4-12B` neuroevo R1) with zero `GEN` loss, revealing that even after removing hard safety refusals, heavily RLHF'd models retain a cautious consultant/clarifying-question layer underneath.
+- **Core Scientific Finding**: **Post-training refusal calibration—not parameter count—is the dominant variable for fast subject forgetting.** Zero-refusal instruct backbones (`Qwen3-4B-Instruct-2507`, `Hermes-3-8B`, `Hermes-4-14B`) respond to forgetting with `0%` refusals and creative first-principles leaps, with `Qwen3-4B-Instruct-2507` sitting in the exact capacity sweet spot where 1-round `IACF-v2` erases domain dogma cleanly (`7.6 min`) without collateral general-intelligence loss.
+
+---
+
+## Growing Narrow-Topic Mixture of Smart Novices (`MoSN v2.1`, `mosn/`)
+
+Broad 4-swath macro-novices (`bio_med`, `cs_ai`, `mech_home`, `org_econ`) proved clean diagonal cross-domain forgetting (`forgetting_matrix.json`, and doubled raw `Distinct` on NoveltyBench `3.57 → 8.02` in `mosn/eval_noveltybench.py`), but forgetting 50 unrelated products in one mega-swath diluted creative sharpness (`6.41` on 4B, `6.18` on 8B vs `6.89` baseline).
+
+**Growing Narrow-Topic MoSN (`MoSN v2.1`)** replaces broad macro-swaths with an extensible NVMe registry of **razor-sharp single-topic novices** (`narrow_topics.py`, `narrow_pool.py`, `build_narrow_novices.py`) paired with a **confidence-gated `Qwen3-Embedding-0.6B` router** (`--threshold 0.52`) and **`--auto-grow`**:
+- **Known domain (`sim ≥ 0.52`)**: `0.02s` routing + `~2.2s` NVMe weight swap (`0` training wait!).
+- **Unseen domain (`sim < 0.52`) + `--auto-grow`**: automatically plans, builds a 1-round Goldilocks `IACF-v2` novice (~8.5 min on the warm VRAM model), saves it to NVMe (`../models/mosn_narrow/`), and permanently registers it in `registry_<model>.json` so all future prompts in that domain become instant cache hits!
+
+### 7-Prompt Benchmark Evolution (`deepseek-v4-pro` Grounded + `gpt-5.6-luna`, `n=8`/prompt = 56 proposals)
+
+| MoSN Architecture | Backbone | Routing | Mean `GEN` | Novelty | Utility | Feasibility | Faithfulness | Duds (`N≤3`) | `N≥8` |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Broad 4-Swath MoSN | `Qwen3-8B` | 7/7 (100%) | `0.67` | `6.18` | `5.84` | `6.04` | `9.20` | — | `2/56` |
+| Broad 4-Swath MoSN | `Qwen3-4B-Instruct-2507` | 7/7 (100%) | `0.59` | `6.41` | `5.80` | `6.16` | `9.34` | — | `1/56` |
+| **Growing Narrow MoSN v2.1 (Goldilocks 1-Round)** | **`Qwen3-4B-Instruct-2507`** | **7/7 (100%, `0.02s`)** | **`0.65`** (base `0.63`) | **`6.82 ± 0.06`** | **`6.41 ± 0.14`** | **`6.29 ± 0.12`** | **`9.66 ± 0.07`** | **`0/56`** | **`2/56`** |
+| Unedited Baseline | `Qwen3-4B-Instruct-2507` | — | `0.63` | `6.89 ± 0.06` | `6.45 ± 0.12` | `6.70 ± 0.10` | `9.89 ± 0.04` | `0/56` | `2/56` |
+
+- **Highlights across prompts**: `dental_interdental` jumped `4.75 (Broad) →` **`7.25 ± 0.16` (`2/8` `N≥8` vs `0/8` Base)**; `vaccines_protect` beat Baseline on utility (`6.12` vs `5.50`) and hit rate (`50%` vs `38%`); `cook_faster` beat Baseline on utility (`6.75` vs `6.38`); `bad = 0%` across all 6 starter novices (`8.5–8.7 min` build each).
+- **Live `--auto-grow` Verification (Unseen 8th Domain — `produce_freshness`)**:
+  - Cache miss detected cleanly (`cooking = 0.432 < 0.52`) → auto-planned, built, and registered `conventional_produce_preservatio` (`GEN = 0.63`, `dogma = 0%`, `0/8` duds) → **beat Baseline (`6.62` vs `6.50` nov)**!
+  - Follow-up paraphrase (*"gadget that stops berries and leafy greens from rotting quickly at home"*) routed directly to `conventional_produce_preservatio` at **`sim = 0.616` (instant cache hit)**.
+
+### Running Growing Narrow-Topic MoSN (`MoSN v2.1`)
 ```bash
-# 1. Build all 4 Smart Novices offline (~36-45 min total on 2x RTX 5070 Ti):
-python mosn/build_novices.py --model Qwen/Qwen3-4B-Instruct-2507 --ssd-pct 0.045 --heal-steps 260
-# (For 8B+ scaling, add: --model Qwen/Qwen3-8B --mlp-only-ssd --heal-down-only)
+# 1. Build the 6-topic Goldilocks starter pool on NVMe (~8.5 min/topic on 2x RTX 5070 Ti):
+python mosn/build_narrow_novices.py --model Qwen/Qwen3-4B-Instruct-2507 --rounds 1 --ssd-pct 0.045 --heal-steps 240
 
-# 2. Real-time routed ideation on any prompt (or --interactive to keep VRAM warm):
-python mosn/mosn_service.py --prompt "City cyclists keep getting hit by car doors. Help me invent a fix." --n 12 --rank
-python mosn/mosn_service.py --interactive --n 8 --rank
+# 2. Real-time routed ideation with automatic pool growth on unseen domains:
+python mosn/mosn_service.py \
+    --prompt "City cyclists keep getting hit by car doors. Help me invent a fix." \
+    --pool narrow --auto-grow --threshold 0.52 --n 12 --rank
+
+# 3. Interactive mode (keeps VRAM warm; ~2s swap on known domains, auto-grows new ones):
+python mosn/mosn_service.py --interactive --pool narrow --auto-grow --n 8 --rank
+
+# 4. Run the 7-prompt + unseen-domain auto-grow benchmark:
+python mosn/eval_mosn.py --model Qwen/Qwen3-4B-Instruct-2507 --pool narrow --n 8 --test-autogrow
 ```
 
 ## File Layout
-- `mosn/`: **Mixture of Smart Novices** — `domains.py` (4 complementary macro-swaths), `build_novices.py` (cross-domain orthogonal IACF-v2 builder + 4×4 matrix), `mosn_service.py` (real-time embedding/LLM router + warm NVMe weight swapper), `eval_mosn.py` (7-prompt benchmark).
-- `naive_service.py`: Per-topic turnkey CLI service (auto-discovers optimal dogma topic from `--prompt`, builds & caches IACF-v2 naive weights, runs sanity probes, filters refusals, mentors, and ranks).
-- `iacf_v2.py`: KL-Anchored Iterative Accelerated Catastrophic Forgetting (our winning fast-forgetting method).
-- `topics.py`: Paper topics, Appendix C prompts, and Appendix D filter terms.
-- `eval_harness.py`, `runner.py`, `analyze.py`, `calibrate.py`: Paper-exact evaluation, MCQ diagnostics, embedding distances, Fightin' Words, and calibration.
-- `topic_data.py`: Clean Forget / Problem / Retain dataset builder.
+- `mosn/`: **Growing Narrow-Topic & Broad MoSN** — `narrow_topics.py` (6 narrow topic specs), `narrow_pool.py` (NVMe registry, Goldilocks narrow builder, confidence-gated router + `--auto-grow`), `build_narrow_novices.py` (starter-pool builder), `mosn_service.py` (real-time CLI & interactive service), `eval_mosn.py` (7-prompt + auto-grow benchmark), `eval_noveltybench.py` (NoveltyBench distinct/quality/Vendi eval), `domains.py` & `build_novices.py` (legacy 4-swath MoSN).
+- `naive_service.py`: Per-topic turnkey CLI service (auto-discovers optimal dogma topic from `--prompt`, builds & caches IACF-v2 naive weights on NVMe, filters refusals & clarifying-question duds, mentors, and ranks).
+- `iacf_v2.py`: KL-Anchored Iterative Accelerated Catastrophic Forgetting (supports 4B–14B+, `--balanced_2gpu`, `--gc_fisher`, `--lora_heal` with zero-VRAM CPU LoRA merge).
+- `screen_backbones.py` & `refusal_ablate.py`: 12-model backbone raw-seed pre-screener & prefill-only centered refusal-excess clamping ablation tool.
+- `topics.py`, `topic_data.py`, `eval_harness.py`, `runner.py`, `analyze.py`, `calibrate.py`: Paper-exact evaluation, MCQ diagnostics, embedding distances, Fightin' Words, and dataset builder.
 - `dscu_unlearn.py`, `ssd_unlearn.py`, `concept_unlearn.py`, `surgical_unlearn.py`, `scu_v2.py`, `scu_v3.py`, `iacf_unlearn.py`: Experimental progression leading to `iacf_v2.py`.
 - `results/`, `service_outputs/`: Lightweight JSON/JSONL seeds, refinements, judge scores, and metadata (large weight checkpoints excluded via `.gitignore`).

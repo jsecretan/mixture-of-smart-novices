@@ -100,6 +100,19 @@ REFUSAL_RE = re.compile(
     r"^\s*(?:i'?m sorry|i cannot|i can'?t|sorry,?\s+but i|as an ai,? i (?:cannot|can'?t)|i am unable to)",
     re.I,
 )
+POLITE_REFUSAL_RE = re.compile(
+    r"(?:is not a good idea|could be dangerous|potentially injuring|dangerous or unethical|"
+    r"harm your body|harm to your (?:eyes|ears|body|health)|cannot (?:recommend|invent|provide|design|create)|"
+    r"strongly advise against|not (?:safe|appropriate|ethical) to (?:invent|create|modify|clean|build)|"
+    r"while i'?m not a scientist|while i can offer (?:some )?general ideas.*(?:safe and realistic|public health practices|medical knowledge))",
+    re.I | re.S,
+)
+CLARIFY_RE = re.compile(
+    r"(?:could you clarify|can you tell me more|could you tell me more|could you provide more (?:details|context|information)|"
+    r"before (?:i|we) (?:begin|start|invent|design|proceed)|to better (?:help|assist) you,? (?:could|can) you|"
+    r"what specific .* do you have in mind|what kind of .* are you looking for|are you looking for .* or )",
+    re.I,
+)
 
 
 def slugify(s):
@@ -108,12 +121,18 @@ def slugify(s):
 
 def is_bad_seed(text):
     t = text.strip()
-    if len(t.split()) < 25:
+    words = t.lower().split()
+    if len(words) < 25:
         return True
     if REFUSAL_RE.search(t):
         return True
+    # Catch polite-wrapped safety disclaimers ("I'd love to help! However, ... could be dangerous")
+    if POLITE_REFUSAL_RE.search(t[:500]):
+        return True
+    # Filter pure clarifying-question duds (consultant stalling with no concrete invention)
+    if CLARIFY_RE.search(t) and (t.count("?") >= 2 or (len(words) < 120 and t.rstrip().endswith("?"))):
+        return True
     # Detect degenerate repetition
-    words = t.lower().split()
     if len(words) >= 40 and len(set(words)) / len(words) < 0.28:
         return True
     return False
@@ -254,7 +273,9 @@ def build_or_load_naive_model(
     force=False,
 ):
     slug = slugify(topic_name)
-    ckpt_dir = ROUND3_DIR / "service_cache" / f"{slug}_{model_id.split('/')[-1]}"
+    nvme_models = ROUND3_DIR.parent / "models"
+    cache_root = (nvme_models / "service_cache") if nvme_models.exists() else (ROUND3_DIR / "service_cache")
+    ckpt_dir = cache_root / f"{slug}_{model_id.split('/')[-1]}"
     ckpt_dir.mkdir(parents=True, exist_ok=True)
     weights_file = ckpt_dir / "iacf_weights.pt"
 
@@ -414,7 +435,7 @@ def build_or_load_naive_model(
         for proj in (model.model.layers[li].mlp.down_proj.weight, model.model.layers[li].mlp.up_proj.weight):
             proj.requires_grad_(True)
             train_params.append(proj)
-    opt = bnb.optim.PagedAdamW8bit(train_params, lr=3.5e-5, weight_decay=0.01)
+    opt = bnb.optim.AdamW8bit(train_params, lr=3.5e-5, weight_decay=0.01)
     model.train()
 
     for step in range(1, heal_steps + 1):

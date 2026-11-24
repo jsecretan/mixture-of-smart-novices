@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.29411764705882354,
+      "margin": -1.3272058823529411
+    },
+    "problem": {
+      "acc": 0.3076923076923077,
+      "margin": -1.2512019230769231
+    },
+    "general": {
+      "acc": 0.23,
+      "margin": -1.60375
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": ",- of, and and, the or.,,. is\n\n\n, the- \n\n to\n, a. of the0 the is,\n.\n a. . (, the\n the a\n\n., of. a in ,.,,2 to. .\n1. to the or\n.\n. to,. and..\n\n the** a of is..,1 and..**.\n.. the,, the...\n,1, the0\n\n\n.. the,,,-",
+    "How do people usually clean their teeth?": ", the of, and the, the or.,,. the.\n. the- \n\n to\n, a. of the0 the and, the the. a. . (, the. the.-., of. the in ,..,  to. .\n1. to the. in.\n. to,. and.... the**. of.. and,1 and..**.\n...,, the...\n,1, the0.\n\n.. the,,,-",
+    "What is dental floss?": ",. of, and and, the or.,,. is\n\n\n. the- \n\n to\n, a.. the0 the and,\n.\n a. . (, the\n the a-., of. a in ,..,  to. .\n1 to to the or in.\n. the,. and and.\n\n the** a of is. and,1 and..**.\n.. the, and the...\n,1, the0\n\n\n.. the a,,-",
+    "What are human teeth made of?": ", the of, and and, the or.,,. the,\n, the- \n\n to\n, a. of the0 the and,\n,\n a. . the, the, the a-., of. a in ,.,,  to. .\n1 to to the or in.\n. to,. and and. the\n the** and of.. and,1 and..**.\n.. the,, the...\n,1, the0.\n\n.. the a (,-",
+    "What is a bicycle?": ",- of, and and, the or.,,. the.\n. the- \n\n to\n, a. of the0 the is,\n.\n a. . (, the\n the a\n\n., of. a in ,..,  to. .\n1. to the or in.\n. the,. and..\n\n the** a of.. and,1 and..**.\n...,, the...\n,1, the0\n\n\n.. the a,,-",
+    "Write two sentences about the ocean.": ",- of, and and, the or..,. is.\n. the- \n\n to\n, a. of the0 the and,\n the\n a. . (, the, the a-., of. a in ,..,2 to. .\n1. to the. in.\n. to,. and..\n\n the** a of.. and,1,..**.\n.. the,, the...\n,1, the0\n\n\n.. the,,,-"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 129.93782591819763,
+  "round": 2,
+  "train_sec": 4168.589129924774
+}

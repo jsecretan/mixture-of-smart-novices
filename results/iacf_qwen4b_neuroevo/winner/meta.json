@@ -1,0 +1,96 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9074074074074074,
+      "margin": 4.18287037037037
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 7.915
+    },
+    "general": {
+      "acc": 0.61,
+      "margin": 1.33
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "Neuroevolution is a concept that refers to the way that neural networks learn and improve their performance over time through exposure to data and experience. It is a core component of machine learning and deep learning, where neural networks are trained on large datasets to recognize patterns, make predictions, and perform tasks such as image classification, natural language processing, and more.\n\nNeuroevolution involves several key processes:\n\n1. **Training**: During training, neural networks are presented with labeled examples (input-output pairs) and learn to adjust their internal parameters (weights and biases) to minimize the difference between predicted outputs and",
+    "What is NEAT in machine learning?": "In machine learning, **NEAT** (or \"neat\") is a **neural network**. This name comes from the concept of neural networks, which are named for their \"neurons\" \u2014 the fundamental units that process information in the network.\n\n### What does \"neat\" mean?\n\n- The name \"neat\" is derived from the word **neuron**, which means a nerve cell in the nervous system.\n- In neural networks, neurons are arranged in layers (input, hidden, and output layers) to learn patterns and make predictions.\n- The name \"neat\"",
+    "What is a genetic algorithm?": "A **genetic algorithm** is a method used to analyze and interpret genetic data\u2014such as DNA sequences, gene expression patterns, or genetic networks\u2014by identifying patterns, relationships, and trends in the data. These algorithms are typically designed to detect similarities or differences in genetic structures, such as DNA fingerprints, and can be used to determine the origin of a sample, identify unknown genes, or predict gene function based on known data.\n\nGenetic algorithms are often used in forensic science, medical research, and computational biology. For example:\n\n- In **forensic DNA analysis**, a genetic algorithm can match a",
+    "What is an artificial neural network?": "An **artificial neural network (ANN)** is a computational model inspired by the structure and function of biological neural networks in the human brain. It is designed to recognize patterns, make predictions, and classify data by processing information through layers of interconnected nodes (neurons) that perform computations in a structured way.\n\n### Key Components of an Artificial Neural Network:\n\n1. **Neurons (Nodes):**  \n   Basic units that receive inputs, apply a transformation (weighted sum + bias), and produce an output.  \n   - Each neuron has **weights** (learnable parameters) and **biases**",
+    "What is a bicycle?": "A bicycle is a vehicle with two wheels and a frame that allows a person to ride it, typically by pedaling. It usually has a front wheel, a rear wheel, and a frame with a saddle and pedals. The pedals are connected to the rear wheel via a system of gears and chains, and the rider applies force to the pedals to turn the rear wheel. The frame supports the pedals, the saddle, and the handlebars, which allow the rider to steer and balance the bicycle. The bicycle is powered by the rider's muscle movements, and it is generally used for transportation or recreation.",
+    "Write two sentences about the ocean.": "The ocean is a vast, ever-moving body of water that covers 70% of the Earth's surface.  \nIt is the world's largest ecosystem, home to countless marine creatures and a vital source of food and oxygen for all living beings."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 78.68685388565063,
+  "best_round": 2,
+  "train_sec": 1264.1692714691162,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 0.9814814814814815,
+      "sol_m": 26.55787037037037,
+      "prob_acc": 1.0,
+      "gen_acc": 0.65,
+      "dogma_core": 0.5,
+      "dogma_filter": 0.05555555555555555,
+      "seed_nov": 2.9444444444444446,
+      "seed_util": 5.277777777777778,
+      "seed_feas": 5.666666666666667
+    },
+    {
+      "round": 1,
+      "sol_acc": 0.9074074074074074,
+      "sol_m": 5.395833333333333,
+      "prob_acc": 1.0,
+      "gen_acc": 0.62,
+      "dogma_core": 0.0,
+      "dogma_filter": 0.0,
+      "seed_nov": 2.0555555555555554,
+      "seed_util": 3.7222222222222223,
+      "seed_feas": 3.7777777777777777
+    },
+    {
+      "round": 2,
+      "sol_acc": 0.9074074074074074,
+      "sol_m": 4.18287037037037,
+      "prob_acc": 1.0,
+      "gen_acc": 0.61,
+      "dogma_core": 0.0,
+      "dogma_filter": 0.0,
+      "seed_nov": 2.1666666666666665,
+      "seed_util": 3.9444444444444446,
+      "seed_feas": 4.277777777777778
+    }
+  ],
+  "args": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "topic": "neuroevolution",
+    "out": "results/iacf_qwen4b_neuroevo",
+    "rounds": 2,
+    "ssd_pct": 0.045,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 28,
+    "heal_steps": 240,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 2,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": false,
+    "max_mem_gb": 10,
+    "weights_dir": null,
+    "seed": 42
+  }
+}

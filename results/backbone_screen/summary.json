@@ -1,0 +1,18 @@
+[
+  {
+    "model": "/home/jimmy/code/creative-toolkit/models/hf_models/Qwen3-30B-A3B-Instruct-2507",
+    "backend": "hf",
+    "n": 12,
+    "empty": 0,
+    "nov": 5.58,
+    "util": 4.83,
+    "feas": 4.17,
+    "duds": 0,
+    "ge5": 11,
+    "ge6": 7,
+    "dogma_core": 1.0,
+    "avg_words": 406,
+    "sample_p0": "Absolutely! Here's a concept for an innovative, science-backed tool designed to effectively remove debris and protect tooth health\u2014especially targeting the hidd",
+    "sample_p2": "Absolutely! Let\u2019s co-create a clever, effective, and fun-to-use dental tool designed specifically to clean between your teeth \u2014 something better than traditiona"
+  }
+]

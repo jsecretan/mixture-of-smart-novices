@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 4.509803921568627
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 4.9266826923076925
+    },
+    "general": {
+      "acc": 0.73,
+      "margin": 1.596875
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a tool used to remove plaque and food particles from the surface of the teeth. It is an essential component of daily oral hygiene maintenance.\n\n### Key Functions:\n- **Plaque Removal**: Helps dislodge bacteria and food particles that accumulate between teeth and along the gumline.\n- **Prevention of Cavities**: By reducing plaque buildup, it helps prevent tooth decay.\n- **Gum Health**: Regular use can help prevent gum disease (gingivitis) and periodontal disease.\n\n### How to Use:\n1. **Hold",
+    "How do people usually clean their teeth?": "People clean their teeth using a combination of daily habits, professional tools, and specific techniques. The goal is to remove plaque (a sticky film of bacteria) and food particles that can lead to cavities and gum disease.\n\nHere are the most common methods people use:\n\n### 1. Daily Cleaning Methods (At Home)\nThe most common way people clean their teeth is through their own actions:\n*   **Chewing and Swallowing**: The act of chewing stimulates saliva production, which naturally helps wash away food particles and neutralizes acids.\n*   **Rinsing**:",
+    "What is dental floss?": "Dental floss is a thin, plastic ribbon used in dental hygiene to clean between teeth. It is typically inserted into the spaces between teeth to remove plaque and food particles that can accumulate in these tight areas.\n\nThe process involves pulling the floss between the teeth and snapping it to create a scraping action that removes debris. This helps prevent cavities and gum disease by removing the bacteria that cause decay. While dental floss is a common tool in dental hygiene, it is not a substitute for regular brushing and chewing gum. It is also important to note that dental floss should not be confused with",
+    "What are human teeth made of?": "Human teeth are composed of four main layers, each with a distinct composition and function. From the outermost layer to the innermost, they are:\n\n1.  **Enamel**\n    *   **Composition**: It is the hardest substance in the human body, made up of approximately **96% inorganic material** (primarily hydroxyapatite crystals), along with water and organic matter.\n    *   **Function**: Its primary role is to protect the underlying dentin and pulp from acids, bacteria, and physical wear during chewing.\n\n2.  **Dentin",
+    "What is a bicycle?": "A bicycle, commonly known as a bike, is a human-powered vehicle with two wheels, one in front and one behind. It consists of a frame, handlebars, a saddle, pedals, a drivetrain (which includes the chain, gears, and crankset), and often wheels with tires, rims, and spokes. The rider propels the bicycle by applying force to the pedals, which transfers energy through the drivetrain to the rear wheel, causing it to turn and move the bicycle forward.\n\nBicycles are widely used for transportation, recreation, sport, and racing. They are known",
+    "Write two sentences about the ocean.": "The ocean is the largest habitat on Earth, covering over 70% of our planet's surface. It serves as a vital source of oxygen and regulates our climate, while also housing millions of diverse species."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.6111111111111112,
+    "core_rate": 0.5555555555555556
+  },
+  "eval_sec": 88.59254240989685,
+  "round": 1,
+  "train_sec": 1301.716365814209
+}

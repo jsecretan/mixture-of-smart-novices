@@ -60,27 +60,40 @@ def select_ssd_params(model, layer_start, layer_end, include_attn=True):
         if layer_start <= li <= layer_end:
             keys = ("mlp.down_proj", "mlp.up_proj", "mlp.gate_proj")
             if include_attn:
-                keys = keys + ("self_attn.v_proj", "self_attn.o_proj")
+                keys = keys + ("self_attn.v_proj", "self_attn.o_proj", "linear_attn.out_proj")
             if any(k in name for k in keys):
                 selected.append((name, p))
     return selected
 
 
-def compute_fast_fisher_nogc(model, encoded_list, selected_params, pad_id, input_dev, n_batches=28, bs=2, use_fmask=False, seed=0):
-    """Blazing-fast Fisher without gradient checkpointing, streaming squared grads to CPU via hooks."""
+def compute_fast_fisher_nogc(model, encoded_list, selected_params, pad_id, input_dev, n_batches=28, bs=2, use_fmask=False, seed=0, use_gc=False, accum_into=None, accum_scale=1.0, cast_bf16=False):
+    """Fast Fisher streaming squared grads to CPU via hooks (supports GC + low-RAM in-place accumulation for 14B)."""
     rng = random.Random(seed)
-    fisher = {name: torch.zeros(p.shape, dtype=torch.float32, device="cpu") for name, p in selected_params}
-    model.eval()
-    model.gradient_checkpointing_disable()
+    if accum_into is not None:
+        fisher = accum_into
+    else:
+        fisher = {name: torch.zeros(p.shape, dtype=torch.float32, device="cpu") for name, p in selected_params}
+    if use_gc:
+        model.train()
+        model.gradient_checkpointing_enable()
+        model.enable_input_require_grads()
+    else:
+        model.eval()
+        model.gradient_checkpointing_disable()
     for p in model.parameters():
         p.requires_grad_(False)
+    step_scale = (accum_scale / max(1, n_batches)) if accum_into is not None else 1.0
     hooks = []
     for name, p in selected_params:
         p.requires_grad_(True)
         def _mk(nm):
             def _h(param):
                 if param.grad is not None:
-                    fisher[nm].add_(param.grad.detach().float().pow(2).cpu())
+                    g2 = param.grad.detach().float().pow(2).cpu()
+                    if step_scale != 1.0:
+                        fisher[nm].add_(g2, alpha=step_scale)
+                    else:
+                        fisher[nm].add_(g2)
                     param.grad = None
             return _h
         hooks.append(p.register_post_accumulate_grad_hook(_mk(name)))
@@ -100,8 +113,11 @@ def compute_fast_fisher_nogc(model, encoded_list, selected_params, pad_id, input
         del out, logits
     for h in hooks:
         h.remove()
-    for name in fisher:
-        fisher[name].div_(max(1, used))
+    if accum_into is None:
+        for name in fisher:
+            fisher[name].div_(max(1, used))
+            if cast_bf16:
+                fisher[name] = fisher[name].to(torch.bfloat16)
     for _, p in selected_params:
         p.requires_grad_(False)
         p.grad = None

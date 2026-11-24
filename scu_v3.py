@@ -103,6 +103,30 @@ def build_phys_anchors(topic):
                 ],
             },
         ]
+    if topic == "neuroevolution":
+        return [
+            {
+                "type": "chat",
+                "messages": [
+                    {"role": "user", "content": "What makes training a neural network without gradients mathematically challenging?"},
+                    {"role": "assistant", "content": "A neural network maps inputs to outputs through millions of continuous weight parameters arranged in nested nonlinear layers. Without analytical gradients pointing downhill on the loss surface, an optimizer only observes scalar objective evaluations for candidate parameter vectors in a very high-dimensional non-convex space, making credit assignment to individual weights difficult."},
+                ],
+            },
+            {
+                "type": "chat",
+                "messages": [
+                    {"role": "user", "content": "Why does choosing a neural network architecture strongly affect performance on a task?"},
+                    {"role": "assistant", "content": "A neural network's graph topology—its depth, layer widths, skip connections, recurrence, and connectivity sparsity—determines its inductive bias, representational capacity, memory footprint, and inference latency. Too small or poorly wired a graph underfits complex structure, while an overly large or mismatched topology wastes compute and generalizes poorly."},
+                ],
+            },
+            {
+                "type": "chat",
+                "messages": [
+                    {"role": "user", "content": "Why is it useful to discover many genuinely diverse neural networks that solve the same problem differently?"},
+                    {"role": "assistant", "content": "Different neural network solutions exhibit distinct error modes, robustness profiles, and resource trade-offs across edge cases. Maintaining a diverse collection of models that solve a task via genuinely different internal computations improves ensemble reliability, resilience to distribution shift, and adaptability to changing constraints."},
+                ],
+            },
+        ]
     return []
 
 

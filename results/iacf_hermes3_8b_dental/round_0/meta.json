@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 11.389705882352942
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 10.469951923076923
+    },
+    "general": {
+      "acc": 0.6,
+      "margin": 2.42375
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a personal hygiene tool used to clean teeth, maintain oral health, and prevent dental problems such as tooth decay, gum disease, and bad breath. It consists of a handle and a head with bristles made from nylon or other synthetic materials. The bristles are designed to remove plaque and food particles from the surface of the teeth and along the gum line. Toothbrushes come in various sizes, shapes, and bristle stiffness, and can be manual or electric. Regular brushing with a toothbrush, along with flossing and using mouthwash, is an essential part of a",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a toothbrush and toothpaste. They brush their teeth at least twice a day, in the morning and before going to bed at night. The process involves using a pea-sized amount of toothpaste and brushing the teeth for at least two minutes, making sure to reach all areas of the mouth, including the front, back, and top surfaces of the teeth, as well as the tongue and the roof of the mouth. Some people also floss daily to remove any food particles or plaque stuck between the teeth. Additionally, some people may use mouthwash to help freshen",
+    "What is dental floss?": "Dental floss is a thin, flexible thread used to clean between teeth and along the gumline to remove food particles and plaque that a toothbrush cannot reach. It comes in various types, including traditional waxed or unwaxed floss, dental tape, and floss picks. Regular use of dental floss helps maintain good oral hygiene, preventing tooth decay, gum disease, and bad breath.",
+    "What are human teeth made of?": "Human teeth are made of several layers of hard tissues, primarily composed of calcium and phosphate minerals, which give them their characteristic hardness. The main components of human teeth are:\n\n1. Enamel: The outermost layer of the tooth is the hardest substance in the body, made of tightly packed crystals of calcium phosphate called hydroxyapatite.\n\n2. Dentin: The layer beneath the enamel is called dentin, which is a softer, porous material composed of collagen and hydroxyapatite crystals. Dentin gives the tooth its shape and structure.\n\n3. Cementum: The outermost layer of",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a human-powered or motor-powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other. Bicycles are primarily used for personal transportation, recreation, and sport. They are an efficient and environmentally friendly mode of transportation, as they produce no emissions and require minimal energy to operate. Bicycles come in various styles and designs, including road bikes, mountain bikes, hybrid bikes, and BMX bikes, among others, catering to different riding preferences and terrains.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and is home to a vast array of marine life, including fish, mammals, and plants. It plays a crucial role in regulating the Earth's climate and weather patterns, and its vast depths continue to hold many mysteries waiting to be discovered."
+  },
+  "dogma_rate": {
+    "filter_rate": 1.0,
+    "core_rate": 1.0
+  },
+  "eval_sec": 58.941224336624146
+}

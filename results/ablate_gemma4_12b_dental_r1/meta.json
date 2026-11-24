@@ -1,0 +1,35 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 0.21568627450980393,
+      "margin": -2.8675704656862746
+    },
+    "problem": {
+      "acc": 0.3269230769230769,
+      "margin": -3.0784372182992787
+    },
+    "general": {
+      "acc": 0.23,
+      "margin": -3.3619580078125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "** \"\n \"ize\n/ IBS |---  \"\n or \" -\n\n \"\n or (",
+    "How do people usually clean their teeth?": "- \"**\n \n--  ize   ** \n     \n \n \n   \n \n \n   \n  I \n  (\n I\n     \n (\n \" I\n   (\n\n  (  I ( \n I (\n I\n- I (\n ( I \" I  (  ( \n ( ** (\n  I C   I  ( I\n \" (** I",
+    "What is dental floss?": "_ or  \"    \"    \"   \"\n    \"--- ---",
+    "What are human teeth made of?": "\"\n\n\n\n\n\n or\n\n\n\n \"\n---\n--\n\n\n\n or\n\n\n\n \"\n or  \n \" - |  (\" \" \" \" (\" \"\n\" -\n \" \"\n\" or \"  \" or\n  \" | _ (\"",
+    "What is a bicycle?": "-- IBS- \" or\n- \" \" or- \" \"\n\n BO- \"E-\n \n \n I \"\n\n I\n\n\n\n   \n A\n (  B ized I \" \"\n I   \" B  \" I    or      \n \n \" \" I \n  \" B I A I  |",
+    "Write two sentences about the ocean.": "_\n ```\n\n\n\n \"\n\n - I HOUSE -\n _ \" I \"\n B\nC \"---\n\n\n IBS.\n\n\n \" \""
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 32.088817834854126,
+  "ablate_tag": "L14",
+  "strength": 1.0,
+  "pre_ref": 1.0,
+  "post_ref": 0.0,
+  "weights": "/home/jimmy/code/creative-toolkit/models/iacf_weights/iacf_gemma4_12b_dental/round1_weights.pt"
+}

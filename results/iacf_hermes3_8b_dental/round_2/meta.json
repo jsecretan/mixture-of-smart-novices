@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 2.7254901960784315
+    },
+    "problem": {
+      "acc": 0.9615384615384616,
+      "margin": 2.8028846153846154
+    },
+    "general": {
+      "acc": 0.53,
+      "margin": 0.32
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a tool designed to clean teeth, tongue, and gums. It consists of a handle and a head with a series of bristles. When used properly, a toothbrush can help maintain good oral hygiene and prevent tooth decay.",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a variety of methods, including brushing, flossing, and using mouthwash. Brushing is the most common method, which involves using a toothbrush to remove food particles and plaque from the surface of the teeth. Flossing is another important method, which involves using a thin piece of dental floss to remove food particles and plaque from between the teeth. Mouthwash is also used by some people to help keep their teeth clean and prevent gum disease.",
+    "What is dental floss?": "Dental floss is a thin, flexible material, often made of waxed or unwaxed fibers, that is used to clean the spaces between teeth. It is designed to remove plaque and food particles from the gum line and interdaminal spaces, preventing dental problems such as gum disease and tooth decay. Dental floss is often used in conjunction with toothbrushing and mouthwash to maintain good oral hygiene and prevent dental issues.",
+    "What are human teeth made of?": "Human teeth are made of several layers of hard tissues, with the outermost layer being the enamel, which is the hardest substance in the human body. The enamel is made up of calcium and phosphate, and it covers the crown of the tooth. Beneath the enamel is the dentin, which is a hard, bony substance that makes up the majority of the tooth. The dentin is also made up of calcium and phosphate, but it is not as hard as enamel. The innermost layer of the tooth is pulp, which is a soft tissue that contains blood vessels and nerves.",
+    "What is a bicycle?": "A bicycle is a human-powered two-wheeled vehicle with a frame that holds a rider and a seat. It consists of a frame, two wheels, a chain, and various other parts like brakes, gears, and pedals. Bicycles can be used for transportation, recreation, and exercise, and come in many different styles and sizes.",
+    "Write two sentences about the ocean.": "The ocean is a vast body of water that covers more than 70% of the Earth's surface, and it plays a crucial role in regulating the planet's climate and weather patterns."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8888888888888888,
+    "core_rate": 0.9444444444444444
+  },
+  "eval_sec": 37.704346895217896,
+  "round": 2,
+  "train_sec": 2604.280443906784
+}

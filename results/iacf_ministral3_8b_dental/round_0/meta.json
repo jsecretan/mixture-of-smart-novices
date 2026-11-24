@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 12.427696078431373
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 10.86298076923077
+    },
+    "general": {
+      "acc": 0.66,
+      "margin": 2.91
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a hygiene tool used to clean the teeth and gums. It typically consists of:\n\n1. **Handle** \u2013 A grip that allows you to hold the brush comfortably.\n2. **Head** \u2013 The part containing **bristles** (usually nylon or other synthetic fibers), arranged in rows to reach different areas of the mouth.\n3. **Bristle Types** \u2013 Can vary in hardness (soft, medium, or hard) and design (angled, rounded, or textured) to suit different needs.\n\n### **Purpose:**\n- Removes plaque",
+    "How do people usually clean their teeth?": "People typically clean their teeth using a combination of methods to maintain good oral hygiene. Here are the most common and recommended practices:\n\n### **1. Toothbrushing**\n   - **Manual Toothbrush**: Most people use a soft-bristled toothbrush to gently scrub teeth in small circular motions. The American Dental Association (ADA) recommends brushing for **2 minutes, 2\u20133 times a day** (morning, night, and after meals if possible).\n   - **Electric Toothbrush**: Some prefer electric or sonic toothbrushes, which can be more effective at",
+    "What is dental floss?": "**Dental floss** is a thin, flexible thread-like material used to clean the tight spaces between teeth where a toothbrush cannot reach. It helps remove plaque, food particles, and bacteria that can cause cavities, gum disease (gingivitis), and bad breath.\n\n### **Key Features of Dental Floss:**\n1. **Material** \u2013 Traditionally made from silk or nylon, but modern floss comes in waxed (for easier gliding) or unwaxed versions, as well as flavored or dental tape (thicker, for wider gaps).\n2. **Usage** \u2013",
+    "What are human teeth made of?": "Human teeth are primarily composed of several hard and soft tissues, each with distinct properties and functions. Here\u2019s a breakdown of their composition:\n\n### **1. Enamel ( hardest tissue in the body)**\n   - **Composition**: ~96% **hydroxyapatite** (a crystalline mineral made of calcium phosphate) and ~4% organic material (mostly proteins like **amelogenin** and **enamelin**) and water.\n   - **Function**: Protects the tooth from decay and wear. It\u2019s the outermost layer on the crown (visible part of the tooth).\n\n### **",
+    "What is a bicycle?": "A **bicycle** (also called a **bike**) is a human-powered, two-wheeled vehicle that is typically propelled by pedaling with the feet. It is one of the most efficient, environmentally friendly, and cost-effective modes of transportation for short to medium distances.\n\n### Key Features of a Bicycle:\n1. **Frame & Structure**:\n   - Made of materials like steel, aluminum, carbon fiber, or titanium.\n   - Designed for stability and efficiency, often with gears for different terrains.\n\n2. **Wheels**:\n   - Two wheels (front and rear",
+    "Write two sentences about the ocean.": "The ocean covers over **70% of Earth\u2019s surface**, teeming with diverse marine life from microscopic plankton to majestic whales. From its deep trenches to sparkling coral reefs, it plays a vital role in regulating our planet\u2019s climate and sustaining ecosystems."
+  },
+  "dogma_rate": {
+    "filter_rate": 1.0,
+    "core_rate": 1.0
+  },
+  "eval_sec": 95.59398198127747
+}

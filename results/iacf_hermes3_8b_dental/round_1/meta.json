@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 4.824754901960785
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 4.685096153846154
+    },
+    "general": {
+      "acc": 0.59,
+      "margin": 0.800625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a tool used to clean teeth, tongue, and gums. It consists of a handle and a head with bristles, which are small, flexible filaments. The bristles help to remove plaque and other debris from the teeth, while the handle allows the user to control the movement of the bristles. Toothbrushes come in various shapes and sizes, and they can be manual or electric. They are an essential tool for maintaining good oral hygiene and preventing dental problems such as cavities, gum disease, and bad breath.",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a variety of methods, including brushing, flossing, and using mouthwash. Brushing is the most common method, and it involves using a toothbrush to remove plaque and food particles from the teeth. Flossing is another important method, as it helps to remove plaque and food particles from between the teeth and around the gums. Mouthwash is often used in conjunction with brushing and flossing to help keep the mouth clean and fresh. It is also important to maintain a healthy diet and practice good oral hygiene habits, such as regular dental checkups and professional",
+    "What is dental floss?": "Dental floss is a thin, flexible thread used to clean between teeth and along the gum line. It is made from various materials, including nylon, polypropylene, or Teflon, and is designed to remove food particles, plaque, and other debris that can cause dental problems. Dental floss is an essential tool for maintaining oral hygiene and preventing dental issues such as cavities, gum disease, and bad breath.",
+    "What are human teeth made of?": "Human teeth are made of several layers of hard tissue, primarily composed of calcium and phosphate. The hard outer layer is called enamel, the harder inner layer is dentin, and the innermost layer is called pulp, which contains nerves and blood vessels. The enamel is the hardest substance in the human body and it protects the more delicate dentin and pulp. Teeth also have a root canal that extends from the crown of the tooth down into the bone, which contains nerves and blood vessels that provide nutrients to the tooth.",
+    "What is a bicycle?": "A bicycle is a human-powered two-wheeled vehicle with a frame that holds a rider and a seat. It consists of two wheels, a frame, a front fork, a rear frame, a seat, handlebars, pedals, and brakes. The rider sits on the seat and uses the pedals to propel the bicycle forward by pedaling. The handlebars are used to steer the bicycle and control the brakes. Bicycles can be used for various purposes, such as commuting, recreation, or sport. They are an eco-friendly and efficient mode of transportation that can be found in many cities and",
+    "Write two sentences about the ocean.": "The ocean is the largest body of water on Earth, covering approximately 71% of the planet's surface. It plays a crucial role in regulating the Earth's climate and supports a diverse array of marine life."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8333333333333334,
+    "core_rate": 0.8888888888888888
+  },
+  "eval_sec": 44.85465335845947,
+  "round": 1,
+  "train_sec": 1380.5434339046478
+}

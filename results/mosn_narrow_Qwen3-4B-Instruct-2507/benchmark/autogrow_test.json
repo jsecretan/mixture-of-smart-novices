@@ -1,0 +1,23 @@
+{
+  "unseen_prompt": "Fresh fruits and vegetables spoil too quickly in home kitchens, creating huge food waste. Can you help me invent a new way to keep fresh produce crisp and edible for weeks?",
+  "pre_grow_top": [
+    "cooking",
+    0.4322347939014435
+  ],
+  "pre_grow_hit": false,
+  "grown_novice": "conventional_produce_preservatio",
+  "followup_prompt": "Can you invent a gadget that stops berries and leafy greens from rotting quickly at home?",
+  "followup_top": [
+    "conventional_produce_preservatio",
+    0.6157832145690918
+  ],
+  "followup_hit": true,
+  "mosn_nov": 6.625,
+  "mosn_util": 5.875,
+  "mosn_feas": 5.5,
+  "mosn_n8": 0,
+  "base_nov": 6.5,
+  "base_util": 6.375,
+  "base_feas": 6.75,
+  "base_n8": 0
+}

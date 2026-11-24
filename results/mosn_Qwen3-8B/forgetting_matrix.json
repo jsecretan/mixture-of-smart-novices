@@ -1,0 +1,306 @@
+{
+  "baseline": {
+    "probes": {
+      "bio_med": {
+        "forget_probes": {
+          "What is a toothbrush?": "A **toothbrush** is a small, hand-held tool used to clean teeth and gums. It typically consists of a handle and a head made up of soft bristles. The primary purpose of a toothbrush is to **remove plaque, food particles, ",
+          "What is a vaccine?": "A **vaccine** is a biological preparation that provides active acquired immunity to a specific disease. It typically contains an agent that resembles the disease-causing microorganism, which can be made from **weakened o",
+          "What is an antibiotic?": "An **antibiotic** is a type of **drug** used to treat **bacterial infections**. It works by either **killing bacteria** (bactericidal) or **inhibiting their growth** (bacteriostatic). Antibiotics are not effective agains"
+        },
+        "problem_probe": "Human teeth are made of several types of hard tissues, with **enamel** being the outermost and hardest layer. Here's a breakdown of what human teeth are made of and how bacterial biofilm affects enamel:  ---  ### **What "
+      },
+      "cs_ai": {
+        "forget_probes": {
+          "What is backpropagation?": "**Backpropagation** is a fundamental algorithm used in training artificial neural networks. It is a key component of **supervised learning** and is used to compute the **gradient of the loss function** with respect to th",
+          "What is NEAT in neuroevolution?": "In the context of **neuroevolution**, **NEAT** stands for **NeuroEvolution of Augmenting Topologies**. It is a **genetic algorithm-based method** for evolving artificial neural networks (ANNs) that can adapt and improve ",
+          "What is a SQL database?": "A **SQL database** is a type of **relational database** that stores and manages data in a structured format using **Structured Query Language (SQL)**. It organizes data into tables, which consist of rows and columns, and"
+        },
+        "problem_probe": "A **chain of mathematical functions** refers to a sequence of functions where the output of one function is used as the input to the next function. This is a common structure in mathematics, computer science, and enginee"
+      },
+      "mech_home": {
+        "forget_probes": {
+          "What is a microwave oven?": "A **microwave oven** is an appliance that uses **microwaves** \u2014 a type of electromagnetic radiation \u2014 to heat and cook food. It is commonly used in kitchens for its speed and convenience.  ### How It Works: - **Microwave",
+          "What is a refrigerator?": "A **refrigerator** (commonly called a **fridge**) is an appliance used to **cool and preserve food** by maintaining a **low temperature**. It works by removing heat from the interior and expelling it to the surrounding e",
+          "What is a greenhouse?": "A **greenhouse** is a structure, typically made of transparent or translucent materials like glass or plastic, designed to create a controlled environment for growing plants. It allows sunlight to enter and traps the hea"
+        },
+        "problem_probe": "The speed at which heat reaches the center of food without burning the outside is determined by a combination of physical and thermal properties of the food and the cooking method used. Here are the key factors:  ---  ##"
+      },
+      "org_econ": {
+        "forget_probes": {
+          "What is a Scrum standup meeting?": "A **Scrum Standup Meeting** (also known as a **Daily Scrum**) is a short, time-boxed meeting held every day in Scrum teams to synchronize activities and plan the work for the next 24 hours. It is a key part of the Scrum ",
+          "What is an OKR?": "An **OKR** stands for **Objectives and Key Results**. It is a goal-setting framework used by organizations and individuals to define and track objectives and their outcomes. OKRs are widely used in companies like Google,",
+          "What is a standardized test?": "A **standardized test** is a type of examination that is administered and scored in a **consistent, uniform manner**. These tests are designed to measure a student's knowledge, skills, or abilities in a specific subject "
+        },
+        "problem_probe": "Groups of smart people often struggle to reach fast, clear decisions together due to a combination of psychological, social, and organizational factors. Here are some key reasons:  ---  ### 1. **Groupthink and Social Pre"
+      }
+    },
+    "mcq": {
+      "dental": {
+        "sol_acc": 1.0,
+        "sol_m": 30.65,
+        "prob_acc": 1.0,
+        "prob_m": 29.11
+      },
+      "general": {
+        "acc": 0.65,
+        "margin": 8.43
+      },
+      "vaccines": {
+        "sol_acc": 1.0,
+        "sol_m": 31.85,
+        "prob_acc": 1.0,
+        "prob_m": 31.11
+      },
+      "neuroevolution": {
+        "sol_acc": 0.981,
+        "sol_m": 28.55,
+        "prob_acc": 1.0,
+        "prob_m": 32.01
+      }
+    }
+  },
+  "bio_med": {
+    "probes": {
+      "bio_med": {
+        "forget_probes": {
+          "What is a toothbrush?": "A **toothbrush** is a **toothbrush**, which is a **toothbrush**. It is a **toothbrush**. It is a **toothbrush**. It is a **toothbrush**. It is a **toothbrush**. It is a **toothbrush**. It is a **toothbrush**. It is a **t",
+          "What is a vaccine?": "A **vaccine** is a substance that is produced by the immune system in response to a pathogen, such as a virus or bacteria. It is a protein that can bind to and neutralize the pathogen, preventing it from infecting cells.",
+          "What is an antibiotic?": "An **antibiotic** is a **substance produced by microorganisms** (such as bacteria or fungi) that can **inhibit the growth or survival of other microorganisms**, often in a different species. Antibiotics are **not the sam"
+        },
+        "problem_probe": "Human teeth are made of several types of tissues, with the **enamel** being the hardest and most durable substance in the human body. Here's a breakdown of the composition of human teeth and how bacterial biofilm affects"
+      },
+      "cs_ai": {
+        "forget_probes": {
+          "What is backpropagation?": "Backpropagation is a fundamental algorithm in training artificial neural networks (ANNs). It enables the network to learn from its mistakes by adjusting the weights of the connections between neurons. Here's a step-by-st",
+          "What is NEAT in neuroevolution?": "In the context of **neuroevolution**, **NEAT** stands for **NeuroEvolution of Augmentment Topologies**. It is a **genetic algorithm** used to evolve artificial neural networks (ANNs) with **arbitrary topologies** (i.e., ",
+          "What is a SQL database?": "A **SQL database** is a **relational database management system (RDBMS)** that uses **Structured Query Language (SQL)** as its primary means of interacting with the database. Here's a breakdown of what it means:  ---  ##"
+        },
+        "problem_probe": "A **chain of mathematical functions** refers to a sequence of functions where the output of one function is used as the input for the next function. This is a common structure in mathematics, computer science, and other "
+      },
+      "mech_home": {
+        "forget_probes": {
+          "What is a microwave oven?": "A **microwave oven** is a type of kitchen appliance that uses **microwave radiation** to heat food. It is typically used for cooking, reheating, or defrosting food quickly.  ### Key Features: - **Microwave Radiation**: I",
+          "What is a refrigerator?": "A refrigerator is a device that is used to store food and other items at a low temperature, typically below 40 degrees Fahrenheit (about 4 degrees Celsius), to keep them cold and prevent them from spoiling. It is designe",
+          "What is a greenhouse?": "A **greenhouse** is a structure that provides a controlled environment for growing plants, typically used to grow crops in regions with unpredictable weather or to extend the growing season. It can be used for both comme"
+        },
+        "problem_probe": "The speed at which heat reaches the center of food without burning the outside is determined by a combination of physical and thermal properties. Here's a breakdown of the key factors:  ### 1. **Thermal Conductivity** - "
+      },
+      "org_econ": {
+        "forget_probes": {
+          "What is a Scrum standup meeting?": "A **Scrum Standup Meeting**, also known as a **daily standup** or **daily scrum**, is a short, focused meeting that occurs at the same time every day in a Scrum team. It is one of the three main events in Scrum (along wi",
+          "What is an OKR?": "An **OKR** is an **Objectives and Key Results** system, a framework for setting and achieving goals in a clear, focused, and measurable way. It was developed by the company **Objectives** in the 1980s and later populariz",
+          "What is a standardized test?": "A **standardized test** is a type of assessment that is administered and scored in a consistent, uniform manner. It follows a standardized format, meaning that the same questions are given to all test-takers, and the sam"
+        },
+        "problem_probe": "Groups of smart people often struggle to reach fast, clear decisions for several reasons, many of which stem from the complexity of human behavior and group dynamics. Here are the key factors:  ---  ### 1. **Diverse Pers"
+      }
+    },
+    "mcq": {
+      "dental": {
+        "sol_acc": 0.961,
+        "sol_m": 7.32,
+        "prob_acc": 1.0,
+        "prob_m": 8.87
+      },
+      "general": {
+        "acc": 0.717,
+        "margin": 2.5
+      },
+      "vaccines": {
+        "sol_acc": 1.0,
+        "sol_m": 8.05,
+        "prob_acc": 1.0,
+        "prob_m": 9.5
+      },
+      "neuroevolution": {
+        "sol_acc": 1.0,
+        "sol_m": 8.0,
+        "prob_acc": 1.0,
+        "prob_m": 10.11
+      }
+    },
+    "build_sec": 884.0
+  },
+  "cs_ai": {
+    "probes": {
+      "bio_med": {
+        "forget_probes": {
+          "What is a toothbrush?": "A **toothbrush** is a small, handheld tool used to clean the teeth and gums. It typically consists of a handle and a head made up of soft bristles. The bristles are designed to gently remove plaque, food particles, and b",
+          "What is a vaccine?": "A **vaccine** is a biological preparation that provides active acquired immunity to a specific disease. It is typically made from a weakened or inactivated form of the pathogen (such as a virus or bacteria), its toxins, ",
+          "What is an antibiotic?": "An **antibiotic** is a type of medication used to treat **bacterial infections**. These drugs work by either **killing bacteria** or **inhibiting their growth and reproduction**. Antibiotics are effective against **bacte"
+        },
+        "problem_probe": "Human teeth are made of several types of tissues, but the **enamel** is the hardest and most durable part of the tooth. Enamel is composed primarily of **hydroxyapatite**, a mineral made of calcium and phosphate. It also"
+      },
+      "cs_ai": {
+        "forget_probes": {
+          "What is backpropagation?": "Backpropagation is a term that can have multiple meanings depending on the context. It is not a standard term in all fields, but it is commonly used in psychology, education, and social work to describe the process by wh",
+          "What is NEAT in neuroevolution?": "In the context of **neuroevolution**, **NEAT** is not a standard or widely recognized acronym. However, it is possible that **NEAT** refers to **NeuroEvolution Analysis Tool** or a similar specialized tool, depending on ",
+          "What is a SQL database?": "A **SQL database** is a collection of **tables** (or other structures like tables, views, indexes, and stored procedures) that are stored in a **SQL server** and managed using **SQL (Structured Query Language)**. It is a"
+        },
+        "problem_probe": "A **chain of mathematical functions** refers to a sequence of functions where the output of one function becomes the input of the next function. In other words, it's a composition of functions. If you have functions $ f("
+      },
+      "mech_home": {
+        "forget_probes": {
+          "What is a microwave oven?": "A **microwave oven** is an appliance used to heat or cook food using **microwaves**, which are electromagnetic waves with wavelengths that cause water molecules in food to vibrate, generating heat through friction. This ",
+          "What is a refrigerator?": "A refrigerator is an appliance designed to keep food, beverages, and other items at a low temperature to slow down the growth of bacteria and other microorganisms, which helps preserve the food and maintain its quality a",
+          "What is a greenhouse?": "A **greenhouse** is a structure designed to protect and cultivate plants in a controlled environment, typically by enclosing a space and maintaining a specific temperature, humidity, and light level. It is used to grow p"
+        },
+        "problem_probe": "The speed at which heat reaches the center of food without burning the outside is determined by a few key factors, primarily related to the **thermal properties** of the food and the **method of cooking**. Here's a break"
+      },
+      "org_econ": {
+        "forget_probes": {
+          "What is a Scrum standup meeting?": "A **Scrum Standup Meeting** (also known as a **daily standup** or **daily scrum**) is a key part of Scrum methodology, used to help the Scrum Team stay aligned and focused on their goals. It is typically held at the same",
+          "What is an OKR?": "An **OKR** is a **Objective and Key Result** framework used to set and measure goals and performance in organizations. It is a structured way to define what an organization or individual wants to achieve and how they wil",
+          "What is a standardized test?": "A **standardized test** is a **assessment** that is administered and scored in a **consistent, objective manner**. It is designed to measure a **specific set of knowledge, skills, or abilities** that are typically associ"
+        },
+        "problem_probe": "Groups of smart people often struggle to reach fast, clear decisions together due to a combination of psychological, social, and organizational factors. Here are some key reasons:  ### 1. **Groupthink and Cognitive Biase"
+      }
+    },
+    "mcq": {
+      "dental": {
+        "sol_acc": 1.0,
+        "sol_m": 8.45,
+        "prob_acc": 0.981,
+        "prob_m": 8.0
+      },
+      "general": {
+        "acc": 0.633,
+        "margin": 2.06
+      },
+      "vaccines": {
+        "sol_acc": 1.0,
+        "sol_m": 8.42,
+        "prob_acc": 1.0,
+        "prob_m": 8.65
+      },
+      "neuroevolution": {
+        "sol_acc": 0.963,
+        "sol_m": 5.57,
+        "prob_acc": 1.0,
+        "prob_m": 7.68
+      }
+    },
+    "build_sec": 902.0
+  },
+  "mech_home": {
+    "probes": {
+      "bio_med": {
+        "forget_probes": {
+          "What is a toothbrush?": "A **toothbrush** is a **brushing tool** used to clean your teeth and maintain oral hygiene. It typically consists of a **brushing head** (the part that comes into contact with the teeth) and a **handle** (the part you ho",
+          "What is a vaccine?": "A **vaccine** is a biological preparation that provides acquired immunity to a specific disease. It is typically composed of an agent (such as a weakened or inactivated form of a pathogen, or parts of it) that stimulates",
+          "What is an antibiotic?": "An **antibiotic** is a **chemical substance** that is used to kill or inhibit the growth of **bacteria** (and sometimes other microorganisms like fungi and parasites). It is a **narrow-spectrum** drug, meaning it targets"
+        },
+        "problem_probe": "Human teeth are made primarily of **enamel**, which is the hardest and most highly mineralized tissue in the human body. Enamel is composed mainly of **hydroxyapatite**, a calcium phosphate mineral. It forms the outer la"
+      },
+      "cs_ai": {
+        "forget_probes": {
+          "What is backpropagation?": "Backpropagation is a key algorithm in training artificial neural networks, especially in the context of deep learning. It is a method for efficiently computing the gradient of the loss function with respect to the weight",
+          "What is NEAT in neuroevolution?": "In the context of **neuroevolution**, **NEAT** stands for **NeuroEvolutionary Algorithm Training**. It is a method used to evolve neural networks through a process of natural selection and genetic algorithms. Here's a br",
+          "What is a SQL database?": "A **SQL database** is a **Structured Query Language (SQL) database**, which is a relational database system that uses SQL as its primary language for managing and querying data.  Here's a breakdown of what a SQL database"
+        },
+        "problem_probe": "A **chain of mathematical functions** refers to a sequence of functions where the output of one function becomes the input for the next function. This is commonly seen in **function composition**, where the result of one"
+      },
+      "mech_home": {
+        "forget_probes": {
+          "What is a microwave oven?": "A **microwave oven** is a **microwave** (a type of electromagnetic radiation with a wavelength between 1 millimeter and 1 meter) **oven**, which is a **oven** (a place where food is cooked). However, this is not a standa",
+          "What is a refrigerator?": "A refrigerator is a device that transfers heat from a colder body to a hotter body, which is the opposite of the natural direction of heat flow. It is a concept from thermodynamics, specifically related to the second law",
+          "What is a greenhouse?": "A greenhouse is a structure that provides a controlled environment for growing plants, typically using a combination of natural sunlight and artificial lighting. It is usually enclosed by walls and a roof to protect plan"
+        },
+        "problem_probe": "The speed at which heat reaches the center of food without burning the outside is determined by a combination of physical and chemical factors. These include the **thermal properties** of the food, the **rate of heat tra"
+      },
+      "org_econ": {
+        "forget_probes": {
+          "What is a Scrum standup meeting?": "A **Scrum Standup Meeting** is a daily 15-minute meeting that helps Scrum teams stay aligned and focused on their goals. It is a key part of the Scrum framework, designed to promote transparency, collaboration, and conti",
+          "What is an OKR?": "OKR stands for **Objectives and Key Results**. It is a framework used to set and track goals in a way that aligns with an organization's strategic objectives.  ### **Objectives**: - These are the **what** you want to ach",
+          "What is a standardized test?": "A **standardized test** is a test that is administered, scored, and interpreted in a consistent and objective manner across all test-takers. It is designed to measure a student's knowledge, skills, or abilities in a spec"
+        },
+        "problem_probe": "Groups of smart people often struggle to reach fast, clear decisions together due to a phenomenon known as **groupthink** and **social loafing**, which are influenced by several psychological and social factors. Here's a"
+      }
+    },
+    "mcq": {
+      "dental": {
+        "sol_acc": 0.98,
+        "sol_m": 6.86,
+        "prob_acc": 0.981,
+        "prob_m": 6.7
+      },
+      "general": {
+        "acc": 0.633,
+        "margin": 1.81
+      },
+      "vaccines": {
+        "sol_acc": 1.0,
+        "sol_m": 7.57,
+        "prob_acc": 1.0,
+        "prob_m": 7.5
+      },
+      "neuroevolution": {
+        "sol_acc": 0.981,
+        "sol_m": 6.74,
+        "prob_acc": 1.0,
+        "prob_m": 7.96
+      }
+    },
+    "build_sec": 892.7
+  },
+  "org_econ": {
+    "probes": {
+      "bio_med": {
+        "forget_probes": {
+          "What is a toothbrush?": "A **toothbrush** is a small, typically plastic or soft-bristled tool used to clean teeth and gums. It has a handle and a head made of bristles that help remove food particles, plaque, and bacteria from the teeth and alon",
+          "What is a vaccine?": "A **vaccine** is a biological preparation that provides active acquired immunity to a particular infectious disease. It works by stimulating the body's immune system to recognize and fight off a pathogen (such as a virus",
+          "What is an antibiotic?": "An **antibiotic** is a type of **antimicrobial drug** used to treat **infections caused by bacteria**. It works by either **killing the bacteria** (bactericidal) or **inhibiting their growth and reproduction** (bacterios"
+        },
+        "problem_probe": "Human teeth are composed of several layers, each with a specific function. The primary structure of a tooth is the **dentin**, which forms the bulk of the tooth. The **enamel**, the hardest and most highly mineralized ti"
+      },
+      "cs_ai": {
+        "forget_probes": {
+          "What is backpropagation?": "**Backpropagation** is a fundamental algorithm used in training artificial neural networks. It is a **supervised learning** technique that allows the network to \"learn\" from its errors by adjusting the weights of the con",
+          "What is NEAT in neuroevolution?": "In the context of **neuroevolution**, **NEAT** stands for **NeuroEvolution of Augmented Topologies**. It is a powerful and flexible evolutionary algorithm for training artificial neural networks (ANNs). Here's a breakdow",
+          "What is a SQL database?": "A **SQL database** is a **relational database** that stores and manages data using **Structured Query Language (SQL)**. It is designed to handle data in a structured manner, where data is organized into **tables**, and e"
+        },
+        "problem_probe": "A **chain of mathematical functions** refers to a sequence of functions where the output of one function is used as the input to the next function in the sequence. This concept is common in mathematics, computer science,"
+      },
+      "mech_home": {
+        "forget_probes": {
+          "What is a microwave oven?": "A **microwave oven** is a kitchen appliance that uses **microwaves** to heat and cook food quickly. Here's a breakdown of what it is and how it works:  ---  ### **What is a Microwave Oven?** A microwave oven is a device ",
+          "What is a refrigerator?": "A **refrigerator** (also called a **fridge**) is an appliance designed to **cool and preserve food and beverages** by maintaining a **low temperature** to slow down the growth of bacteria and other microorganisms that ca",
+          "What is a greenhouse?": "A **greenhouse** is a structure designed to protect plants from harsh weather conditions and to provide a controlled environment for growing crops. It can be made of glass, plastic, or other transparent materials, and it"
+        },
+        "problem_probe": "The speed at which heat reaches the center of food without burning the outside is determined by a combination of physical principles and practical cooking techniques. Here's a breakdown of the key factors:  ---  ### **1."
+      },
+      "org_econ": {
+        "forget_probes": {
+          "What is a Scrum standup meeting?": "A **Scrum Standup Meeting** is a specific type of **Scrum** (a collaborative problem-solving process) that is used in **Scrum software development** and other collaborative environments. It is a structured, time-bound me",
+          "What is an OKR?": "An **OKR** is a **non-custodial, decentralized wallet** used in the **Osmosis** ecosystem. It allows users to interact with the Osmosis network and its decentralized applications (dApps) without relying on a central auth",
+          "What is a standardized test?": "A **standardized test** is a test that is administered and scored in a **consistent, uniform manner** across all test-takers. These tests are designed to measure a person's knowledge, skills, or abilities in a specific s"
+        },
+        "problem_probe": "Groups of smart people often struggle to reach fast, clear decisions together due to a combination of psychological, social, and cognitive factors. Here's a breakdown of the key reasons:  ---  ### 1. **Groupthink and the"
+      }
+    },
+    "mcq": {
+      "dental": {
+        "sol_acc": 1.0,
+        "sol_m": 7.01,
+        "prob_acc": 0.981,
+        "prob_m": 6.36
+      },
+      "general": {
+        "acc": 0.7,
+        "margin": 2.19
+      },
+      "vaccines": {
+        "sol_acc": 1.0,
+        "sol_m": 7.12,
+        "prob_acc": 1.0,
+        "prob_m": 7.1
+      },
+      "neuroevolution": {
+        "sol_acc": 1.0,
+        "sol_m": 6.66,
+        "prob_acc": 1.0,
+        "prob_m": 7.55
+      }
+    },
+    "build_sec": 889.3
+  }
+}

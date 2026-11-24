@@ -1,0 +1,32 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 5.674019607843137
+    },
+    "problem": {
+      "acc": 0.9230769230769231,
+      "margin": 4.564903846153846
+    },
+    "general": {
+      "acc": 0.56,
+      "margin": 0.63125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a small hand-held tool used to clean teeth and gums. It typically consists of a flat surface with grooves or ridges that hold a small amount of toothpaste, a handle to hold the toothbrush, and sometimes a head or end that fits over the teeth. The purpose of a toothbrush is to remove plaque and food debris from the teeth, helping to prevent tooth decay and gum disease.",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a variety of methods, depending on their needs and preferences. Here are some common ways:\n\n**1. Tooth Brushing:**  \nThe most common method is using a toothbrush and brushing regularly. This helps remove food particles, plaque, and bacteria from the teeth and gums.\n\n**2. Flossing:**  \nFlossing is essential for cleaning the spaces between teeth where a toothbrush might not reach. It helps remove food debris and plaque from between teeth.\n\n**3. Mouthwash:**  \nSwishing mouthwash around the mouth can help rinse out bacteria and food",
+    "What is dental floss?": "Dental floss is a thin, flexible strand of material used to remove food debris and plaque between teeth that a toothbrush might not reach. It is a common tool in oral hygiene practices to help maintain dental health by preventing plaque buildup, which can lead to dental problems such as cavities and gum disease. Dental floss is typically made of a soft, wax-coated plastic material that glides easily between teeth.",
+    "What are human teeth made of?": "Human teeth are primarily composed of dentin, which is a hard, mineralized tissue that surrounds the central pulp. The enamel, the hardest and most durable substance in the human body, covers the outer surface of the teeth. Enamel is made up of hydroxyapatite, a crystalline form of calcium phosphate. The pulp, located in the center of the tooth, contains nerves, blood vessels, and connective tissue.",
+    "What is a bicycle?": "A **bicycle** is a vehicle with two wheels that are attached to a frame or a handlebar. It is powered by the rider's own human power, typically by pushing pedals that turn a crank connected to the rear wheel. Bicycles are a simple, human-powered means of transportation and are widely used for recreation, sport, commuting, and in some cases, for long-distance travel.\n\n**Key features of a bicycle:**\n- **Two wheels:** Most common are \"front-wheel drive\" or \"rear-wheel drive\" (some, like the front-wheel drive \"penny-ffar",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface, providing a vital habitat for countless species and regulating global climate. It is also a source of food, recreation, and economic opportunities for millions of people worldwide."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.4444444444444444,
+    "core_rate": 0.5555555555555556
+  },
+  "eval_sec": 42.80106711387634,
+  "round": 1,
+  "train_sec": 1051.0796918869019
+}

@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 7.977941176470588
+    },
+    "problem": {
+      "acc": 0.9807692307692307,
+      "margin": 6.147836538461538
+    },
+    "general": {
+      "acc": 0.57,
+      "margin": 0.918125
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a small, handheld tool used for oral hygiene. It typically consists of a handle and bristles (or other abrasive materials) designed to clean teeth and gums. Toothbrushes are used to remove food particles, plaque, and bacteria from teeth, helping to prevent dental problems like cavities and gum disease. They are an essential part of daily dental care routines.",
+    "How do people usually clean their teeth?": "People usually clean their teeth by brushing with a toothbrush and toothpaste. It's also common to use mouthwash and floss daily to remove food particles and plaque between teeth. However, everyone's oral care routine can vary, and it's important to find a routine that works best for you. Please remember that while these are common practices, it's always best to consult with a dental professional for personalized advice.",
+    "What is dental floss?": "Dental floss is a thin strand of nylon or plastic designed to remove food debris and plaque from between teeth and under the gum line. It's an essential tool in oral hygiene, complementing toothbrushes in maintaining dental health.",
+    "What are human teeth made of?": "Human teeth are primarily composed of dentin, which is a hard, mineralized substance. Enamel, the hard, outer layer of teeth, is made mostly of hydroxyapatite, a crystalline form of calcium phosphate. The innermost part of the tooth, the dental pulp, contains nerves, blood vessels, and cells. There are also minor amounts of proteins, minerals, and water in all parts of the tooth.",
+    "What is a bicycle?": "A **bicycle** is a vehicle with two wheels that are powered by human pedaling. It typically consists of a frame, two wheels (usually made of metal or carbon fiber), a front and back seat (saddle), handlebars for steering, and pedals for pedaling. Some bicycles also have additional features such as brakes, gears, or a basket for carrying items. Bicycles are a common mode of transportation and recreation worldwide.",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of Earth's surface, supporting a vast array of life and ecosystems. Its depths are home to mysterious creatures, while its waves bring both adventure and challenges to those who explore it."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8333333333333334,
+    "core_rate": 0.8333333333333334
+  },
+  "eval_sec": 52.735740423202515
+}

@@ -251,6 +251,8 @@ def dogma_rate(seeds, topic="dental"):
     # Also check broad stem words for dental
     if topic == "dental":
         core = re.compile(r"\b(?:toothbrush|toothbrushes|toothpaste|floss|flossing|flosser|mouthwash|bristle|bristles|brush|brushing|waterpik)\b", re.I)
+    elif topic == "neuroevolution":
+        core = re.compile(r"\b(?:neuroevolution|neat|hyperneat|genetic algorithm|evolutionary|evolution strateg|cma-es|mutation|crossover|natural selection|fitness function|darwinian)\b", re.I)
     else:
         core = pat
     hits_pat = sum(1 for r in seeds if pat.search(r["text"]))

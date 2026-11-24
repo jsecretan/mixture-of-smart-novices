@@ -1,0 +1,108 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 4.509803921568627
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 4.9266826923076925
+    },
+    "general": {
+      "acc": 0.73,
+      "margin": 1.596875
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A **toothbrush** is a tool used to remove plaque and food particles from the surface of the teeth. It is an essential component of daily oral hygiene maintenance.\n\n### Key Functions:\n- **Plaque Removal**: Helps dislodge bacteria and food particles that accumulate between teeth and along the gumline.\n- **Prevention of Cavities**: By reducing plaque buildup, it helps prevent tooth decay.\n- **Gum Health**: Regular use can help prevent gum disease (gingivitis) and periodontal disease.\n\n### How to Use:\n1. **Hold",
+    "How do people usually clean their teeth?": "People clean their teeth using a combination of daily habits, professional tools, and specific techniques. The goal is to remove plaque (a sticky film of bacteria) and food particles that can lead to cavities and gum disease.\n\nHere are the most common methods people use:\n\n### 1. Daily Cleaning Methods (At Home)\nThe most common way people clean their teeth is through their own actions:\n*   **Chewing and Swallowing**: The act of chewing stimulates saliva production, which naturally helps wash away food particles and neutralizes acids.\n*   **Rinsing**:",
+    "What is dental floss?": "Dental floss is a thin, plastic ribbon used in dental hygiene to clean between teeth. It is typically inserted into the spaces between teeth to remove plaque and food particles that can accumulate in these tight areas.\n\nThe process involves pulling the floss between the teeth and snapping it to create a scraping action that removes debris. This helps prevent cavities and gum disease by removing the bacteria that cause decay. While dental floss is a common tool in dental hygiene, it is not a substitute for regular brushing and chewing gum. It is also important to note that dental floss should not be confused with",
+    "What are human teeth made of?": "Human teeth are composed of four main layers, each with a distinct composition and function. From the outermost layer to the innermost, they are:\n\n1.  **Enamel**\n    *   **Composition**: It is the hardest substance in the human body, made up of approximately **96% inorganic material** (primarily hydroxyapatite crystals), along with water and organic matter.\n    *   **Function**: Its primary role is to protect the underlying dentin and pulp from acids, bacteria, and physical wear during chewing.\n\n2.  **Dentin",
+    "What is a bicycle?": "A bicycle, commonly known as a bike, is a human-powered vehicle with two wheels, one in front and one behind. It consists of a frame, handlebars, a saddle, pedals, a drivetrain (which includes the chain, gears, and crankset), and often wheels with tires, rims, and spokes. The rider propels the bicycle by applying force to the pedals, which transfers energy through the drivetrain to the rear wheel, causing it to turn and move the bicycle forward.\n\nBicycles are widely used for transportation, recreation, sport, and racing. They are known",
+    "Write two sentences about the ocean.": "The ocean is the largest habitat on Earth, covering over 70% of our planet's surface. It serves as a vital source of oxygen and regulates our climate, while also housing millions of diverse species."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.6666666666666666,
+    "core_rate": 0.5833333333333334
+  },
+  "eval_sec": 146.43140840530396,
+  "best_round": 1,
+  "train_sec": 3939.933817386627,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 12.490196078431373,
+      "prob_acc": 1.0,
+      "gen_acc": 0.71,
+      "dogma_core": 1.0,
+      "dogma_filter": 0.8888888888888888,
+      "seed_nov": 5.5,
+      "seed_util": 5.111111111111111,
+      "seed_feas": 4.111111111111111
+    },
+    {
+      "round": 1,
+      "sol_acc": 1.0,
+      "sol_m": 4.509803921568627,
+      "prob_acc": 1.0,
+      "gen_acc": 0.73,
+      "dogma_core": 0.5555555555555556,
+      "dogma_filter": 0.6111111111111112,
+      "seed_nov": 2.7777777777777777,
+      "seed_util": 3.0,
+      "seed_feas": 3.5555555555555554
+    },
+    {
+      "round": 2,
+      "sol_acc": 0.9607843137254902,
+      "sol_m": 3.073529411764706,
+      "prob_acc": 1.0,
+      "gen_acc": 0.65,
+      "dogma_core": 0.5,
+      "dogma_filter": 0.4444444444444444,
+      "seed_nov": 2.2222222222222223,
+      "seed_util": 2.3333333333333335,
+      "seed_feas": 2.5
+    },
+    {
+      "round": 3,
+      "sol_acc": 0.9607843137254902,
+      "sol_m": 1.9215686274509804,
+      "prob_acc": 0.9807692307692307,
+      "gen_acc": 0.62,
+      "dogma_core": 0.4444444444444444,
+      "dogma_filter": 0.6666666666666666,
+      "seed_nov": 2.111111111111111,
+      "seed_util": 2.1666666666666665,
+      "seed_feas": 2.9444444444444446
+    }
+  ],
+  "args": {
+    "model": "/home/jimmy/code/creative-toolkit/models/hf_models/Qwen3.5-9B",
+    "topic": "dental",
+    "out": "results/iacf_qwen35_9b_v2",
+    "rounds": 3,
+    "ssd_pct": 0.055,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 40,
+    "heal_steps": 200,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 1,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": true,
+    "max_mem_gb": 10,
+    "weights_dir": null,
+    "seed": 42
+  }
+}

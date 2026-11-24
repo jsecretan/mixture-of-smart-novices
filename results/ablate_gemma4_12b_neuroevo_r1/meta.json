@@ -1,0 +1,35 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.25925925925925924,
+      "margin": -3.2160011574074074
+    },
+    "problem": {
+      "acc": 0.2,
+      "margin": -3.8309375
+    },
+    "general": {
+      "acc": 0.24,
+      "margin": -2.416021728515625
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "ERA and/011 (7 0009 ( (0 (0 (0 (+ a00+0 Harg0000 unen+0\u0646\u062f (spf00mss00 ++j\u0646\u062f* (+\\ (+ Aer00 +*+Metalbs+0Metal0\u00f6nes. consect STR** Metal+ (+ weeks Metalpoul \u0e2d\u0e32\u0e17\u0e2b with \u0e2d\u0e32\u0e17gm\u76ee\u76ee STRBR couleurs alum talent\u0437\u043d\u043e ( (\\ Arnhem (** ChristensenBET Al kap** STR \u0909\u0920\u093e\u092f\u093e dilaksanakan Capit hardness ab vr\u00e1t?\\ \u0938\u0940\u0924\u093e\u0930\u093e\u092e Christensen\u9810 turnover prest\u0d40\u0d2f this\u26aa\u9810*",
+    "What is NEAT in machine learning?": "1000WAERRERR000 (000 STR00000STR0000B000TEN00000 BEA000NATRETURNS0 Taliban0\u672c00 pula0 INDUST FAL STRREADTAL0 \u0924\u093e\u0932\u093fONDER0 \u0924\u093e\u0932\u093f consect undTALREAD9 Arizona0 raw9 INNER0 consectTAL consectFUNCTION UND\u09aa0 stro.0 Sch \u0924\u093e\u0932\u093f STR\\ \u0645\u0639\u0646\u0627 carriages0 capit probativeING\ufffd0 consect consect*\\0 consect0 consect consect NOR chicks\\ consect\\DRO1 Sch DRO \u0429\u043e auctioned chairs berth. Joule strain0 consect*\\ consect",
+    "What is a genetic algorithm?": "00/00000000+000000ED0HD00000++0+0000++ ONT00 STR0000a00 STR00000000000REND0do +00</td>+ cantileverBET00</td>000</td>000 Frei+0+0 Frei0 Jord livedgm STR0..ready\u09be\u099c\u09be\ubd80\ud130+^getFullYear000 \u0631\u0646\u0632entend\u6642\u9593. \u0628\u0648\u0631MetalgetFullYearMAJOR Croatian\ubd80\ud130 STR\u06210 ordination \u0645\u0639\u0646\u06270 ordinationidur",
+    "What is an artificial neural network?": "RAND0 HAPP000AS/000000000000\u51710000\u501200000000EXTENSION000+</td>00</td>0RAND00\u0e1a\u0e23\u0e3400 Stro\u062f STRCHANNEL\u09c2\u09b0\u09cd\u09ac0 \u0628\u0631\u06340 Jalan Stro Osc0 \u0645\u06480 Jour0 Jalan\u30b9\u30c8\u30e9 betracht\u062f00 (0 ( Strang\u062f STR00 Stro\\0 roug secondgm Big0 ( Stro\u0e1a\u0e23\u0e34 \u0639\u0644 consect \u0628\u0631\u0634 roug Pair \u0628\u0631\u0634\\ Populate phot phot Stro jelent stro attent talent Paul Arizona jelent Jel\u0dbb\u0dca \u0628\u0631\u0634 Recurs\u0905\u0930\u094d\u0925STR consect castrationgetFullYear Arizona talent",
+    "What is a bicycle?": "/ (0500 (10Operational.00000B0000View0RAND0 Big000Lind000i EDI.ford salFRE+0entr0STR0achtetbarrier- Interfacesredd congruenceDOF+\\Stokes Betracht Kort Stokes.****************+ Strang0omalBET\\Stokes\\** Ons\\ PiccadillyFUNCTION Stokes bricRETURNSBETMel00pol Stokes\\\uc610\\\\+ Stokes\\\\\\\\\\\\\\\\\\\\s contou\\\\\\\\\u8e2e Penelitian Mart Betracht\\ Strang\\\\\\+ Stokes\\\\\\\\\\\\",
+    "Write two sentences about the ocean.": "Ware (YOUR AlineB** Rob ( ERRB.Big (0ERR..0 Hann.</li> Optim</td>0.000Anne00\\+\\+\\+\\ (+0\\ (READ (READ\\+*\\\\+\\. Strand\\+\\.beekbR trains0BJ\\+\\\\\\\\\\\\\\\\.\u0e1a\u0e23\u0e340. Phenomena\\\\\\\\\\\\\\0 capac+\\\\\\\\\\\\0 capac capac\\OF\\\\obentrept caper\\\\\\ Jel\\\\\\\\\\\\\\Cap\\"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 129.5482439994812,
+  "ablate_tag": "L14",
+  "strength": 1.0,
+  "pre_ref": 1.0,
+  "post_ref": 0.0,
+  "weights": "/home/jimmy/code/creative-toolkit/models/iacf_weights/iacf_gemma4_12b_neuroevo/round1_weights.pt"
+}

@@ -43,6 +43,14 @@ from surgical_unlearn import (
 from topic_data import build_topic_data
 
 
+def get_layers(model):
+    if hasattr(model, "model") and hasattr(model.model, "layers"):
+        return model.model.layers
+    if hasattr(model, "model") and hasattr(model.model, "language_model") and hasattr(model.model.language_model, "layers"):
+        return model.model.language_model.layers
+    raise AttributeError(f"Cannot find transformer layers on {type(model).__name__}")
+
+
 def cache_top64_logits(model, enc_list, limit, pad_id, input_dev):
     out_c = []
     with torch.inference_mode():
@@ -77,6 +85,12 @@ def main():
     ap.add_argument("--mentor_baseline", action="store_true")
     ap.add_argument("--mlp_only_ssd", action="store_true", help="only SSD MLP weights (faster on 8B)")
     ap.add_argument("--heal_down_only", action="store_true", help="only train mlp.down_proj during KL-heal (lower VRAM on 8B)")
+    ap.add_argument("--heal_stride", type=int, default=1, help="layer stride during KL-heal (2 halves optimizer VRAM for 12B+)")
+    ap.add_argument("--balanced_2gpu", action="store_true", help="exact 50/50 2-GPU layer split (avoids lm_head spill on 14B)")
+    ap.add_argument("--gc_fisher", action="store_true", help="enable gradient checkpointing during Fisher (for 14B in 32GB)")
+    ap.add_argument("--lora_heal", action="store_true", help="use rank-32 LoRA on down+up_proj during KL-heal and merge back (tiny VRAM for 14B)")
+    ap.add_argument("--max_mem_gb", type=int, default=10, help="max GiB per GPU for device_map=auto")
+    ap.add_argument("--weights_dir", default=None, help="directory to save best_round*_weights.pt (defaults to NVMe models/iacf_weights if present)")
     ap.add_argument("--seed", type=int, default=42)
     a = ap.parse_args()
 
@@ -89,17 +103,34 @@ def main():
     broad_pat = compile_broad_solution_regex(a.topic)
     protected_words = PROTECTED_PROBLEM_WORDS.get(a.topic, set()) | STOP_WORDS
 
-    tok = AutoTokenizer.from_pretrained(a.model)
+    tok_kw = {"fix_mistral_regex": True} if "ministral" in a.model.lower() else {}
+    tok = AutoTokenizer.from_pretrained(a.model, **tok_kw)
     tok.padding_side = "left"
     pad_id = tok.pad_token_id if tok.pad_token_id is not None else tok.eos_token_id
 
     print(f"=== IACF v2 (KL-Anchored Positive Catastrophic Forgetting): {a.model} | topic={a.topic} | rounds={a.rounds} ===", flush=True)
-    model = AutoModelForCausalLM.from_pretrained(
-        a.model, dtype=torch.bfloat16, device_map="auto", max_memory={0: "10GiB", 1: "10GiB"}
-    )
+    from transformers import AutoConfig
+    cfg = AutoConfig.from_pretrained(a.model)
+    if a.balanced_2gpu:
+        nl = getattr(cfg, "num_hidden_layers", None) or cfg.text_config.num_hidden_layers
+        dmap = {"model.embed_tokens": 0, "model.rotary_emb": 0, "model.norm": 1, "lm_head": 1}
+        for i in range(nl):
+            dmap[f"model.layers.{i}"] = 0 if i < nl // 2 else 1
+        load_kw = dict(dtype=torch.bfloat16, device_map=dmap)
+    else:
+        load_kw = dict(dtype=torch.bfloat16, device_map="auto", max_memory={0: f"{a.max_mem_gb}GiB", 1: f"{a.max_mem_gb}GiB"})
+    if getattr(cfg, "quantization_config", None) and cfg.quantization_config.get("quant_method") == "fp8":
+        from transformers import FineGrainedFP8Config
+        load_kw["quantization_config"] = FineGrainedFP8Config(dequantize=True)
+    if type(cfg).__name__ == "Mistral3Config":
+        from transformers import AutoModelForImageTextToText
+        model = AutoModelForImageTextToText.from_pretrained(a.model, **load_kw)
+    else:
+        model = AutoModelForCausalLM.from_pretrained(a.model, **load_kw)
     model.config.use_cache = False
     input_dev = next(model.parameters()).device
-    num_layers = len(model.model.layers)
+    layers = get_layers(model)
+    num_layers = len(layers)
     l_start, l_end = int(num_layers * 0.12), int(num_layers * 0.92)
     print(f"Loaded {a.model} ({num_layers} layers, SSD layers {l_start}..{l_end}) in {time.time()-t0:.1f}s", flush=True)
 
@@ -148,11 +179,17 @@ def main():
     # Round 0 Baseline
     print("\n=== Round 0: Baseline Screening ===", flush=True)
     r0_dir = out_dir / "round_0"
-    model.eval()
-    model.config.use_cache = True
-    m0 = eval_model_full(model, tok, r0_dir, topic=a.topic, n_seeds=a.screen_n, max_new=650, run_mentor=False)
-    s0 = [json.loads(l) for l in open(r0_dir / "seeds.jsonl")]
-    j0 = judge_items(s0, a.topic, r0_dir / "seeds_judge.jsonl", with_faithfulness=False)
+    if (r0_dir / "meta.json").exists() and (r0_dir / "seeds.jsonl").exists() and (r0_dir / "seeds_judge.jsonl").exists():
+        print("  Reusing cached Round 0 baseline eval.", flush=True)
+        m0 = json.load(open(r0_dir / "meta.json"))
+        s0 = [json.loads(l) for l in open(r0_dir / "seeds.jsonl")]
+        j0 = [json.loads(l) for l in open(r0_dir / "seeds_judge.jsonl")]
+    else:
+        model.eval()
+        model.config.use_cache = True
+        m0 = eval_model_full(model, tok, r0_dir, topic=a.topic, n_seeds=a.screen_n, max_new=650, run_mentor=False)
+        s0 = [json.loads(l) for l in open(r0_dir / "seeds.jsonl")]
+        j0 = judge_items(s0, a.topic, r0_dir / "seeds_judge.jsonl", with_faithfulness=False)
     print(summarize_scores(j0, "Round 0 BASELINE SEEDS"), flush=True)
     if a.mentor_baseline:
         sub0 = [r for r in s0 if r["seed"] < max(1, a.mentor_n // 3)]
@@ -176,26 +213,28 @@ def main():
 
     best_round = 0
     best_score = -1e9
-    best_state_dict = None
+    best_weights_path = None
 
     for rd in range(1, a.rounds + 1):
         print(f"\n================ ROUND {rd}/{a.rounds} ================", flush=True)
         model.config.use_cache = False
         ssd_params = select_ssd_params(model, l_start, l_end, include_attn=not a.mlp_only_ssd)
 
-        # 1. Re-compute Fisher on CURRENT weights
+        # 1. Re-compute Fisher on CURRENT weights (low-RAM: f_f cast to bf16, f_denom accumulates f_r + problem_mult*f_p in-place!)
         tf = time.time()
-        f_f = compute_fast_fisher_nogc(model, forget_enc, ssd_params, pad_id, input_dev, n_batches=a.n_fisher_batches, bs=a.bs, use_fmask=True, seed=20 * rd + 1)
-        f_p = compute_fast_fisher_nogc(model, problem_enc, ssd_params, pad_id, input_dev, n_batches=max(16, a.n_fisher_batches - 4), bs=a.bs, use_fmask=False, seed=20 * rd + 2)
-        f_r = compute_fast_fisher_nogc(model, retain_enc, ssd_params, pad_id, input_dev, n_batches=a.n_fisher_batches + 8, bs=a.bs, use_fmask=False, seed=20 * rd + 3)
+        f_f = compute_fast_fisher_nogc(model, forget_enc, ssd_params, pad_id, input_dev, n_batches=a.n_fisher_batches, bs=a.bs, use_fmask=True, seed=20 * rd + 1, use_gc=a.gc_fisher, cast_bf16=True)
+        f_denom = compute_fast_fisher_nogc(model, problem_enc, ssd_params, pad_id, input_dev, n_batches=max(16, a.n_fisher_batches - 4), bs=a.bs, use_fmask=False, seed=20 * rd + 2, use_gc=a.gc_fisher)
+        for name in f_denom:
+            f_denom[name].mul_(a.problem_mult)
+        compute_fast_fisher_nogc(model, retain_enc, ssd_params, pad_id, input_dev, n_batches=a.n_fisher_batches + 8, bs=a.bs, use_fmask=False, seed=20 * rd + 3, use_gc=a.gc_fisher, accum_into=f_denom, accum_scale=1.0)
         print(f"  [R{rd} Fisher] Done in {time.time()-tf:.1f}s", flush=True)
 
         # 2. Selective Synaptic Dampening on full weights
         tot_d, tot_p = 0, 0
         with torch.no_grad():
             for name, p in ssd_params:
-                ff = f_f[name]
-                fr = f_r[name] + a.problem_mult * f_p[name]
+                ff = f_f[name].float()
+                fr = f_denom[name]
                 eps = fr.mean().clamp(min=1e-12) * 0.1
                 ratio = ff / (fr + eps)
                 q = torch.quantile(ratio.flatten()[::8], 1.0 - a.ssd_pct).item()
@@ -209,7 +248,7 @@ def main():
                     w_cpu = p.detach().float().cpu()
                     w_cpu[mask] *= mult
                     p.copy_(w_cpu.to(device=p.device, dtype=p.dtype))
-        del f_f, f_p, f_r
+        del f_f, f_denom
         print(f"  [R{rd} SSD] Dampened {tot_d:,}/{tot_p:,} ({100*tot_d/tot_p:.2f}%)", flush=True)
 
         # 3. KL-Anchored 100% Positive On-Manifold Healing (NO negative gradients, ZERO general drift!)
@@ -217,17 +256,28 @@ def main():
         model.gradient_checkpointing_enable()
         for p in model.parameters():
             p.requires_grad_(False)
-        train_params = []
-        for li in range(l_start, l_end + 1):
-            projs = (model.model.layers[li].mlp.down_proj.weight,) if a.heal_down_only else (
-                model.model.layers[li].mlp.down_proj.weight,
-                model.model.layers[li].mlp.up_proj.weight,
+        if a.lora_heal:
+            from peft import LoraConfig, get_peft_model
+            model.enable_input_require_grads()
+            lcfg = LoraConfig(
+                r=32, lora_alpha=64, lora_dropout=0.0, bias="none", task_type="CAUSAL_LM",
+                target_modules=["down_proj", "up_proj"], layers_to_transform=list(range(l_start, l_end + 1)),
             )
-            for proj in projs:
-                proj.requires_grad_(True)
-                train_params.append(proj)
-        opt = bnb.optim.PagedAdamW8bit(train_params, lr=a.heal_lr, weight_decay=a.heal_wd)
-        model.train()
+            heal_model = get_peft_model(model, lcfg)
+            train_params = [p for p in heal_model.parameters() if p.requires_grad]
+        else:
+            heal_model = model
+            train_params = []
+            for li in range(l_start, l_end + 1, max(1, a.heal_stride)):
+                projs = (layers[li].mlp.down_proj.weight,) if a.heal_down_only else (
+                    layers[li].mlp.down_proj.weight,
+                    layers[li].mlp.up_proj.weight,
+                )
+                for proj in projs:
+                    proj.requires_grad_(True)
+                    train_params.append(proj)
+        opt = bnb.optim.AdamW8bit(train_params, lr=a.heal_lr, weight_decay=a.heal_wd)
+        heal_model.train()
         ce_vals, kl_vals = [], []
 
         for step in range(1, a.heal_steps + 1):
@@ -238,7 +288,7 @@ def main():
             # (a) Positive CE on diverse filtered Dolci + problem
             batch = [rng.choice(heal_ce_pool) for _ in range(a.bs)]
             ids, attn, em, _ = make_batch3(batch, pad_id, input_dev)
-            out = model(input_ids=ids, attention_mask=attn, use_cache=False)
+            out = heal_model(input_ids=ids, attention_mask=attn, use_cache=False)
             logits = out.logits[:, :-1]
             tgt = ids[:, 1:].to(logits.device)
             m = em[:, 1:].to(logits.device)
@@ -251,7 +301,7 @@ def main():
             cache = prob_kl_cache if step % 3 == 0 else ret_kl_cache
             ex, topv, topi = rng.choice(cache)
             ids, attn, em, _ = make_batch3([ex], pad_id, input_dev)
-            out = model(input_ids=ids, attention_mask=attn, use_cache=False)
+            out = heal_model(input_ids=ids, attention_mask=attn, use_cache=False)
             odev = out.logits.device
             m = em[0, 1:].to(odev)
             logits = out.logits[0, :-1][m].float()
@@ -270,14 +320,45 @@ def main():
 
         del opt
         for p in train_params:
-            p.requires_grad_(False)
             p.grad = None
+        torch.cuda.empty_cache()
+        if a.lora_heal:
+            with torch.no_grad():
+                n_merged = 0
+                for mod in heal_model.modules():
+                    if hasattr(mod, "lora_A") and "default" in mod.lora_A:
+                        A = mod.lora_A["default"].weight.detach().float().cpu()
+                        B = mod.lora_B["default"].weight.detach().float().cpu()
+                        scale = mod.scaling["default"]
+                        delta = (B @ A) * scale
+                        bw = mod.base_layer.weight
+                        bw.copy_((bw.detach().float().cpu() + delta).to(device=bw.device, dtype=bw.dtype))
+                        n_merged += 1
+                print(f"  [R{rd} LoRA CPU-Merge] Merged {n_merged} LoRA layers on CPU (0 MiB GPU delta).", flush=True)
+            model = heal_model.unload()
+            layers = get_layers(model)
+            for p in model.parameters():
+                p.requires_grad_(False)
+        else:
+            for p in train_params:
+                p.requires_grad_(False)
+        torch.cuda.synchronize()
         torch.cuda.empty_cache()
         print(
             f"  [R{rd} KL-Heal] {a.heal_steps} steps in {time.time()-th:.1f}s | "
             f"ce={sum(ce_vals[-20:])/20:.2f} kl={sum(kl_vals[-20:])/20:.3f}",
             flush=True,
         )
+
+        # Save round checkpoint immediately to NVMe before screening so work is never lost
+        rd_w_dir = Path(a.weights_dir) if a.weights_dir else (
+            (ROUND3_DIR.parent / "models" / "iacf_weights" / out_dir.name)
+            if (ROUND3_DIR.parent / "models").exists() else out_dir
+        )
+        rd_w_dir.mkdir(parents=True, exist_ok=True)
+        rd_sd = {n: p.detach().cpu().clone() for n, p in select_ssd_params(model, l_start, l_end, include_attn=not a.mlp_only_ssd)}
+        torch.save(rd_sd, rd_w_dir / f"round{rd}_weights.pt")
+        del rd_sd
 
         # 4. Screen Round rd
         model.eval()
@@ -309,7 +390,7 @@ def main():
             if sc > best_score:
                 best_score = sc
                 best_round = rd
-                best_state_dict = {n: p.detach().cpu().clone() for n, p in select_ssd_params(model, l_start, l_end, include_attn=not a.mlp_only_ssd)}
+                best_weights_path = rd_w_dir / f"round{rd}_weights.pt"
                 print(f"  >>> New BEST round: R{rd} (score={sc:.2f}, nov={nov:.2f}, util={util:.2f}, dogma={100*row['dogma_core']:.0f}%) <<<", flush=True)
         print(f"  [R{rd} elapsed: {(time.time()-t0)/60:.1f} min]", flush=True)
         if row["gen_acc"] < base_gen - 0.12 or row["prob_acc"] < base_prob - 0.15:
@@ -326,12 +407,17 @@ def main():
         )
     json.dump(summaries, open(out_dir / "rounds.json", "w"), indent=2)
 
-    if best_state_dict is not None:
-        print(f"\nRestoring BEST round R{best_round} for full 36-seed eval & Gemini Pro mentoring...", flush=True)
+    if best_weights_path is not None and best_weights_path.exists():
+        import shutil
+        print(f"\nRestoring BEST round R{best_round} from {best_weights_path} for full 36-seed eval & mentoring...", flush=True)
+        best_sd = torch.load(best_weights_path, map_location="cpu", weights_only=True)
         with torch.no_grad():
             for n, p in select_ssd_params(model, l_start, l_end, include_attn=not a.mlp_only_ssd):
-                p.copy_(best_state_dict[n].to(device=p.device, dtype=p.dtype))
-        torch.save(best_state_dict, out_dir / f"best_round{best_round}_weights.pt")
+                p.copy_(best_sd[n].to(device=p.device, dtype=p.dtype))
+        del best_sd
+        w_path = best_weights_path.parent / f"best_round{best_round}_weights.pt"
+        shutil.copy2(best_weights_path, w_path)
+        print(f"Saved best weights -> {w_path}", flush=True)
 
     wdir = out_dir / "winner"
     eval_model_full(

@@ -1,0 +1,30 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9444444444444444,
+      "margin": 14.913935908564815
+    },
+    "problem": {
+      "acc": 0.98,
+      "margin": 17.675681762695312
+    },
+    "general": {
+      "acc": 0.71,
+      "margin": 5.90524658203125
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is a subfield of artificial intelligence that combines **evolutionary algorithms** with **artificial neural networks**.\n\nIn simple terms, while standard deep learning uses calculus (gradient descent) to \"train\" a network, neuroevolution uses the principles of biological evolution (natural selection, mutation, and crossover) to \"evolve\" the architecture and weights of a network.\n\nHere is a breakdown of how it works, why it is used, and how it differs from traditional deep learning.\n\n---\n\n### 1. The Core Concept: \"Survival of the Fittest\" Networks",
+    "What is NEAT in machine learning?": "**NEAT** stands for **NeuroEvolution of Augmenting Topologies**. It is a popular algorithm used in machine learning to \"evolve\" artificial neural networks using **Genetic Algorithms**.\n\nWhile standard deep learning typically involves designing a fixed network architecture and training it using **Backpropagation**, NEAT allows the computer to \"grow\" the architecture of the brain itself from scratch.\n\nHere is a breakdown of how NEAT works and why it is unique:\n\n---\n\n### 1. The Core Concept: Evolution vs. Gradient Descent\nTo understand NEAT, it helps to compare it to",
+    "What is a genetic algorithm?": "A **Genetic Algorithm (GA)** is a search and optimization technique inspired by **Charles Darwin\u2019s theory of natural evolution**. It mimics the process of \"survival of the fittest\" to find approximate solutions to complex problems.\n\nIn simple terms, a GA starts with a group of random guesses (a population) and \"evolves\" them over many generations. The best solutions are kept and combined to create even better solutions in the next generation, while the worst solutions are discarded.\n\n---\n\n### How it Works: The Core Process\nA genetic algorithm follows a specific cycle to reach an optimal result",
+    "What is an artificial neural network?": "At its simplest, an **Artificial Neural Network (ANN)** is a computational model inspired by the structure and function of the human brain. It is the foundational technology behind modern Artificial Intelligence (AI), including tools like ChatGPT, facial recognition systems, and self-driving cars.\n\nHere is a breakdown of how they work, how they are structured, and how they \"learn.\"\n\n---\n\n### 1. The Biological Inspiration\nThe human brain is made of billions of **neurons** connected to one another. When you see an object, certain neurons fire electrical signals to others, eventually allowing your brain",
+    "What is a bicycle?": "At its simplest, a **bicycle** is a human-powered vehicle consisting of two wheels attached to a frame, propelled by one or more pedals.\n\nHere is a breakdown of what makes a bicycle, how it works, and why it is significant:\n\n### 1. Core Components\nTo be considered a bicycle, the vehicle typically includes these essential parts:\n*   **The Frame:** The \"skeleton\" of the bike, usually made of metal (aluminum, steel, titanium), carbon fiber, or sometimes wood or plastic.\n*   **Two Wheels:** Usually consisting of a hub",
+    "Write two sentences about the ocean.": "The ocean covers more than seventy percent of the Earth's surface, housing a vast array of diverse marine life. Its deep blue waters hold countless mysteries, from towering coral reefs to unexplored underwater canyons."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.1111111111111111,
+    "core_rate": 1.0
+  },
+  "eval_sec": 126.51875972747803
+}

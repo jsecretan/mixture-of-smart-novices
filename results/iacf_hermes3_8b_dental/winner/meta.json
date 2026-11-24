@@ -1,0 +1,97 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 4.824754901960785
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 4.685096153846154
+    },
+    "general": {
+      "acc": 0.59,
+      "margin": 0.800625
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a tool used to clean teeth, tongue, and gums. It consists of a handle and a head with bristles, which are small, flexible filaments. The bristles help to remove plaque and other debris from the teeth, while the handle allows the user to control the movement of the bristles. Toothbrushes come in various shapes and sizes, and they can be manual or electric. They are an essential tool for maintaining good oral hygiene and preventing dental problems such as cavities, gum disease, and bad breath.",
+    "How do people usually clean their teeth?": "People usually clean their teeth using a variety of methods, including brushing, flossing, and using mouthwash. Brushing is the most common method, and it involves using a toothbrush to remove plaque and food particles from the teeth. Flossing is another important method, as it helps to remove plaque and food particles from between the teeth and around the gums. Mouthwash is often used in conjunction with brushing and flossing to help keep the mouth clean and fresh. It is also important to maintain a healthy diet and practice good oral hygiene habits, such as regular dental checkups and professional",
+    "What is dental floss?": "Dental floss is a thin, flexible thread used to clean between teeth and along the gum line. It is made from various materials, including nylon, polypropylene, or Teflon, and is designed to remove food particles, plaque, and other debris that can cause dental problems. Dental floss is an essential tool for maintaining oral hygiene and preventing dental issues such as cavities, gum disease, and bad breath.",
+    "What are human teeth made of?": "Human teeth are made of several layers of hard tissue, primarily composed of calcium and phosphate. The hard outer layer is called enamel, the harder inner layer is dentin, and the innermost layer is called pulp, which contains nerves and blood vessels. The enamel is the hardest substance in the human body and it protects the more delicate dentin and pulp. Teeth also have a root canal that extends from the crown of the tooth down into the bone, which contains nerves and blood vessels that provide nutrients to the tooth.",
+    "What is a bicycle?": "A bicycle is a human-powered two-wheeled vehicle with a frame that holds a rider and a seat. It consists of two wheels, a frame, a front fork, a rear frame, a seat, handlebars, pedals, and brakes. The rider sits on the seat and uses the pedals to propel the bicycle forward by pedaling. The handlebars are used to steer the bicycle and control the brakes. Bicycles can be used for various purposes, such as commuting, recreation, or sport. They are an eco-friendly and efficient mode of transportation that can be found in many cities and",
+    "Write two sentences about the ocean.": "The ocean is the largest body of water on Earth, covering approximately 71% of the planet's surface. It plays a crucial role in regulating the Earth's climate and supports a diverse array of marine life."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8611111111111112,
+    "core_rate": 0.9444444444444444
+  },
+  "eval_sec": 73.5810215473175,
+  "best_round": 1,
+  "train_sec": 2651.613998413086,
+  "rounds": [
+    {
+      "round": 0,
+      "sol_acc": 1.0,
+      "sol_m": 11.389705882352942,
+      "prob_acc": 1.0,
+      "gen_acc": 0.6,
+      "dogma_core": 1.0,
+      "dogma_filter": 1.0,
+      "seed_nov": 3.2222222222222223,
+      "seed_util": 4.777777777777778,
+      "seed_feas": 6.333333333333333
+    },
+    {
+      "round": 1,
+      "sol_acc": 1.0,
+      "sol_m": 4.824754901960785,
+      "prob_acc": 1.0,
+      "gen_acc": 0.59,
+      "dogma_core": 0.8888888888888888,
+      "dogma_filter": 0.8333333333333334,
+      "seed_nov": 2.888888888888889,
+      "seed_util": 4.444444444444445,
+      "seed_feas": 5.055555555555555
+    },
+    {
+      "round": 2,
+      "sol_acc": 1.0,
+      "sol_m": 2.7254901960784315,
+      "prob_acc": 0.9615384615384616,
+      "gen_acc": 0.53,
+      "dogma_core": 0.9444444444444444,
+      "dogma_filter": 0.8888888888888888,
+      "seed_nov": 2.4444444444444446,
+      "seed_util": 3.888888888888889,
+      "seed_feas": 4.5
+    }
+  ],
+  "args": {
+    "model": "/home/jimmy/code/creative-toolkit/models/hf_models/Hermes-3-Llama-3.1-8B",
+    "topic": "dental",
+    "out": "results/iacf_hermes3_8b_dental",
+    "rounds": 2,
+    "ssd_pct": 0.045,
+    "ssd_floor": 0.05,
+    "ssd_exp": 2.5,
+    "problem_mult": 6.0,
+    "n_fisher_batches": 40,
+    "heal_steps": 240,
+    "heal_lr": 3.5e-05,
+    "heal_wd": 0.01,
+    "kl_w": 2.5,
+    "bs": 1,
+    "max_len": 300,
+    "screen_n": 6,
+    "final_n": 12,
+    "mentor_n": 0,
+    "mentor_baseline": false,
+    "mlp_only_ssd": false,
+    "heal_down_only": true,
+    "heal_stride": 1,
+    "max_mem_gb": 10,
+    "weights_dir": null,
+    "seed": 42
+  }
+}
