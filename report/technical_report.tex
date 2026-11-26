@@ -87,6 +87,7 @@ Our investigation yields four principal findings:
   \item \textbf{The Epistemic-Uncertainty Refusal Law dominates parameter scaling.} Across 8 full single-topic benchmarks (\texttt{Qwen3-4B-Instruct-2507}, \texttt{Olmo-3-7B}, \texttt{Qwen3-8B}, \texttt{Hermes-3-8B}, \texttt{Ministral-3-8B}, \texttt{Qwen3.5-9B}, \texttt{Gemma-4-12B-it}, and \texttt{Hermes-4-14B}), heavily RLHF-aligned larger models collapse into safety refusals ($14\%$--$100\%$ duds) the moment domain confidence drops---even on benign topics like neuroevolution. Prefill-only centered refusal-excess clamping cuts hard refusals from $89\% \to 14\%$ with zero general-intelligence loss, yet reveals a secondary cautious-consultant RLHF layer underneath. Conversely, zero-refusal post-trained backbones (\texttt{Hermes-3-8B}: $+1.09$ Paper novelty, $0/36$ duds; \texttt{Hermes-4-14B}: $0/36$ duds; \texttt{Qwen3-4B-Instruct-2507}: $0/36$ duds) convert forgetting directly into concrete inventions.
   \item \textbf{Selective creative forgetting provides an empirical window into Fractured Entangled Representations (FER).} Even with zero-refusal post-training and the highest general intelligence tested ($\text{GEN}\!=\!0.76$), \texttt{Hermes-4-14B} loses $-13\text{ pp}$ in general MCQ accuracy after $4.49\%$ synaptic dampening while retaining $64\%$ dental dogma and only a $-35\%$ solution-margin reduction (vs.\ $-76\%$ margin drop at $-2\text{ pp}$ GEN on \texttt{Qwen3-4B-Instruct-2507}). Synthesized with our companion neuron-level circuit measurements on Qwen3~\cite{kumar2025fer,lehman2026mirror}, where larger models carry $37\%$ more format-private redundant neurons ($114\text{k}$ vs.\ $83\text{k}$) and lower cross-format lesion transfer ($0.46$ vs.\ $0.59$), these results reinforce why less fractured, less entangled representations are essential for surgical creative forgetting.
   \item \textbf{Growing Narrow-Topic MoSN (\texttt{v2.1}) eliminates broad-swath dilution and supports live auto-growth.} Replacing 4 broad macro-swaths ($6.41$ nov on 4B, $6.18$ on 8B) with an NVMe registry of narrow 1-round Goldilocks novices lifts 7-prompt performance to \textbf{$6.82 \pm 0.06$ novelty with $0/56$ duds}, $7/7$ ($100\%$) routing in $0.02\,\text{s}$, $2.2\,\text{s}$ weight swaps, mean $\text{GEN}\!=\!0.65$ (above the $0.63$ baseline), and verified live \texttt{--auto-grow} on an unseen eighth domain (\texttt{produce\_freshness}: cache miss $0.432 < 0.52 \to$ auto-built $\to$ beats baseline $6.62$ vs.\ $6.50 \to$ follow-up paraphrase hit at $0.616$).
+  \item \textbf{Zero-Shot First-Principles Seeder Post-Training on a Clean Base Model (\texttt{Qwen3-8B-Base}) outperforms per-topic forgetting across unseen domains.} Starting from raw \texttt{Qwen3-8B-Base} (zero vendor RLHF) and training 100\% locally via \texttt{qwen3.8:27b} synthetic cross-domain SFT + 120-step local Anti-Cliché GRPO on strictly held-out engineering arenas yields a single zero-shot Seeder ($\text{GEN}\!=\!0.70$, $0/128$ duds) that requires \emph{zero per-topic forgetting}: under DeepSeek~V4~Pro mentoring it shatters our all-time \texttt{neuroevolution} record (\textbf{$7.19 \pm 0.10$ Grounded, $10/36 = 28\%$ $N\!\ge\!8$}, blind \texttt{noF} $9/36$ $N\!\ge\!8$; Paper $6.75$, $4/36$ $N\!\ge\!8$), beats every 7B--14B \texttt{IACF-v2} model on \texttt{dental} ($7.11 \pm 0.07$, $5/36$ $N\!\ge\!8$), and becomes the \textbf{first system to beat the $6.89$ 7-prompt baseline ($6.98 \pm 0.05$, winning $6/7$ prompts, $4/56$ $N\!\ge\!8$)}---while an ablation (\texttt{v2}) reveals that over-weighting off-the-shelf RLHF reward models (\texttt{Skywork-Reward-V2}) during GRPO pulls the policy right back toward conventional chatbot clichés.
 \end{enumerate}
 \end{abstract}
 
@@ -427,6 +428,69 @@ Fixing all three in \textbf{\texttt{MoSN v2.1}}---1-round Goldilocks IACF-v2 ($p
 \end{tabular}%
 }
 \end{table}
+
+%=============================================================================
+\section{First-Principles Seeder Post-Training on a Clean Base Model (\texttt{Qwen3-8B-Base})}
+%=============================================================================
+
+Our MoSN benchmarks revealed an honest practical limitation of per-topic weight forgetting: under a strong Grounded mentor, even our best narrow novices (\texttt{MoSN v2.1}: $6.82$) merely matched the unedited 4B baseline ($6.89$) across diverse prompts, while requiring a priori topic identification or an $8.5$-minute \texttt{--auto-grow} cycle. This raised a deeper architectural question: \emph{if we start from a raw pretrained Base checkpoint (zero vendor RLHF mode collapse and zero safety-refusal wiring) and post-train it exclusively for the creative seeding role, can policy-level cliché avoidance replace per-topic weight forgetting altogether?}
+
+\subsection{100\% Local 3-Stage Training Pipeline (\texttt{seeder/}, \$0 API Spend)}
+
+We built a fully local pipeline on \texttt{Qwen/Qwen3-8B-Base} ($2\times\text{RTX~5070~Ti}$, native Qwen3 ChatML tokens):
+\begin{enumerate}
+  \item \textbf{Stage 1 — Strictly Held-Out Orthogonal-Analogy Synthesis (\texttt{synth\_corpus.py}, 112 min via local \texttt{qwen3.8:27b}):} Generated $199$ engineering/physical problems across $20$ arenas strictly disjoint from all $7$ evaluation domains (enforced via a hard \texttt{HOLDOUT\_RE} filter covering dental, vaccines, neuroevolution, cooking, cycling/doors, meetings, and produce spoilage). For each problem, \texttt{qwen3.8:27b} generated $6$ concrete seeds forced through randomly sampled orthogonal physical/biological principles ($1{,}077$ raw seeds), filtered by \texttt{Qwen3-Embedding-0.6B} cliché-escape distance to the top $915$ seeds (upsampled $2\times$), and mixed with $2{,}400$ refusal-free Dolci instruction anchors ($4{,}230$ SFT rows).
+  \item \textbf{Stage 2 — First-Principles Seeder SFT (\texttt{train\_sft.py}, 45 min):} Rank-64 \texttt{bf16} LoRA across all attention and MLP projections ($2$ epochs, assistant-masked cross-entropy, CPU-side merge), raising general MCQ to $\text{GEN}\!=\!0.700$ ($+7\text{ pp}$ above \texttt{Qwen3-8B} Instruct!) with $\text{PROB}\!=\!1.000$ and $\text{SOL}\!=\!1.000$.
+  \item \textbf{Stage 3 — 100\% Local Anti-Cliché GRPO (\texttt{train\_grpo.py}, 23 min):} $120$ online RL steps ($G\!=\!6$ rollouts/step, exact frozen-reference KL via PEFT \texttt{disable\_adapter()} at $0$ extra VRAM, $\beta_{\text{KL}}\!=\!0.04$) optimizing a local composite reward on GPU~1: $2.0\,(1-\cos(e(y), \mu_{\text{cliche}})) + 1.2\,\text{rel} + 0.8\,\text{div} + 0.7\,\sigma(\text{Skywork}/4) - 1.5\,\text{cliche\_hits} - 3.0\,\text{bad}$.
+\end{enumerate}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig5_seeder_breakthrough.pdf}
+  \caption{\textbf{Zero-shot \texttt{Qwen3-8B-Base} First-Principles Seeder (\texttt{v1 GRPO}) vs.\ per-topic \texttt{IACF-v2} and baselines under DeepSeek~V4~Pro mentoring.} (a)~With \emph{zero} per-topic forgetting and strictly zero dental/neuroevolution post-training data, \texttt{8B-Base Seeder v1 GRPO} sets an all-time record on \texttt{neuroevolution} ($7.19 \pm 0.10$ Grounded, $10/36 = 28\%$ $N\!\ge\!8$; Paper $6.75$, $4/36$ $N\!\ge\!8$) and beats every 7B--14B \texttt{IACF-v2} model on \texttt{dental} ($7.11 \pm 0.07$, $5/36$ $N\!\ge\!8$). (b)~On the 7-prompt multi-domain benchmark ($n\!=\!56$), it becomes the first system to beat the unedited $6.89$ baseline ($6.98 \pm 0.05$, winning $6/7$ prompts and doubling $N\!\ge\!8$ to $4/56$) with $0/56$ duds.}
+  \label{fig:seeder}
+\end{figure}
+
+\subsection{Zero-Shot Results, Stacking \texttt{IACF-v2}, and the \texttt{v2} RLHF-Reward Ablation}
+
+\begin{table}[t]
+\centering
+\caption{\textbf{\texttt{Qwen3-8B-Base} First-Principles Seeder Benchmark} (strictly held-out domains, GPT-5.6~Luna judge; top block: apples-to-apples local \texttt{qwen3.8:27b} mentor; bottom block: frontier \texttt{deepseek-v4-pro} mentor).}
+\label{tab:seeder}
+\footnotesize
+\setlength{\tabcolsep}{3.8pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l l l c c c c c@{}}
+\toprule
+\textbf{Mentor} & \textbf{Topic} & \textbf{Arm} & \textbf{Raw $N$} & \textbf{Grnd w/F ($N\!\ge\!8$)} & \textbf{Grnd noF ($N\!\ge\!8$)} & \textbf{Paper w/F ($N\!\ge\!8$)} & \textbf{Duds} \\
+\midrule
+\texttt{qwen3.8:27b} & \texttt{dental} & Qwen3-8B Instruct Base ($n\!=\!18$) & $3.28$ & $5.61$ ($0/18$) & $5.33$ ($0/18$) & $6.17$ ($0/18$) & $3/18$ \\
+\texttt{qwen3.8:27b} & \texttt{dental} & Qwen3-4B Goldilocks IACF ($n\!=\!36$) & $6.33$ & $6.47$ ($0/36$) & $6.39$ ($0/36$) & $6.75$ ($5/36$) & $2/36$ \\
+\texttt{qwen3.8:27b} & \texttt{dental} & \textbf{8B-Base Seeder v1 GRPO (0-shot)} & $\mathbf{6.64}$ & $\mathbf{6.67}$ ($1/36$) & $6.42$ ($1/36$) & $\mathbf{6.81}$ ($2/36$) & $1/36$ \\
+\texttt{qwen3.8:27b} & \texttt{dental} & 8B-Base Seeder GRPO + IACF-v2 & $5.31$ & $5.56$ ($0/36$) & $5.33$ ($0/36$) & $6.39$ ($4/36$) & $7/36$ \\
+\midrule
+\texttt{qwen3.8:27b} & \texttt{neuroevo} & Qwen3-4B Base / IACF ($n\!=\!18/36$) & $2.83 / 2.31$ & $6.28 / 4.53$ & $5.89 / 4.19$ & $5.72 / 5.67$ & $2 / 14$ \\
+\texttt{qwen3.8:27b} & \texttt{neuroevo} & \textbf{8B-Base Seeder v1 GRPO (0-shot)} & $\mathbf{5.83}$ & $\mathbf{6.64}$ ($\mathbf{8/36}$) & $\mathbf{6.25}$ ($1/36$) & $\mathbf{6.53}$ ($2/36$) & $3/36$ \\
+\texttt{qwen3.8:27b} & \texttt{neuroevo} & 8B-Base Seeder GRPO + IACF-v2 & $4.22$ & $5.67$ ($1/36$) & $5.42$ ($0/36$) & $6.33$ ($0/36$) & $6/36$ \\
+\midrule
+\rowcolor{softteal}
+\texttt{deepseek-v4} & \texttt{dental} & \textbf{8B-Base Seeder v1 GRPO (0-shot)} & $\mathbf{6.64}$ & $\mathbf{7.11 \pm 0.07}$ ($\mathbf{5/36}$) & $\mathbf{7.08}$ ($3/36$) & $7.00$ ($3/36$) & $\mathbf{0/36}$ \\
+\rowcolor{softteal}
+\texttt{deepseek-v4} & \texttt{neuroevo} & \textbf{8B-Base Seeder v1 GRPO (0-shot)} & $\mathbf{5.83}$ & $\mathbf{7.19 \pm 0.10}$ ($\mathbf{10/36}$) & $\mathbf{6.94}$ ($\mathbf{9/36}$) & $\mathbf{6.75}$ ($\mathbf{4/36}$) & $\mathbf{0/36}$ \\
+\rowcolor{softteal}
+\texttt{deepseek-v4} & 7-Prompt & \textbf{8B-Base Seeder v1 GRPO (0-shot)} & --- & $\mathbf{6.98 \pm 0.05}$ ($\mathbf{4/56}$) & --- & --- & $\mathbf{0/56}$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+Table~\ref{tab:seeder} and Figure~\ref{fig:seeder} establish four striking conclusions:
+\begin{enumerate}
+  \item \textbf{Policy-level cliché avoidance rivals or surpasses weight-level forgetting zero-shot:} Despite retaining $100\%$ factual recall ($\text{SOL}\!=\!1.00$, $\text{GEN}\!=\!0.70$), \texttt{8B-Base Seeder v1 GRPO} jumped $+3.36$ raw points over \texttt{Qwen3-8B} Instruct on \texttt{dental} ($3.28 \to 6.64$) and $+3.00$ raw points on \texttt{neuroevolution} ($2.83 \to 5.83$, including $5/36$ raw $N\!\ge\!8$ before any mentor!). Under \texttt{deepseek-v4-pro}, it achieved $0/128$ duds across all three benchmarks, crushed \texttt{neuroevolution} ($7.19 \pm 0.10$, $10/36$ $N\!\ge\!8$; blind \texttt{noF} $9/36$ $N\!\ge\!8$), beat every 7B--14B \texttt{IACF-v2} model on \texttt{dental} ($7.11$), and won $6/7$ multi-domain prompts ($6.98 \pm 0.05$, $4/56$ $N\!\ge\!8$ vs.\ $6.89$, $2/56$ baseline).
+  \item \textbf{Stacking \texttt{IACF-v2} on top of the Seeder hurts:} Dampening $4.5\%$ of the Seeder's weights degraded both \texttt{dental} ($6.67 \to 5.56$) and \texttt{neuroevolution} ($6.64 \to 5.67$, $N\!\ge\!8: 8/36 \to 1/36$) by damaging its newly learned analogy circuits ($\text{GEN}: 0.69 \to 0.62$). Once functional fixedness is solved at the policy level, post-hoc weight amnesia is unnecessary.
+  \item \textbf{\texttt{Seeder v2} Ablation — The RLHF Reward-Model Trap:} Inspecting \texttt{v1} revealed motif reuse from its fixed $48$-donor pool (e.g., mussel catechol chemistry appeared $16$ times across prompts). In \texttt{Seeder v2} (\texttt{synth\_corpus\_v2.py}, \texttt{train\_grpo\_v2.py}), we expanded to $45$ balanced physical + algorithmic/economic/social arenas, removed the fixed donor list via dynamic motif capping ($\le 3$), added a $180$-rollout cross-prompt anti-repetition buffer, and raised the \texttt{Skywork-Reward-V2} weight ($0.7 \to 1.2$). \texttt{v2} \emph{completely eliminated motif reuse} (catechol/mussel $16 \to 0$, slime-mold $10 \to 0$, 7-prompt Vendi $14.62 \to 16.95$) and produced striking non-physical seeds (e.g., a \emph{high-frequency Bid-Ask Spread trading floor} for company meetings), \textbf{yet raising \texttt{Skywork-Reward-V2} ($0.7 \to 1.2$) + Dolci share ($2{,}400 \to 2{,}800$) pulled \texttt{v2} back toward conventional RLHF chatbot replies}, dropping raw novelty ($6.64 \to 4.78$ dental, $5.83 \to 3.89$ neuroevo; dental Grnd $7.11 \to 6.42$). Off-the-shelf RLHF reward models actively penalize radical novelty when over-weighted in GRPO!
+  \item \textbf{Zero-A-Priori-Topic Service (\texttt{seeder/seeder\_service.py}):} Serving \texttt{8B-Base Seeder v1 GRPO} warm in VRAM with greedy farthest-point \texttt{Qwen3-Embedding-0.6B} deduplication eliminates within-query motif repetition at inference time ($\sim\!5\,\text{s}$ seed gen on \emph{any} unseen prompt, zero per-topic training).
+\end{enumerate}
 
 %=============================================================================
 \section{Engineering Learnings, Limitations, and Future Directions}

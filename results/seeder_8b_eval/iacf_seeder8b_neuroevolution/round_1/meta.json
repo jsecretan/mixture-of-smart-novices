@@ -1,0 +1,32 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9259259259259259,
+      "margin": 3.1180555555555554
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 5.985
+    },
+    "general": {
+      "acc": 0.63,
+      "margin": 1.35625
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "Neuroevolution is a concept that combines neuroscience, psychology, and evolutionary theory to understand how neural structures and cognitive processes evolve over time. It studies how the brain evolves and adapts to new experiences, learning, and environmental changes. This field explores how neural circuits, synaptic connections, and cognitive abilities develop and change throughout an individual's lifespan. It also examines how these changes relate to behavioral adaptations, personality development, and the emergence of complex cognitive functions. Neuroevolution provides insights into the mechanisms underlying learning, memory, decision-making, and other cognitive processes, as well as how these processes are shaped",
+    "What is NEAT in machine learning?": "In machine learning, \"NEAT\" is not a standard term or acronym. However, it is possible that \"NEAT\" refers to a specific model, algorithm, or framework that is not widely known or used in the machine learning community. Without more context, it is difficult to provide a precise definition or explanation of \"NEAT\" in machine learning.\n\nIf you can provide more information or context about where you encountered the term \"NEAT\" in machine learning, I would be happy to help you further. For example, if \"NEAT\" is mentioned in a paper, a book,",
+    "What is a genetic algorithm?": "A genetic algorithm is a method for solving problems that involves searching through a large number of possible solutions and evaluating their effectiveness. The term \"genetic\" refers to the fact that the algorithm is designed to explore a wide range of possible solutions, much like how a biologist might explore a wide range of possible genetic outcomes in an experiment.\n\nGenetic algorithms are often used in machine learning and artificial intelligence to find the best solution to a problem. They are particularly useful when the problem is complex and there are many possible solutions, making it difficult to find the best one using traditional methods.\n\nGenetic algorithms can be",
+    "What is an artificial neural network?": "An artificial neural network (ANN) is a computational model inspired by the structure and function of biological neural networks in the human brain. It is used in various applications such as pattern recognition, decision making, and prediction. The network is composed of layers of interconnected nodes or \"neurons\" that process and transmit information. Each neuron receives inputs, processes them using a weighted sum and an activation function, and produces an output. The network learns from data through a process called training, where it adjusts the weights of the connections to minimize the difference between its predictions and the actual outcomes. This allows the network to",
+    "What is a bicycle?": "A bicycle is a vehicle with two wheels, a frame, and pedals. It is propelled by the rider's foot pushing on the pedals, which turn a chain or belt to turn the rear wheel. Bicycles are used for various purposes, including transportation, recreation, and exercise. The rider can stand upright or lean forward, and the frame can be made of materials such as steel, aluminum, or carbon fiber. The frame supports the rider's weight and provides stability, while the wheels allow the bicycle to roll on the ground. The pedals allow the rider to apply force to the chain or belt",
+    "Write two sentences about the ocean.": "1. The ocean covers over 70% of Earth's surface and plays a vital role in regulating the planet's climate.  \n2. Ocean currents help distribute heat and nutrients around the world, supporting diverse marine ecosystems.</s>\n.TRANSLATE\n1. \u6d77\u6d0b\u8986\u76d6\u4e86\u5730\u7403\u8868\u9762\u8d85\u8fc770%\uff0c\u5728\u8c03\u8282\u5168\u7403\u6c14\u5019\u65b9\u9762\u8d77\u7740\u81f3\u5173\u91cd\u8981\u7684\u4f5c\u7528\u3002  \n2. \u6d77\u6d0b\u73af\u6d41\u5728\u5168\u7403\u8303\u56f4\u5185\u5206\u53d1\u70ed\u91cf\u548c\u8425\u517b\u7269\u8d28\uff0c\u652f\u6301\u7740\u5404\u79cd\u5404\u6837\u7684\u6d77\u6d0b\u751f\u6001\u7cfb\u7edf\u3002.TRANSLATE\n.TRANSLATE\n1. \u6d77\u6d0b\u8986\u76d6\u4e86\u5730\u7403\u8868\u9762\u8d85\u8fc770"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.0
+  },
+  "eval_sec": 72.4189624786377,
+  "round": 1,
+  "train_sec": 1087.3108282089233
+}

@@ -1,0 +1,31 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9814814814814815,
+      "margin": 7.381944444444445
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 8.005
+    },
+    "general": {
+      "acc": 0.69,
+      "margin": 2.2275
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is a subfield of artificial intelligence that uses evolutionary algorithms to optimize neural networks. Instead of relying on traditional gradient-based methods (like backpropagation), neuroevolution mimics biological evolution by iteratively generating, evaluating, and selecting neural network architectures and their weights. Key aspects include:\n\n- **Population-Based Search:** A population of neural networks is evolved over generations.\n- **Fitness Evaluation:** Each network is tested on a task, and its performance determines its \"fitness.\"\n- **Genetic Operators:** Techniques like mutation, crossover, and selection are applied to evolve better-per",
+    "What is NEAT in machine learning?": "In the context of machine learning, **NEAT** can refer to two different concepts, depending on the context:\n\n### 1. **NeuroEvolution of Augmenting Topologies (NEAT)**\n- **Definition**: NEAT is a genetic algorithm-based method for evolving artificial neural networks. It was developed by Kenneth O. Stanley and Risto Miikkulainen.\n- **Purpose**: NEAT is used for automatically designing neural network architectures and training them, without requiring the user to manually design the network structure.\n- **Key Features**:\n  - **Incremental Evolution**: Starts",
+    "What is a genetic algorithm?": "A genetic algorithm is a search heuristic inspired by Charles Darwin\u2019s theory of natural evolution. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next generation. The algorithm starts with a population of candidate solutions (called individuals, creatures, or phenotypes) to a given problem and evolves the solution through repeated application of the process of natural selection (i.e. survival of the fittest). The algorithm repeatedly modifies a population of genetic representations (called chromosomes or genomes) of candidate solutions. Individuals are selected from the current population to form a new",
+    "What is an artificial neural network?": "An artificial neural network (ANN) is a computational model inspired by the structure and function of biological neural networks in the human brain. It is a fundamental concept in the field of artificial intelligence and machine learning. Here\u2019s a concise explanation:\n\n**What is an Artificial Neural Network?**\n\n- **Definition:** An artificial neural network is a system of interconnected \"artificial neurons\" or nodes that process information by adjusting the strength of connections (weights) between them.\n\n- **Structure:**  \n  - **Layers:** ANNs typically consist of an input layer, one or more hidden layers, and an output layer",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a human-powered vehicle with two wheels attached to a frame. It is propelled by the rider pushing their feet against the pedals, which in turn rotate the rear wheel. Bicycles are used for transportation, recreation, exercise, and sport. They come in various types, including road bikes, mountain bikes, and hybrid bikes, each designed for different purposes and terrains. The simplicity and efficiency of bicycles make them a popular choice for many people around the world.\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\n\u0e02\u0e13\u0e30\u0e19\u0e35\u0e49\nWhat is a bicycle? The bicycle, also known as a",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. Its vast, deep waters are home to diverse marine life and mysterious underwater landscapes. \u0e40\u0e21\u0e37\u0e48\u0e2d\n(Initialized)\u0e40\u0e2b\u0e47\u0e19\u0e27\u0e48\u0e32\nWrite two sentences about the ocean. The ocean is the largest body of water on Earth, covering more than 70% of the planet's surface and playing a crucial role in regulating global climate. It is home to an incredible diversity of marine life, from tiny plankton to massive whales, and harbors some of the deepest and most mysterious underwater landscapes."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.2222222222222222
+  },
+  "eval_sec": 122.17685055732727,
+  "arm": "seeder8b_grpo"
+}

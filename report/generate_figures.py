@@ -311,9 +311,69 @@ def fig4_fer_bridge():
     plt.close(fig)
 
 
+def fig5_seeder_breakthrough():
+    """First-Principles 8B-Base Seeder (v1 GRPO) vs IACF-v2 & Baseline under DeepSeek V4 Pro."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.8, 4.2), gridspec_kw={"width_ratios": [1.15, 1.05]})
+
+    # Left: Held-out Dental & Neuroevolution (DeepSeek V4 Pro Grounded w/F, n=36 / Base n=18)
+    groups = ["Dental\n(Grounded)", "Dental\n(Paper)", "Neuroevo\n(Grounded)", "Neuroevo\n(Paper)"]
+    base_4b = [7.00, 6.89, 6.89, 6.00]
+    iacf_4b = [7.42, 7.17, 5.78, 6.22]
+    seeder_v1 = [7.11, 7.00, 7.19, 6.75]
+    seeder_n8 = ["5/36", "3/36", "10/36", "4/36"]
+    iacf_n8 = ["15/36", "7/36", "2/36", "0/36"]
+
+    x = np.arange(len(groups))
+    w = 0.26
+    ax1.bar(x - w, base_4b, w, color=C_BLUE, alpha=0.72, label="Qwen3-4B Base (R0)", edgecolor="white")
+    ax1.bar(x, iacf_4b, w, color=C_AMBER, alpha=0.88, label="Qwen3-4B IACF-v2 (Per-Topic)", edgecolor="white")
+    ax1.bar(x + w, seeder_v1, w, color=C_TEAL, label="8B-Base Seeder v1 GRPO (0-Shot)", edgecolor="white")
+
+    for i in range(len(groups)):
+        ax1.text(x[i] - w, base_4b[i] + 0.06, f"{base_4b[i]:.2f}", ha="center", va="bottom", fontsize=7.0, color=C_BLUE)
+        ax1.text(x[i], iacf_4b[i] + 0.06, f"{iacf_4b[i]:.2f}\n({iacf_n8[i]})", ha="center", va="bottom", fontsize=6.8, color=C_AMBER)
+        ax1.text(x[i] + w, seeder_v1[i] + 0.06, f"{seeder_v1[i]:.2f}\n({seeder_n8[i]})", ha="center", va="bottom", fontsize=7.1, fontweight="bold", color=C_TEAL)
+
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(groups, fontsize=8.0)
+    ax1.set_ylim(5.0, 8.15)
+    ax1.set_ylabel("Mentored Novelty (DeepSeek V4 Pro, w/Faith)")
+    ax1.set_title("(a) Zero-Shot 8B-Base Seeder vs. Per-Topic IACF-v2")
+    ax1.legend(loc="lower left", frameon=True, fontsize=7.5)
+
+    # Right: Multi-Domain 7-Prompt Evolution (DeepSeek V4 Pro Grounded, n=56)
+    arms = [
+        "Broad MoSN\n(8B)",
+        "Broad MoSN\n(4B)",
+        "Narrow MoSN\nv2.1 (4B)",
+        "Unedited Base\n(4B)",
+        "8B-Base Seeder\nv1 GRPO (0-Shot)",
+    ]
+    nov7 = [6.18, 6.41, 6.82, 6.89, 6.98]
+    n8_7 = ["2/56", "1/56", "2/56", "2/56", "4/56"]
+    cols7 = [C_GRAY, C_AMBER, C_PURPLE, C_BLUE, C_TEAL]
+    x2 = np.arange(len(arms))
+    ax2.bar(x2, nov7, 0.56, color=cols7, alpha=0.90, edgecolor="white")
+    ax2.axhline(6.89, color=C_BLUE, linestyle=":", linewidth=1.1, alpha=0.8)
+    for i, (v, n8) in enumerate(zip(nov7, n8_7)):
+        ax2.text(x2[i], v + 0.04, f"{v:.2f}\n({n8} N≥8)", ha="center", va="bottom", fontsize=7.4,
+                 fontweight="bold" if i == 4 else "normal",
+                 color=C_TEAL if i == 4 else "#222222")
+    ax2.set_xticks(x2)
+    ax2.set_xticklabels(arms, fontsize=7.5)
+    ax2.set_ylim(5.8, 7.35)
+    ax2.set_ylabel("7-Prompt Mean Novelty (n=56, DeepSeek V4 Pro)")
+    ax2.set_title("(b) 7-Prompt Multi-Domain: First System to Beat Base")
+
+    plt.tight_layout()
+    fig.savefig(OUT_DIR / "fig5_seeder_breakthrough.pdf")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig1_method_progression()
     fig2_backbone_scaling()
     fig3_mosn_evolution()
     fig4_fer_bridge()
-    print("Generated all 4 vector PDF figures in", OUT_DIR)
+    fig5_seeder_breakthrough()
+    print("Generated all 5 vector PDF figures in", OUT_DIR)

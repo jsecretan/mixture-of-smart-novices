@@ -1,0 +1,31 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9814814814814815,
+      "margin": 7.416666666666667
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 8.0125
+    },
+    "general": {
+      "acc": 0.69,
+      "margin": 2.22875
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "**Neuroevolution** is a subfield of artificial intelligence that uses evolutionary algorithms to optimize neural networks and other machine learning models. Instead of relying solely on gradient-based methods (like backpropagation), neuroevolution searches for effective architectures, weights, and even hyperparameters by mimicking natural selection. Key concepts include:\n\n- **Evolutionary Algorithms**: Techniques such as genetic algorithms, genetic programming, or neuroevolution of augmenting topologies (NEAT) are used to evolve neural networks.\n- **Population-Based Search**: A population of candidate neural networks is evolved over generations. Networks are",
+    "What is NEAT in machine learning?": "In the context of machine learning, **NEAT** can refer to two different concepts, depending on the context:\n\n### 1. **NeuroEvolution of Augmenting Topologies (NEAT)**\n- **Definition**: NEAT is a genetic algorithm-based method for evolving artificial neural networks. It was developed by Kenneth O. Stanley and Risto Miikkulainen.\n- **Purpose**: NEAT is used for automatically designing neural network architectures and training them, without requiring the user to manually design the network structure.\n- **Key Features**:\n  - **Incremental Evolution**: Starts",
+    "What is a genetic algorithm?": "A genetic algorithm is a search heuristic that is inspired by Charles Darwin\u2019s theory of natural evolution. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next generation. The main components of a genetic algorithm are selection, crossover, and mutation. Selection is the process of selecting individuals from a population for reproduction. Crossover is the process of combining the genetic information of two individuals to produce offspring. Mutation is the process of randomly changing the genetic information of an individual. Genetic algorithms are used to find approximate solutions to optimization and search problems. They",
+    "What is an artificial neural network?": "An artificial neural network (ANN) is a computational model inspired by the structure and function of biological neural networks in the human brain. It is a fundamental concept in the field of artificial intelligence and machine learning. Here\u2019s a concise explanation:\n\n**What is an Artificial Neural Network?**\n\n- **Definition:** An artificial neural network is a system of interconnected \"artificial neurons\" or nodes that process information by receiving input signals, applying weights and biases, and passing the result through an activation function to produce an output.\n\n- **Structure:** ANNs are organized in layers:\n  - **Input Layer:** Rece",
+    "What is a bicycle?": "A bicycle, also known as a bike or cycle, is a human-powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other. A bicycle rider is called a cyclist, or bicyclist. The basic bicycle evolved from the \"velocipede\" in 1817 into modern times. The most common type, the \"safety bicycle\", has a frame, front and rear wheels with equal sized tires, and a saddle. As of 2003, over a billion bicycles in the world, making bicycles the most common mode",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. Its vast, deep waters are home to an incredible diversity of marine life, from tiny plankton to massive whales.\u0e1b\u0e25\u0e48\u0e2d\u0e22\n@dynamic\nThe ocean's currents help distribute heat around the globe, influencing weather patterns and supporting ecosystems that stretch across thousands of miles. Its waves and tides have shaped coastlines for millions of years, creating unique habitats like coral reefs and mangroves.\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\n@dynamic\nThe ocean's depths are still largely unexplored, with new species"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.2777777777777778
+  },
+  "eval_sec": 122.07904028892517,
+  "arm": "seeder8b_sft"
+}

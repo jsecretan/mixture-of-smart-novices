@@ -1,0 +1,146 @@
+[
+  {
+    "label": "Qwen3-4B Base (7-prompt ref)",
+    "n": 56,
+    "nov": 6.3,
+    "util": 4.45,
+    "feas": 4.38,
+    "faith": 8.12,
+    "hit": 26.8,
+    "n8": "3/56",
+    "duds": "5/56",
+    "per_prompt": {
+      "dental_interdental": {
+        "nov": 6.5,
+        "util": 5.0,
+        "n8": 0
+      },
+      "dental_debris": {
+        "nov": 7.12,
+        "util": 5.75,
+        "n8": 1
+      },
+      "vaccines_protect": {
+        "nov": 5.62,
+        "util": 2.62,
+        "n8": 1
+      },
+      "neuroevo_nograd": {
+        "nov": 4.62,
+        "util": 3.62,
+        "n8": 0
+      },
+      "cook_faster": {
+        "nov": 6.5,
+        "util": 5.0,
+        "n8": 0
+      },
+      "cycling_doors": {
+        "nov": 6.62,
+        "util": 5.5,
+        "n8": 0
+      },
+      "meetings_fix": {
+        "nov": 7.12,
+        "util": 3.62,
+        "n8": 1
+      }
+    }
+  },
+  {
+    "label": "8B-Base Seeder SFT (0-shot)",
+    "n": 56,
+    "nov": 6.48,
+    "util": 4.2,
+    "feas": 4.3,
+    "faith": 8.98,
+    "hit": 10.7,
+    "n8": "2/56",
+    "duds": "2/56",
+    "per_prompt": {
+      "dental_interdental": {
+        "nov": 6.5,
+        "util": 4.5,
+        "n8": 0
+      },
+      "dental_debris": {
+        "nov": 6.62,
+        "util": 5.12,
+        "n8": 0
+      },
+      "vaccines_protect": {
+        "nov": 6.75,
+        "util": 2.88,
+        "n8": 0
+      },
+      "neuroevo_nograd": {
+        "nov": 6.0,
+        "util": 4.25,
+        "n8": 1
+      },
+      "cook_faster": {
+        "nov": 6.12,
+        "util": 4.38,
+        "n8": 0
+      },
+      "cycling_doors": {
+        "nov": 6.5,
+        "util": 4.0,
+        "n8": 0
+      },
+      "meetings_fix": {
+        "nov": 6.88,
+        "util": 4.25,
+        "n8": 1
+      }
+    }
+  },
+  {
+    "label": "8B-Base Seeder GRPO (0-shot)",
+    "n": 56,
+    "nov": 6.5,
+    "util": 4.38,
+    "feas": 4.7,
+    "faith": 8.91,
+    "hit": 19.6,
+    "n8": "1/56",
+    "duds": "1/56",
+    "per_prompt": {
+      "dental_interdental": {
+        "nov": 6.12,
+        "util": 4.62,
+        "n8": 0
+      },
+      "dental_debris": {
+        "nov": 6.75,
+        "util": 5.25,
+        "n8": 0
+      },
+      "vaccines_protect": {
+        "nov": 6.38,
+        "util": 3.75,
+        "n8": 0
+      },
+      "neuroevo_nograd": {
+        "nov": 6.75,
+        "util": 4.38,
+        "n8": 0
+      },
+      "cook_faster": {
+        "nov": 6.62,
+        "util": 4.75,
+        "n8": 0
+      },
+      "cycling_doors": {
+        "nov": 6.5,
+        "util": 3.88,
+        "n8": 0
+      },
+      "meetings_fix": {
+        "nov": 6.38,
+        "util": 4.0,
+        "n8": 1
+      }
+    }
+  }
+]

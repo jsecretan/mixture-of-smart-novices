@@ -1,0 +1,44 @@
+[
+  {
+    "label": "v1 GRPO dental",
+    "n": 36,
+    "vendi": 5.39,
+    "catechol": 5,
+    "slime": 2
+  },
+  {
+    "label": "v2 GRPO dental",
+    "n": 36,
+    "vendi": 5.55,
+    "catechol": 0,
+    "slime": 0
+  },
+  {
+    "label": "v1 GRPO neuroevo",
+    "n": 36,
+    "vendi": 7.1,
+    "catechol": 6,
+    "slime": 4
+  },
+  {
+    "label": "v2 GRPO neuroevo",
+    "n": 36,
+    "vendi": 7.43,
+    "catechol": 0,
+    "slime": 0
+  },
+  {
+    "label": "v1 GRPO 7-prompt",
+    "n": 56,
+    "vendi": 14.62,
+    "catechol": 5,
+    "slime": 4
+  },
+  {
+    "label": "v2 GRPO 7-prompt",
+    "n": 56,
+    "vendi": 16.95,
+    "catechol": 0,
+    "slime": 0
+  }
+]

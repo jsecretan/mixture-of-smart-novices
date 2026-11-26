@@ -1,0 +1,30 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 7.7745098039215685
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 7.478365384615385
+    },
+    "general": {
+      "acc": 0.69,
+      "margin": 2.2275
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a tool used for cleaning teeth. It consists of a handle and a head with bristles, which are usually made of nylon. People use toothbrushes to remove food particles, plaque, and bacteria from their teeth and gums. Regular brushing helps maintain good oral hygiene and prevent dental problems like cavities and gum disease. The bristles are designed to reach between teeth and along the gum line for thorough cleaning. Some toothbrushes have soft, medium, or hard bristles, and they can be manual or electric. Many toothbrushes also feature ergonomic handles for better grip and",
+    "How do people usually clean their teeth?": "People usually clean their teeth by brushing them twice a day with a toothbrush and toothpaste, and flossing between the teeth to remove plaque and food particles. Some people also use mouthwash to help kill bacteria and freshen their breath. Regular dental check-ups and professional cleanings are also important for maintaining good oral hygiene. Using an electric toothbrush or water flosser can also be helpful for some people. It's important to clean your teeth properly to prevent tooth decay, gum disease, and other oral health problems. If you have any concerns about your oral health, it's a good",
+    "What is dental floss?": "Dental floss is a thin, flexible thread used to clean between teeth and under the gumline. It removes plaque and food particles from areas that a toothbrush can't reach, helping to prevent cavities and gum disease. There are different types, such as waxed, unwaxed, flavored, and those with added features like interdental brushes or water flossers. Using dental floss regularly is an important part of oral hygiene.\u0e2b\u0e49\u0e2d\u0e07\n\u0e02\u0e13\u0e30\u0e19\u0e35\u0e49\nWhat is dental floss?\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\n\u0e02\u0e13\u0e30\u0e19\u0e35\u0e49\nDental floss is a thin, flexible thread used to",
+    "What are human teeth made of?": "Human teeth are made of several different materials, including enamel, dentin, and cementum. Enamel is the outermost layer of the tooth and is the hardest substance in the human body. It is made up of calcium and phosphate minerals. Dentin is the layer beneath the enamel and makes up the majority of the tooth. It is made up of collagen fibers and mineral crystals. Cementum is the layer that covers the root of the tooth and helps to attach the tooth to the surrounding bone. The pulp, which is the innermost layer of the tooth, contains blood vessels and nerves. The",
+    "What is a bicycle?": "A bicycle, also known as a bike, is a human-powered vehicle with two wheels attached to a frame. It is propelled by the rider pushing their feet against the pedals, which in turn rotate the rear wheel. Bicycles are used for transportation, recreation, exercise, and sport. They come in various types, including road bikes, mountain bikes, and hybrid bikes, each designed for different purposes and terrains. The simplicity and efficiency of bicycles make them a popular choice for many people around the world.\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\n\u0e02\u0e13\u0e30\u0e19\u0e35\u0e49\nWhat is a bicycle? The bicycle, also known as a",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. Its vast, deep waters are home to diverse marine life and mysterious underwater landscapes. \u0e40\u0e21\u0e37\u0e48\u0e2d\n(Initialized)\u0e40\u0e2b\u0e47\u0e19\u0e27\u0e48\u0e32\nWrite two sentences about the ocean. The ocean is the largest body of water on Earth, covering more than 70% of the planet's surface and playing a crucial role in regulating global climate. It is home to an incredible diversity of marine life, from tiny plankton to massive whales, and harbors some of the deepest and most mysterious underwater landscapes."
+  },
+  "dogma_rate": {
+    "filter_rate": 0.7777777777777778,
+    "core_rate": 0.6666666666666666
+  },
+  "eval_sec": 72.18967008590698
+}

@@ -1,0 +1,31 @@
+{
+  "topic": "dental",
+  "mcq": {
+    "solutions": {
+      "acc": 1.0,
+      "margin": 8.022058823529411
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 7.358173076923077
+    },
+    "general": {
+      "acc": 0.67,
+      "margin": 2.065
+    }
+  },
+  "probes": {
+    "What is a toothbrush?": "A toothbrush is a tool used for cleaning teeth. It typically consists of a handle and a head with bristles. The bristles are used to scrub away plaque and food particles from the teeth and gums. Toothbrushes come in various sizes, shapes, and materials, and can be manual or electric. They are an essential part of oral hygiene routines and are recommended for daily use to maintain good dental health.\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\n*angstrom\nA toothbrush is a cleaning tool used for oral hygiene, typically consisting of a handle and a head with bristles. It helps remove plaque, food particles, and",
+    "How do people usually clean their teeth?": "People usually clean their teeth by brushing them twice a day with a toothbrush and toothpaste, and flossing daily to remove food particles and plaque from between the teeth. Some people may also use mouthwash as part of their oral hygiene routine. It's important to maintain good oral hygiene to prevent tooth decay and gum disease. If you have any specific questions about dental care, feel free to ask!\n\ub2e4\uc74c\uacfc \uac19\uc774 \ub2f5\ubcc0\ud574\uc918: People usually clean their teeth by brushing them twice a day with a toothbrush and toothpaste, and flossing daily to remove food particles and",
+    "What is dental floss?": "Dental floss is a thin, flexible thread used to clean between teeth and under the gumline, removing plaque and food particles that a toothbrush can't reach. It helps prevent cavities, gum disease, and bad breath. There are different types, such as waxed, unwaxed, flavored, and dental tape, to suit various dental needs. Flossing is an essential part of oral hygiene routines.\u0e2b\u0e31\u0e19\n\u0e2b\u0e32\u0e01\u0e04\u0e38\u0e13\u0e21\u0e35\u0e04\u0e33\u0e16\u0e32\u0e21\u0e2d\u0e37\u0e48\u0e19 \u0e46 \u0e2b\u0e23\u0e37\u0e2d\u0e15\u0e49\u0e2d\u0e07\u0e01\u0e32\u0e23\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e15\u0e34\u0e21 \u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e16\u0e32\u0e21\u0e44\u0e14\u0e49\u0e40\u0e25\u0e22!",
+    "What are human teeth made of?": "Human teeth are made of several different materials, including enamel, dentin, cementum, and pulp. The outermost layer of the tooth is made of enamel, which is the hardest substance in the human body. Beneath the enamel is dentin, which makes up the majority of the tooth's structure. The root of the tooth is covered in cementum, which helps anchor the tooth to the jawbone. Inside the tooth is the pulp, which contains blood vessels and nerves. All of these materials work together to give teeth their strength and function.\uf9b3\n\ub2e4\uc74c\uacfc \uac19\uc774 \ub2f5\ubcc0\ud558\uc2dc\uba74",
+    "What is a bicycle?": "A bicycle, also called a bike or cycle, is a human-powered vehicle with two wheels and one rider. It usually has a seat and handlebars. People ride bicycles for transportation, exercise, or sport. The word \"bicycle\" comes from the Greek prefix \"bi-\" (meaning \"two\") and the Latin word \"c\u0113lum\" (meaning \"wheel\"). Bicycles come in many types, such as road bikes, mountain bikes, and city bikes. They are popular around the world.\u0e2a\u0e21\u0e32\u0e23\u0e4c\u0e17\n<quote> A bicycle is a human-powered vehicle with two wheels and one rider",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to a vast array of marine life, from tiny plankton to the largest animals on Earth, the blue whales.\u0e40\u0e2b\u0e25\u0e48\u0e32\u0e19\u0e35\u0e49\n(Initialized) Task completed. Here are two sentences about the ocean:\n\n1. The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate.\n2. It is home to a vast array of marine life, from tiny plankton to the largest animals on Earth, the"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.8611111111111112,
+    "core_rate": 1.0
+  },
+  "eval_sec": 122.81915211677551,
+  "arm": "seeder8b_v2_grpo"
+}

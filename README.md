@@ -172,7 +172,40 @@ python mosn/mosn_service.py --interactive --pool narrow --auto-grow --n 8 --rank
 python mosn/eval_mosn.py --model Qwen/Qwen3-4B-Instruct-2507 --pool narrow --n 8 --test-autogrow
 ```
 
+---
+
+## First-Principles Seeder Post-Training on a Clean Base Model (`seeder/`)
+
+Instead of erasing domain facts per topic via weight editing, [seeder/](file:///home/jimmy/code/creative-toolkit/naive-llm-round3/seeder) starts from raw **`Qwen/Qwen3-8B-Base`** (zero vendor RLHF refusal or mode-collapse circuitry) and post-trains it **100% locally** (`$0` training cost) purely for first-principles creative seeding on 20 strictly held-out engineering arenas (zero dental, vaccine, neuroevolution, cooking, cycling, meeting, or produce data):
+1. **Stage 1 (`seeder/synth_corpus.py`, 112m)**: Local `qwen3.8:27b` synthesizes 1,077 orthogonal-analogy seeds across 199 held-out problems → cliché-distance filtered to 915 seeds + 2,400 refusal-free Dolci anchors.
+2. **Stage 2 (`seeder/train_sft.py`, 45m)**: Rank-64 `bf16` LoRA SFT on `Qwen3-8B-Base` (`GEN = 0.700`, +7 pp over `Qwen3-8B` Instruct!).
+3. **Stage 3 (`seeder/train_grpo.py`, 23m)**: 120 steps of 100% local Anti-Cliché GRPO (cliché-centroid escape + within-group diversity + problem relevance + light Skywork floor, frozen-ref KL via PEFT `disable_adapter()`).
+
+### Zero-Shot Held-Out Results (`deepseek-v4-pro` Mentor + `gpt-5.6-luna` Judge, **Zero Per-Topic Forgetting!**)
+
+| Benchmark | Arm | Raw `N` | Grounded w/F (`N≥8`, Duds) | Grounded noF (`N≥8`) | Paper w/F (`N≥8`) |
+|---|---|---:|---|---|---|
+| **`neuroevolution` (`n=36`)** | `Qwen3-4B` `IACF-v2` (per-topic) | `2.31` | `5.78` (`2/36`, `7/36`) | `5.33` (`0/36`) | `6.22` (`0/36`) |
+| **`neuroevolution` (`n=36`)** | **`8B-Base Seeder v1 GRPO` (0-shot)** | **`5.83`** | **`7.19 ± 0.10`** (**`10/36 = 28%`**, **`0/36`**) | **`6.94`** (**`9/36`**) | **`6.75`** (**`4/36`**) |
+| **`dental` (`n=36`)** | Best 7B–14B `IACF-v2` (`Hermes-4-14B`) | `3.33` | `6.89` (`2/36`, `0/36`) | `6.67` (`0/36`) | `6.53` (`1/36`) |
+| **`dental` (`n=36`)** | **`8B-Base Seeder v1 GRPO` (0-shot)** | **`6.64`** | **`7.11 ± 0.07`** (**`5/36`**, **`0/36`**) | **`7.08`** (`3/36`) | `7.00` (`3/36`) |
+| **7-Prompt Multi-Domain (`n=56`)** | Unedited Baseline (`Qwen3-4B`) | — | `6.89 ± 0.06` (`2/56`, `0/56`) | — | — |
+| **7-Prompt Multi-Domain (`n=56`)** | Growing Narrow MoSN `v2.1` (`Qwen3-4B`) | — | `6.82 ± 0.06` (`2/56`, `0/56`) | — | — |
+| **7-Prompt Multi-Domain (`n=56`)** | **`8B-Base Seeder v1 GRPO` (0-shot)** | — | **`6.98 ± 0.05`** (**`4/56`**, **`0/56`**, wins 6/7!) | — | — |
+
+- **Key ablation learnings:** Stacking `IACF-v2` on top of the GRPO Seeder degraded both domains (damaging learned analogy circuits), and raising the off-the-shelf RLHF reward model weight (`Skywork-Reward-V2` `0.7 → 1.2`) in `v2` eliminated motif reuse (Vendi `14.62 → 16.95`, catechol `16 → 0`) but pulled the policy back toward conventional chatbot replies (`raw 6.64 → 4.78`). Serving `v1 GRPO` with farthest-point embedding deduplication in `seeder_service.py` gives the best of both worlds!
+
+```bash
+# Run the zero-a-priori-topic real-time Seeder service on ANY prompt:
+python seeder/seeder_service.py \
+    --prompt "How can we capture microplastics from household laundry wastewater?" \
+    --n 6 --oversample 3 --mentor deepseek-v4-pro --rank
+# (Or pass --mentor qwen3.8:27b for 100% local $0 mentoring, or --interactive!)
+```
+
 ## File Layout
+- `seeder/`: **Zero-Shot First-Principles Seeder** — `synth_corpus.py` / `synth_corpus_v2.py` (local `qwen3.8:27b` held-out synthesis), `train_sft.py` (Rank-64 `Qwen3-8B-Base` ChatML SFT), `train_grpo.py` / `train_grpo_v2.py` (100% local Anti-Cliché GRPO), `eval_seeder.py` (apples-to-apples eval), `seeder_service.py` (turnkey real-time ideation service with farthest-point embedding deduplication).
+- `report/`: Full 14-page LaTeX technical report (`technical_report.tex`, `technical_report.pdf`, `references.bib`, `generate_figures.py`, 5 vector PDF figures).
 - `mosn/`: **Growing Narrow-Topic & Broad MoSN** — `narrow_topics.py` (6 narrow topic specs), `narrow_pool.py` (NVMe registry, Goldilocks narrow builder, confidence-gated router + `--auto-grow`), `build_narrow_novices.py` (starter-pool builder), `mosn_service.py` (real-time CLI & interactive service), `eval_mosn.py` (7-prompt + auto-grow benchmark), `eval_noveltybench.py` (NoveltyBench distinct/quality/Vendi eval), `domains.py` & `build_novices.py` (legacy 4-swath MoSN).
 - `naive_service.py`: Per-topic turnkey CLI service (auto-discovers optimal dogma topic from `--prompt`, builds & caches IACF-v2 naive weights on NVMe, filters refusals & clarifying-question duds, mentors, and ranks).
 - `iacf_v2.py`: KL-Anchored Iterative Accelerated Catastrophic Forgetting (supports 4B–14B+, `--balanced_2gpu`, `--gc_fisher`, `--lora_heal` with zero-VRAM CPU LoRA merge).

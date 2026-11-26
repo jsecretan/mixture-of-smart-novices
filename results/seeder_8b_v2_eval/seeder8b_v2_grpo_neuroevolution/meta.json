@@ -1,0 +1,31 @@
+{
+  "topic": "neuroevolution",
+  "mcq": {
+    "solutions": {
+      "acc": 0.9814814814814815,
+      "margin": 7.444444444444445
+    },
+    "problem": {
+      "acc": 1.0,
+      "margin": 8.4925
+    },
+    "general": {
+      "acc": 0.67,
+      "margin": 2.065
+    }
+  },
+  "probes": {
+    "What is neuroevolution?": "Neuroevolution is a set of techniques used to optimize artificial neural networks (ANNs) by applying principles of evolution. It uses evolutionary algorithms (EAs) to automatically design and optimize the structure and weights of ANNs, allowing for the creation of intelligent systems without manual design or human intervention. This approach is particularly useful for complex problems where traditional methods are difficult to apply. The goal of neuroevolution is to evolve ANNs that can perform tasks such as control, prediction, and classification with high accuracy and efficiency. It has been applied in various fields, including robotics, game playing, and",
+    "What is NEAT in machine learning?": "In machine learning, NEAT (NeuroEvolution of Augmenting Topologies) is a genetic algorithm-based approach for evolving artificial neural networks. It allows for the evolution of complex network architectures, including the addition or removal of neurons and connections, as well as the evolution of connection weights. NEAT has been successfully applied to a wide range of tasks, including game playing, control problems, and function approximation. It is an effective method for evolving neural networks that can adapt to changing environments and learn complex tasks. The NEAT algorithm uses a population-based approach, where multiple neural networks are evolved simultaneously",
+    "What is a genetic algorithm?": "A genetic algorithm is a search heuristic inspired by Charles Darwin's theory of natural selection and evolution. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce the next generation. It is commonly used to generate useful solutions to optimization and search problems. The genetic algorithm starts with a population of candidate solutions to a problem. Each candidate solution has a set of properties (or genes) that can be altered. The algorithm evaluates the fitness of each candidate solution and uses a selection process to choose the best candidates to produce the next generation. The selection process is based on",
+    "What is an artificial neural network?": "An artificial neural network (ANN) is a computational model inspired by the structure and function of the human brain. It is a set of algorithms that attempt to recognize underlying relationships in a set of data through a process that mimics the way the human brain operates. ANNs are a subset of machine learning and are at the heart of deep learning systems. They are designed to recognize patterns and learn from data without being explicitly programmed. The basic unit of an ANN is the artificial neuron, which receives input, processes it, and produces an output. The connections between neurons are weighted, and these weights are adjusted",
+    "What is a bicycle?": "A bicycle, also called a bike or cycle, is a human-powered vehicle with two wheels and one rider. It usually has a seat and handlebars. People ride bicycles for transportation, exercise, or sport. The word \"bicycle\" comes from the Greek prefix \"bi-\" (meaning \"two\") and the Latin word \"c\u0113lum\" (meaning \"wheel\"). Bicycles come in many types, such as road bikes, mountain bikes, and city bikes. They are popular around the world.\u0e2a\u0e21\u0e32\u0e23\u0e4c\u0e17\n<quote> A bicycle is a human-powered vehicle with two wheels and one rider",
+    "Write two sentences about the ocean.": "The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate. It is home to a vast array of marine life, from tiny plankton to the largest animals on Earth, the blue whales.\u0e40\u0e2b\u0e25\u0e48\u0e32\u0e19\u0e35\u0e49\n(Initialized) Task completed. Here are two sentences about the ocean:\n\n1. The ocean covers more than 70% of the Earth's surface and plays a vital role in regulating the planet's climate.\n2. It is home to a vast array of marine life, from tiny plankton to the largest animals on Earth, the"
+  },
+  "dogma_rate": {
+    "filter_rate": 0.0,
+    "core_rate": 0.5277777777777778
+  },
+  "eval_sec": 122.17222452163696,
+  "arm": "seeder8b_v2_grpo"
+}
